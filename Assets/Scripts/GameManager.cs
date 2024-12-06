@@ -22,9 +22,6 @@ public class GameManager : MonoBehaviour
 
     private void Initialize()
     {
-        // player = gameObject.AddComponent<Player>();
-        // opponent = gameObject.AddComponent<Opponent>();
-        // roundManager = gameObject.AddComponent<RoundManager>();
         roundManager.opponent = opponent;
         roundManager.player = player;
     }
@@ -50,7 +47,7 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < 20; i++)
         {
-            roundManager.StartRound();
+          //  roundManager.StartRound();
         }
         MatchResults();
     }

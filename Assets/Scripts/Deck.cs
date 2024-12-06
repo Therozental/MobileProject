@@ -1,6 +1,6 @@
 namespace Cards
 {
-    public class CardDeck
+    public class Deck
     {
         
     }

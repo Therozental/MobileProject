@@ -21,6 +21,7 @@ public class RoundManager : MonoBehaviour
     {
     }
 
+    /*
     public void StartRound()
     {
         Debug.Log("StartRound");
@@ -28,6 +29,7 @@ public class RoundManager : MonoBehaviour
         SetCardValue(opponentCard);
         CompareCards();
     }
+    
     
     public void SetCardValue(Card card)
     {
@@ -50,4 +52,5 @@ public class RoundManager : MonoBehaviour
             Debug.Log("opponent points");
         }
     }
+    */
 }
