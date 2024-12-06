@@ -6,9 +6,8 @@ public class Card : MonoBehaviour
 {
     public int Value;
     public string Suit;
-    public Sprite sprite;
 
-    Card(int value, string suit)
+    public Card(int value, string suit)
     {
         Value = value;
         Suit = suit;

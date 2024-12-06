@@ -5,16 +5,17 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public RoundManager roundManager; 
-    public Player player; 
+    public RoundManager roundManager;
+    public Player player;
     public Opponent opponent;
-    
+    public Deck deck;
+
     // Start is called before the first frame update
     void Start()
     {
         Gameloop();
     }
-    
+
     public void Awake()
     {
         Initialize();
@@ -22,11 +23,12 @@ public class GameManager : MonoBehaviour
 
     private void Initialize()
     {
+        deck = new Deck();
         roundManager.opponent = opponent;
         roundManager.player = player;
     }
-    
-    
+
+
     void MatchResults()
     {
         if (player.Points > opponent.Points)
@@ -47,13 +49,12 @@ public class GameManager : MonoBehaviour
     {
         for (int i = 0; i < 20; i++)
         {
-          //  roundManager.StartRound();
+            //  roundManager.StartRound();
         }
+
         MatchResults();
     }
 }
-
-
 
 
 /*
