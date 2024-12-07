@@ -5,37 +5,60 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public RoundManager roundManager;
+    public static GameManager Instance { get; private set; }
+    public Round round;
     public Player player;
-    public Opponent opponent;
+    public CPU cpu;
     public Deck deck;
 
     // Start is called before the first frame update
     void Start()
     {
+        deck.CreateDeck();
+        deck.DealCards();
         Gameloop();
     }
 
     public void Awake()
     {
-        Initialize();
+        //Singletone:
+        // if there is no instance, we initialize it
+        if (Instance == null)
+        {
+            Initialize();
+        }
+        // if this instance is not the original, we destroy it
+        else if (Instance != this)
+        {
+            Destroy(gameObject);
+        }
     }
 
     private void Initialize()
     {
+        Instance = this;
         deck = new Deck();
-        roundManager.opponent = opponent;
-        roundManager.player = player;
+        round.cpu = cpu;
+        round.player = player;
     }
 
+    void Gameloop()
+    {
+        while ((deck.cpuDeck.Count != 0) || (deck.playerDeck.Count != 0)) // until there are cards in the
+        {
+            round.StartRound();
+        }
+
+        MatchResults();
+    }
 
     void MatchResults()
     {
-        if (player.Points > opponent.Points)
+        if (player.Points > cpu.Points)
         {
             Debug.Log("player win!");
         }
-        else if (player.Points < opponent.Points)
+        else if (player.Points < cpu.Points)
         {
             Debug.Log("player lost!");
         }
@@ -44,25 +67,4 @@ public class GameManager : MonoBehaviour
             Debug.Log("its a tie!");
         }
     }
-
-    void Gameloop()
-    {
-        for (int i = 0; i < 20; i++)
-        {
-            //  roundManager.StartRound();
-        }
-
-        MatchResults();
-    }
 }
-
-
-/*
- * to do:
- * create the core mechanic
- * create randomizers
- * make a list of 13 ints to randomize from them
- * check the values
- *create 2 deck of cards - playerDeck and OpponentDeck
- * after 20 rounds check winner
- */
