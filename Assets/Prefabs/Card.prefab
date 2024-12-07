@@ -45,8 +45,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8a8051f13ff9f45f79c77cf596df38bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Value: 0
-  Suit: 
+  Value: 2
+  Suit: Hearts
 --- !u!1 &2164249227863906841
 GameObject:
   m_ObjectHideFlags: 0

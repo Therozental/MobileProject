@@ -10,8 +10,7 @@ public class Round : MonoBehaviour
     public Deck deck;
     private Card _playerCard;
     private Card _cpuCard;
-
-    bool _isInTie = false;
+    private bool _isInTie = false;
 
     public Round(Player _player, CPU _cpu)
     {

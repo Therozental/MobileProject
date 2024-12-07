@@ -7,18 +7,20 @@ public class Deck : MonoBehaviour
     public List<Card> deck = new List<Card>();
     public List<Card> playerDeck = new List<Card>();
     public List<Card> cpuDeck = new List<Card>();
-
+    [SerializeField] private Transform playerPile;
+    [SerializeField] private Transform cpuPile;
+    
     public void CreateDeck()
     {
-        string[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
-
-        for (int value = 2; value <= 14; value++) // Ranks: 2 (2) to 14 (ace)
-        {
-            foreach (string suit in suits)
-            {
-                deck.Add(new Card(value, suit));
-            }
-        }
+        // string[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
+        //
+        // for (int value = 2; value <= 14; value++) // Ranks: 2 (2) to 14 (ace)
+        // {
+        //     foreach (string suit in suits)
+        //     {
+        //         deck.Add(new Card(value, suit));
+        //     }
+        // }
 
         Shuffle();
     }
@@ -41,10 +43,12 @@ public class Deck : MonoBehaviour
             if (i % 2 == 0) // Even index: assign to player
             {
                 playerDeck.Add(deck[i]);
+                deck[i].transform.SetParent(playerPile);
             }
             else if (i % 2 != 0) // Odd index: assign to CPU
             {
                 cpuDeck.Add(deck[i]);
+                deck[i].transform.SetParent(cpuPile);
             }
         }
         Debug.Log("cards Been Dealed");
