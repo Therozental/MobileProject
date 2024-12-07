@@ -17,13 +17,12 @@ public class GameManager : MonoBehaviour
     {
         deck.Shuffle();
         deck.DealCards();
-        Gameloop();
+       // Gameloop();
     }
 
     public void Awake()
     {
         //Singletone:
-
         // if there is no instance, we initialize it
         if (instance == null)
         {

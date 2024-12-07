@@ -9,21 +9,6 @@ public class Deck : MonoBehaviour
     public List<Card> cpuDeck = new List<Card>();
     [SerializeField] private Transform playerPile;
     [SerializeField] private Transform cpuPile;
-    
-    public void CreateDeck()
-    {
-        // string[] suits = { "Hearts", "Diamonds", "Clubs", "Spades" };
-        //
-        // for (int value = 2; value <= 14; value++) // Ranks: 2 (2) to 14 (ace)
-        // {
-        //     foreach (string suit in suits)
-        //     {
-        //         deck.Add(new Card(value, suit));
-        //     }
-        // }
-
-        Shuffle();
-    }
 
     // Shuffle method to randomize the order of cards in the deck.
     public void Shuffle()

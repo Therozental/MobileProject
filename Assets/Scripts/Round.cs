@@ -11,6 +11,8 @@ public class Round : MonoBehaviour
     private Card _playerCard;
     private Card _cpuCard;
     private bool _isInTie = false;
+    [SerializeField] private GameObject PlayerCard;
+    [SerializeField] private GameObject CpuCard;
 
     public Round(Player _player, CPU _cpu)
     {
@@ -20,21 +22,28 @@ public class Round : MonoBehaviour
 
     public void StartRound()
     {
-        PlayerDrawCard();
-        CPUDrawCard();
-        CompareCards();
+            Debug.Log("StartRound");
+            PlayerDrawCard();
+            CPUDrawCard();
+            CompareCards();
+        
+        
     }
 
     private void PlayerDrawCard()
     {
         _playerCard = deck.playerDeck[0];
         deck.playerDeck.RemoveAt(0);
+        Debug.Log($"Player card {_playerCard}");
+        _playerCard.transform.SetParent(PlayerCard.transform);
     }
 
     private void CPUDrawCard()
     {
         _cpuCard = deck.cpuDeck[0];
         deck.cpuDeck.RemoveAt(0);
+        Debug.Log($"CPU card {_cpuCard}");
+        _cpuCard.transform.SetParent(CpuCard.transform);
     }
 
     private void CompareCards()
@@ -45,9 +54,9 @@ public class Round : MonoBehaviour
         {
             differenceValue = _playerCard.Value - _cpuCard.Value; // get the differance between the values
             // add it to the player overall points
-            if (_isInTie) // if its a tie round
+            if (_isInTie) // if it's a tie round
             {
-                Player.Points += (differenceValue * 3); // if its a tie round decrease the points
+                Player.Points += (differenceValue * 3); // if it's a tie round decrease the points
             }
             else // if not in tie round
             {
