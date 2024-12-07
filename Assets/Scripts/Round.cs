@@ -5,16 +5,18 @@ using UnityEngine;
 
 public class Round : MonoBehaviour
 {
-    public Player player;
-    public CPU cpu;
-    private Card playerCard;
-    private Card cpuCard;
+    public Player Player;
+    public CPU Cpu;
     public Deck deck;
+    private Card _playerCard;
+    private Card _cpuCard;
+    
+    bool _isInTie = false;
 
     public Round(Player _player, CPU _cpu)
     {
-        _player = player;
-        _cpu = cpu;
+        _player = Player;
+        _cpu = Cpu;
     }
 
     public void StartRound()
@@ -26,57 +28,96 @@ public class Round : MonoBehaviour
 
     private void PlayerDrawCard()
     {
-        playerCard = deck.playerDeck[0];
+        _playerCard = deck.playerDeck[0];
         deck.playerDeck.RemoveAt(0);
     }
 
     private void CPUDrawCard()
     {
-        cpuCard = deck.cpuDeck[0];
+        _cpuCard = deck.cpuDeck[0];
         deck.cpuDeck.RemoveAt(0);
     }
 
     private void CompareCards()
     {
-        if (playerCard.Value > cpuCard.Value) // if player wins
+        int differenceValue = 0;
+
+        if (_playerCard.Value > _cpuCard.Value) // if player wins
         {
-            player.Points++;
-            Debug.Log("player points");
+            differenceValue = _playerCard.Value - _cpuCard.Value; // get the differance between the values
+            // add it to the player overall points
+            if (_isInTie) // if its a tie round
+            {
+                Player.Points += (differenceValue * 3);
+            }
+
+            Player.Points += differenceValue;
+
+            Debug.Log($"player points increased by {differenceValue}, its value is {Player.Points}");
         }
-        else if (playerCard.Value < cpuCard.Value) // if cpu wins
+        else if (_playerCard.Value < _cpuCard.Value) // if cpu wins
         {
-            cpu.Points++;
-            Debug.Log("opponent points");
+            if (_isInTie) // if its a tie round
+            {
+                Player.Points -= (differenceValue * 3);
+            }
+
+            Player.Points -= differenceValue;
+
+            Debug.Log($"player points decreased by {differenceValue}, its value is {Player.Points}");
         }
-        else if (playerCard.Value == cpuCard.Value)
+        else if (_playerCard.Value == _cpuCard.Value)
         {
             CardTie();
         }
+
+        _isInTie = false;
     }
 
-    private void CardTie() // if both cards has the same value, take out 3 cards from each deck and try again
+    private void CardTie()
     {
-        for (int i = 0; i < 3; i++) //remove the 3 first cards in the deck
-        {
-            deck.playerDeck.RemoveAt(0);
-            Debug.Log($"Player card {deck.playerDeck[i]} was drawn");
-            
-            deck.cpuDeck.RemoveAt(0);
-            Debug.Log($"cpu card {deck.cpuDeck[i]} was drawn");
-        }
+        _isInTie = true;
+        Remove3Cards();
         StartRound();
     }
 
-    /*
-
-    public void SetCardValue(Card card)
+    private void Remove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
     {
-        int value = Random.Range(1, 14);
-        // card = gameObject.AddComponent<Card>();
-        card.CardValue = value;
-        Debug.Log(card.CardValue);
+        deck.playerDeck.RemoveRange(0, 3);
+        deck.cpuDeck.RemoveRange(0, 3);
     }
 
+    // for (int i = 0; i < 3; i++) //remove the 3 first cards in the deck
+    // {
+    //     deck.playerDeck.RemoveAt(0);
+    //     
+    //     Debug.Log($"Player card {deck.playerDeck[i]} was drawn");
+    //
+    //     deck.cpuDeck.RemoveAt(0);
+    //     Debug.Log($"cpu card {deck.cpuDeck[i]} was drawn");
+    // }
 
-    */
+
+    // private void TieRound()
+    // {
+    //     PlayerDrawCard();
+    //     CPUDrawCard();
+    //     if (playerCard.Value > cpuCard.Value) // if player wins
+    //     {
+    //         int differenceValue = playerCard.Value - cpuCard.Value; // get the differance between the values
+    //         player.Points += (differenceValue * 3); // add it to the player overall points
+    //
+    //         Debug.Log($"player points increased by {player.Points}, its value is {differenceValue}");
+    //     }
+    //     else if (playerCard.Value < cpuCard.Value) // if cpu wins
+    //     {
+    //         int differenceValue = cpuCard.Value - playerCard.Value;
+    //         player.Points -= (differenceValue * 3);
+    //         Debug.Log("opponent points");
+    //     }
+    //     else if (playerCard.Value == cpuCard.Value)
+    //     {
+    //         CardTie();
+    //     }
+    // }
 }

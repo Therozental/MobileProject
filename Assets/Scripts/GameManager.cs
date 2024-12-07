@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     public void Awake()
     {
         //Singletone:
+
         // if there is no instance, we initialize it
         if (Instance == null)
         {
@@ -37,9 +38,27 @@ public class GameManager : MonoBehaviour
     private void Initialize()
     {
         Instance = this;
-        deck = new Deck();
-        round.cpu = cpu;
-        round.player = player;
+
+        if (deck == null)
+        {
+            deck = new Deck();
+        }
+
+        if (round == null)
+        {
+            round = new Round(player, cpu); // Ensure round is properly created
+        }
+
+        // Assign cpu and player to round
+        if (cpu != null && player != null)
+        {
+            round.Cpu = cpu;
+            round.Player = player;
+        }
+        else
+        {
+            Debug.LogError("CPU or Player is null! Make sure they are assigned.");
+        }
     }
 
     void Gameloop()

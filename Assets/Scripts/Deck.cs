@@ -31,7 +31,7 @@ public class Deck : MonoBehaviour
             int randomIndex = Random.Range(0, deck.Count); // Get a random index.
             (deck[i], deck[randomIndex]) = (deck[randomIndex], deck[i]); //Swap between the random index and the i
         }
-        Debug.Log("cardsShuffled");
+        Debug.Log("Cards Shuffled");
     }
 
     public void DealCards()
@@ -47,6 +47,6 @@ public class Deck : MonoBehaviour
                 cpuDeck.Add(deck[i]);
             }
         }
-        Debug.Log("cardsBeenDealed");
+        Debug.Log("cards Been Dealed");
     }
 }
