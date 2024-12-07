@@ -7,8 +7,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance { get; private set; }
     public Round round;
-    public Player player;
-    public CPU cpu;
+    public Player Player;
+    public CPU Cpu;
     public Deck deck;
 
     // Start is called before the first frame update
@@ -46,14 +46,14 @@ public class GameManager : MonoBehaviour
 
         if (round == null)
         {
-            round = new Round(player, cpu); // Ensure round is properly created
+            round = new Round(Player, Cpu); // Ensure round is properly created
         }
 
         // Assign cpu and player to round
-        if (cpu != null && player != null)
+        if (Cpu != null && Player != null)
         {
-            round.Cpu = cpu;
-            round.Player = player;
+            round.Cpu = Cpu;
+            round.Player = Player;
         }
         else
         {
@@ -68,9 +68,15 @@ public class GameManager : MonoBehaviour
             round.StartRound();
         }
 
-        MatchResults();
+        GameOver();
     }
 
+    void GameOver()
+    {
+        
+    }
+
+/*
     void MatchResults()
     {
         if (player.Points > cpu.Points)
@@ -86,4 +92,5 @@ public class GameManager : MonoBehaviour
             Debug.Log("its a tie!");
         }
     }
+    */
 }

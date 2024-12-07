@@ -10,7 +10,7 @@ public class Round : MonoBehaviour
     public Deck deck;
     private Card _playerCard;
     private Card _cpuCard;
-    
+
     bool _isInTie = false;
 
     public Round(Player _player, CPU _cpu)
@@ -48,21 +48,27 @@ public class Round : MonoBehaviour
             // add it to the player overall points
             if (_isInTie) // if its a tie round
             {
-                Player.Points += (differenceValue * 3);
+                Player.Points += (differenceValue * 3); // if its a tie round decrease the points
+            }
+            else // if not in tie round
+            {
+                Player.Points += differenceValue;
             }
 
-            Player.Points += differenceValue;
+            Player.GetExp();
 
             Debug.Log($"player points increased by {differenceValue}, its value is {Player.Points}");
         }
         else if (_playerCard.Value < _cpuCard.Value) // if cpu wins
         {
-            if (_isInTie) // if its a tie round
+            if (_isInTie) // if its a tie round increase the points
             {
                 Player.Points -= (differenceValue * 3);
             }
-
-            Player.Points -= differenceValue;
+            else // if not in tie round
+            {
+                Player.Points -= differenceValue;
+            }
 
             Debug.Log($"player points decreased by {differenceValue}, its value is {Player.Points}");
         }

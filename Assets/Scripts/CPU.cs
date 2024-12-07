@@ -4,5 +4,5 @@ using UnityEngine;
 
     public class CPU : MonoBehaviour
     {
-        public int Points = 0;
+  
     }

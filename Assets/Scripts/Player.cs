@@ -2,13 +2,32 @@ using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 
-    public class Player : MonoBehaviour
+public class Player : MonoBehaviour
+{
+    public int Points = 0;
+    public int Exp = 0;
+    public int Level = 1;
+
+
+    public void GetExp()
     {
-        public int Points = 0;
-        public int Coins = 0;
-        
-        void GetCoins()
+        int expPoints = Random.Range(5, 20);
+        Exp += expPoints;
+
+        if (Exp >= 100)
         {
-            Coins += Points;
+            LevelUp();
         }
     }
+
+    private void LevelUp()
+    {
+        Level++;
+        ResetExp();
+    }
+
+    private void ResetExp()
+    {
+        Exp = 0;
+    }
+}
