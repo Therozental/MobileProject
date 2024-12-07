@@ -9,6 +9,6 @@ using System.Collections.Generic;
         
         void GetCoins()
         {
-            
+            Coins += Points;
         }
     }
