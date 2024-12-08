@@ -12,6 +12,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 7 of Hearts
       objectReference: {fileID: 0}
+    - target: {fileID: 1896462780179457453, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1908700246036701338, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: Value
       value: 7

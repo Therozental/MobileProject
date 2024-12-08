@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
+using UnityEditor.VersionControl;
 using UnityEngine;
+using System.Threading.Tasks;
+using Task = UnityEditor.VersionControl.Task;
 
 public class Round : MonoBehaviour
 {
@@ -20,30 +23,34 @@ public class Round : MonoBehaviour
         _cpu = Cpu;
     }
 
-    public void StartRound()
+    public  void StartRound()
     {
             Debug.Log("StartRound");
             PlayerDrawCard();
             CPUDrawCard();
             CompareCards();
         
-        
     }
 
     private void PlayerDrawCard()
     {
+         // Task.Delay(1000);
         _playerCard = deck.playerDeck[0];
         deck.playerDeck.RemoveAt(0);
         Debug.Log($"Player card {_playerCard}");
         _playerCard.transform.SetParent(PlayerCard.transform);
+        _playerCard.transform.position = PlayerCard.transform.position;
     }
 
     private void CPUDrawCard()
     {
+     //   await Task.Delay(3000);
         _cpuCard = deck.cpuDeck[0];
         deck.cpuDeck.RemoveAt(0);
         Debug.Log($"CPU card {_cpuCard}");
         _cpuCard.transform.SetParent(CpuCard.transform);
+        _cpuCard.transform.position = CpuCard.transform.position;
+        
     }
 
     private void CompareCards()
@@ -65,7 +72,7 @@ public class Round : MonoBehaviour
 
             Player.GetExp();
 
-            Debug.Log($"player points increased by {differenceValue}, its value is {Player.Points}");
+            Debug.Log($"PLAYER WON! player points increased by {differenceValue}, its value is {Player.Points}");
         }
         else if (_playerCard.Value < _cpuCard.Value) // if cpu wins
         {
@@ -78,7 +85,7 @@ public class Round : MonoBehaviour
                 Player.Points -= differenceValue;
             }
 
-            Debug.Log($"player points decreased by {differenceValue}, its value is {Player.Points}");
+            Debug.Log($"CPU WON! player points decreased by {differenceValue}, its value is {Player.Points}");
         }
         else if (_playerCard.Value == _cpuCard.Value)
         {
@@ -88,8 +95,9 @@ public class Round : MonoBehaviour
         _isInTie = false;
     }
 
-    private void CardTie()
+    private async void CardTie()
     {
+        Debug.Log("Card tied");
         _isInTie = true;
         Remove3Cards();
         StartRound();

@@ -29,11 +29,13 @@ public class Deck : MonoBehaviour
             {
                 playerDeck.Add(deck[i]);
                 deck[i].transform.SetParent(playerPile);
+                deck[i].transform.position = playerPile.position;
             }
             else if (i % 2 != 0) // Odd index: assign to CPU
             {
                 cpuDeck.Add(deck[i]);
                 deck[i].transform.SetParent(cpuPile);
+                deck[i].transform.position = cpuPile.position;
             }
         }
         Debug.Log("cards Been Dealed");
