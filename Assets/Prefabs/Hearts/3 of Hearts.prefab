@@ -12,9 +12,33 @@ PrefabInstance:
       propertyPath: m_Name
       value: 3 of Hearts
       objectReference: {fileID: 0}
+    - target: {fileID: 1896462780179457453, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1908700246036701338, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: Value
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2049783769655528286, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3365354685414164052, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06e4454d1b0074aa4b6aa86f1b2c6bb8, type: 3}
+    - target: {fileID: 5252046472466712256, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252046472466712256, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 5252046472466712256, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.6
       objectReference: {fileID: 0}
     - target: {fileID: 5252046472466712256, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_LocalPosition.x
@@ -56,6 +80,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5252046472466712256, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5834758547462616447, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 06e4454d1b0074aa4b6aa86f1b2c6bb8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

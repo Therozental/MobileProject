@@ -10,15 +10,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1896462780179457453, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_Name
-      value: 4 of Hearts
-      objectReference: {fileID: 0}
-    - target: {fileID: 1896462780179457453, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
-      propertyPath: m_IsActive
-      value: 1
+      value: Ace of Hearts
       objectReference: {fileID: 0}
     - target: {fileID: 1908700246036701338, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: Value
-      value: 4
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 5252046472466712256, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_LocalScale.x
@@ -79,7 +75,7 @@ PrefabInstance:
     - target: {fileID: 5834758547462616447, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: fd225d197c8664de9a5f8a5ebf6fe9f0, type: 3}
+      objectReference: {fileID: 21300000, guid: 01f7e290a49e84dea814aecad51daee9, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
