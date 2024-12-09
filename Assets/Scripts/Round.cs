@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
+using UnityEngine.UI;
 using System.Threading.Tasks;
 using Task = UnityEditor.VersionControl.Task;
 
@@ -16,6 +17,7 @@ public class Round : MonoBehaviour
     private bool _isInTie = false;
     [SerializeField] private GameObject PlayerCard;
     [SerializeField] private GameObject CpuCard;
+    
 
     public Round(Player _player, CPU _cpu)
     {
