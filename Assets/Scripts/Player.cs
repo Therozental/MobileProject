@@ -6,8 +6,10 @@ public class Player : MonoBehaviour
 {
     public int Points = 0;
     public int Exp = 0;
-    public int Level = 1;
+    public int MaxExp = 100;
+    public int Level = 0;
 
+    [SerializeField] private Transform playerPile;
 
     public void GetExp()
     {
@@ -23,11 +25,20 @@ public class Player : MonoBehaviour
     private void LevelUp()
     {
         Level++;
+        IncreaseMaxExp();
         ResetExp();
     }
 
-    private void ResetExp()
+    private int ResetExp()
     {
-        Exp = 0;
+        return Exp = 0;
+    }
+
+    private int IncreaseMaxExp()
+    {
+        int levelInt = Level * 5; //get the int for the player level and multiply by 5
+        MaxExp += levelInt; // add the number to the exp
+        Debug.Log($"max exp increased to {MaxExp}");
+        return MaxExp;
     }
 }
