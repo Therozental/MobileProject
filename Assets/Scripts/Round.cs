@@ -10,14 +10,18 @@ using Task = UnityEditor.VersionControl.Task;
 public class Round : MonoBehaviour
 {
     public Player Player;
+
     public CPU Cpu;
-    public Deck deck;
+
+    // public Deck deck;
+    public PlayerDeck playerDeck;
+    public CPUDeck cpuDeck;
     private Card _playerCard;
     private Card _cpuCard;
     private bool _isInTie = false;
     [SerializeField] private GameObject PlayerCard;
     [SerializeField] private GameObject CpuCard;
-    
+
 
     public Round(Player _player, CPU _cpu)
     {
@@ -25,34 +29,32 @@ public class Round : MonoBehaviour
         _cpu = Cpu;
     }
 
-    public  void StartRound()
+    public void StartRound()
     {
-            Debug.Log("StartRound");
-            PlayerDrawCard();
-            CPUDrawCard();
-            CompareCards();
-        
+        Debug.Log("StartRound");
+        PlayerDrawCard();
+        CPUDrawCard();
+        CompareCards();
     }
 
     private void PlayerDrawCard()
     {
-         // Task.Delay(1000);
-        _playerCard = deck.playerDeck[0];
-        deck.playerDeck.RemoveAt(0);
+        _playerCard = playerDeck.deck[0];
+        playerDeck.deck.RemoveAt(0);
         Debug.Log($"Player card {_playerCard}");
         _playerCard.transform.SetParent(PlayerCard.transform);
         _playerCard.transform.position = PlayerCard.transform.position;
+        // get a random card from the deck
+        //remove it from the deck- add it to the discard pile
     }
 
     private void CPUDrawCard()
     {
-     //   await Task.Delay(3000);
-        _cpuCard = deck.cpuDeck[0];
-        deck.cpuDeck.RemoveAt(0);
+        _cpuCard = cpuDeck.deck[0];
+        cpuDeck.deck.RemoveAt(0);
         Debug.Log($"CPU card {_cpuCard}");
         _cpuCard.transform.SetParent(CpuCard.transform);
         _cpuCard.transform.position = CpuCard.transform.position;
-        
     }
 
     private void CompareCards()
@@ -97,7 +99,7 @@ public class Round : MonoBehaviour
         _isInTie = false;
     }
 
-    private async void CardTie()
+    private void CardTie()
     {
         Debug.Log("Card tied");
         _isInTie = true;
@@ -107,10 +109,13 @@ public class Round : MonoBehaviour
 
     private void Remove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
     {
-        deck.playerDeck.RemoveRange(0, 3);
-        deck.cpuDeck.RemoveRange(0, 3);
+        playerDeck.deck.RemoveRange(0, 3);
+        cpuDeck.deck.RemoveRange(0, 3);
     }
 
+    
+    
+    
     // for (int i = 0; i < 3; i++) //remove the 3 first cards in the deck
     // {
     //     deck.playerDeck.RemoveAt(0);

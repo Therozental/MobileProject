@@ -4,5 +4,6 @@ using UnityEngine;
 
     public class CPU : MonoBehaviour
     {
-  
+        public CPUDeck Deck;
+        [SerializeField] private Transform playerPile;
     }

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Deck : MonoBehaviour
+public abstract class Deck
 {
+    // public List<Card> playerDeck = new List<Card>();
+    // public List<Card> cpuDeck = new List<Card>();
+    
     public List<Card> deck = new List<Card>();
-    public List<Card> playerDeck = new List<Card>();
-    public List<Card> cpuDeck = new List<Card>();
-    [SerializeField] private Transform playerPile;
-    [SerializeField] private Transform cpuPile;
+
 
     // Shuffle method to randomize the order of cards in the deck.
     public void Shuffle()
@@ -19,9 +19,10 @@ public class Deck : MonoBehaviour
             int randomIndex = Random.Range(0, deck.Count); // Get a random index.
             (deck[i], deck[randomIndex]) = (deck[randomIndex], deck[i]); //Swap between the random index and the i
         }
+
         Debug.Log("Cards Shuffled");
     }
-
+/*
     public void DealCards()
     {
         for (int i = 0; i < deck.Count; i++)
@@ -41,4 +42,5 @@ public class Deck : MonoBehaviour
         }
         Debug.Log("cards Been Dealed");
     }
+    */
 }

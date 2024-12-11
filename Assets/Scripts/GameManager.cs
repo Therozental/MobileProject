@@ -9,14 +9,18 @@ public class GameManager : MonoBehaviour
     public Round round;
     public Player Player;
     public CPU Cpu;
-    public Deck deck;
+   //  public Deck deck;
+    public PlayerDeck playerDeck;
+    public CPUDeck cpuDeck;
     
 
     // Start is called before the first frame update
     void Start()
     {
-        deck.Shuffle();
-        deck.DealCards();
+        playerDeck.Shuffle();
+        cpuDeck.Shuffle();
+        // deck.Shuffle();
+       // deck.DealCards();
        // Gameloop();
     }
 
@@ -47,12 +51,15 @@ public class GameManager : MonoBehaviour
         //  //   round.StartRound();
         // }
 
-        GameOver();
+        OutOfCards();
     }
 
-    void GameOver()
+    void OutOfCards()
     {
-        
+        if (playerDeck.deck.Count <= 0)
+        {
+            //
+        }
     }
 
 /*
