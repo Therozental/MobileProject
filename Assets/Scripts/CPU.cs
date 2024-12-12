@@ -2,8 +2,9 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-    public class CPU : MonoBehaviour
-    {
-        public CPUDeck Deck;
-        [SerializeField] private Transform playerPile;
-    }
+public class CPU : MonoBehaviour
+{
+    public Deck cpuDeck;
+
+    [SerializeField] private Transform cpuPile;
+}

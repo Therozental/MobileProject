@@ -4,24 +4,17 @@ using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
-using System.Threading.Tasks;
-using Task = UnityEditor.VersionControl.Task;
 
 public class Round : MonoBehaviour
 {
+    public Deck deck;
     public Player Player;
-
     public CPU Cpu;
-
-    // public Deck deck;
-    public PlayerDeck playerDeck;
-    public CPUDeck cpuDeck;
     private Card _playerCard;
     private Card _cpuCard;
     private bool _isInTie = false;
     [SerializeField] private GameObject PlayerCard;
     [SerializeField] private GameObject CpuCard;
-
 
     public Round(Player _player, CPU _cpu)
     {
@@ -39,8 +32,8 @@ public class Round : MonoBehaviour
 
     private void PlayerDrawCard()
     {
-        _playerCard = playerDeck.deck[0];
-        playerDeck.deck.RemoveAt(0);
+        _playerCard = Player.PlayerDeck.deck[0];
+        Player.PlayerDeck.deck.RemoveAt(0);
         Debug.Log($"Player card {_playerCard}");
         _playerCard.transform.SetParent(PlayerCard.transform);
         _playerCard.transform.position = PlayerCard.transform.position;
@@ -50,8 +43,8 @@ public class Round : MonoBehaviour
 
     private void CPUDrawCard()
     {
-        _cpuCard = cpuDeck.deck[0];
-        cpuDeck.deck.RemoveAt(0);
+        _cpuCard = Cpu.cpuDeck.deck[0];
+        Cpu.cpuDeck.deck.RemoveAt(0);
         Debug.Log($"CPU card {_cpuCard}");
         _cpuCard.transform.SetParent(CpuCard.transform);
         _cpuCard.transform.position = CpuCard.transform.position;
@@ -109,13 +102,11 @@ public class Round : MonoBehaviour
 
     private void Remove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
     {
-        playerDeck.deck.RemoveRange(0, 3);
-        cpuDeck.deck.RemoveRange(0, 3);
+        Player.PlayerDeck.deck.RemoveRange(0, 3);
+        Cpu.cpuDeck.deck.RemoveRange(0, 3);
     }
 
-    
-    
-    
+
     // for (int i = 0; i < 3; i++) //remove the 3 first cards in the deck
     // {
     //     deck.playerDeck.RemoveAt(0);

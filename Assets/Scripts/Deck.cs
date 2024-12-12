@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public abstract class Deck
+public class Deck : MonoBehaviour
 {
-    // public List<Card> playerDeck = new List<Card>();
+    //  public List<Card> playerDeck = new List<Card>();
     // public List<Card> cpuDeck = new List<Card>();
-    
-    public List<Card> deck = new List<Card>();
 
+    public List<Card> deck = new List<Card>();
+    public List<Card> DiscardPile = new List<Card>();
 
     // Shuffle method to randomize the order of cards in the deck.
     public void Shuffle()
@@ -21,6 +21,12 @@ public abstract class Deck
         }
 
         Debug.Log("Cards Shuffled");
+    }
+
+    public void DiscardCard()
+    {
+        DiscardPile.Add(null);
+        //get the card from the player/cpu
     }
 /*
     public void DealCards()
