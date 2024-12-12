@@ -506,6 +506,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6517ce63e0bad475cb25cd65ca6418c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deck: {fileID: 0}
   Player: {fileID: 737914504}
   Cpu: {fileID: 723065012}
   PlayerCard: {fileID: 882363449}
