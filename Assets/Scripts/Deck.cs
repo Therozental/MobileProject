@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class Deck : MonoBehaviour
 {
+    //  public List<Card> playerDeck = new List<Card>();
+    // public List<Card> cpuDeck = new List<Card>();
+
     public List<Card> deck = new List<Card>();
-    public List<Card> playerDeck = new List<Card>();
-    public List<Card> cpuDeck = new List<Card>();
-    [SerializeField] private Transform playerPile;
-    [SerializeField] private Transform cpuPile;
+    public List<Card> DiscardPile = new List<Card>();
 
     // Shuffle method to randomize the order of cards in the deck.
     public void Shuffle()
@@ -19,26 +19,21 @@ public class Deck : MonoBehaviour
             int randomIndex = Random.Range(0, deck.Count); // Get a random index.
             (deck[i], deck[randomIndex]) = (deck[randomIndex], deck[i]); //Swap between the random index and the i
         }
+
         Debug.Log("Cards Shuffled");
     }
-
-    public void DealCards()
+    
+    private void Remove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
     {
-        for (int i = 0; i < deck.Count; i++)
-        {
-            if (i % 2 == 0) // Even index: assign to player
-            {
-                playerDeck.Add(deck[i]);
-                deck[i].transform.SetParent(playerPile);
-                deck[i].transform.position = playerPile.position;
-            }
-            else if (i % 2 != 0) // Odd index: assign to CPU
-            {
-                cpuDeck.Add(deck[i]);
-                deck[i].transform.SetParent(cpuPile);
-                deck[i].transform.position = cpuPile.position;
-            }
-        }
-        Debug.Log("cards Been Dealed");
+        deck.RemoveRange(0, 3);
     }
+    
+    /*
+    public void DiscardCard(Card card)
+    {
+        DiscardPile.Add(card);
+        //get the card from the player/cpu
+    }
+    */
 }
+
