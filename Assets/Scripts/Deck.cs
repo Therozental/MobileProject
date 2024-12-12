@@ -22,31 +22,18 @@ public class Deck : MonoBehaviour
 
         Debug.Log("Cards Shuffled");
     }
-
-    public void DiscardCard()
+    
+    private void Remove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
     {
-        DiscardPile.Add(null);
-        //get the card from the player/cpu
+        deck.RemoveRange(0, 3);
     }
-/*
-    public void DealCards()
+    
+    /*
+    public void DiscardCard(Card card)
     {
-        for (int i = 0; i < deck.Count; i++)
-        {
-            if (i % 2 == 0) // Even index: assign to player
-            {
-                playerDeck.Add(deck[i]);
-                deck[i].transform.SetParent(playerPile);
-                deck[i].transform.position = playerPile.position;
-            }
-            else if (i % 2 != 0) // Odd index: assign to CPU
-            {
-                cpuDeck.Add(deck[i]);
-                deck[i].transform.SetParent(cpuPile);
-                deck[i].transform.position = cpuPile.position;
-            }
-        }
-        Debug.Log("cards Been Dealed");
+        DiscardPile.Add(card);
+        //get the card from the player/cpu
     }
     */
 }
+

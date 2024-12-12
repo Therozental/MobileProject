@@ -7,7 +7,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Round round;
     public Player Player;
     public CPU Cpu;
 
@@ -41,39 +40,4 @@ public class GameManager : MonoBehaviour
         instance = this;
     }
 
-    void Gameloop()
-    {
-        // //while ((deck.cpuDeck.Count != 0) || (deck.playerDeck.Count != 0)) // until there are cards in the
-        // {
-        //  //   round.StartRound();
-        // }
-
-        OutOfCards();
-    }
-
-    void OutOfCards()
-    {
-        if (Player.PlayerDeck.deck.Count <= 0)
-        {
-            //
-        }
-    }
-
-/*
-    void MatchResults()
-    {
-        if (player.Points > cpu.Points)
-        {
-            Debug.Log("player win!");
-        }
-        else if (player.Points < cpu.Points)
-        {
-            Debug.Log("player lost!");
-        }
-        else
-        {
-            Debug.Log("its a tie!");
-        }
-    }
-    */
 }
