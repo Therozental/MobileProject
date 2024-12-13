@@ -327,12 +327,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerDeck: {fileID: 1271199045}
   cpuDeck: {fileID: 1969569273}
-  DiscardPile: {fileID: 1757962365}
   Player: {fileID: 737914504}
-  Cpu: {fileID: 723065012}
   PlayerCard: {fileID: 882363449}
   CpuCard: {fileID: 1635610667}
-  CooldownTimer: 0
+  restoreTime: 10000
 --- !u!1 &502179668
 GameObject:
   m_ObjectHideFlags: 0
@@ -1074,7 +1072,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1887714809}
+    m_TransformParent: {fileID: 737914503}
     m_Modifications:
     - target: {fileID: 3964172420522024929, guid: 42b629bc47a2d4702b410cac22b23948, type: 3}
       propertyPath: m_Pivot.x
@@ -1470,8 +1468,6 @@ RectTransform:
   - {fileID: 723065011}
   - {fileID: 1239948183}
   - {fileID: 7522060475396392424}
-  - {fileID: 1271199046}
-  - {fileID: 1969569274}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -1550,7 +1546,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 1887714809}
+    m_TransformParent: {fileID: 723065011}
     m_Modifications:
     - target: {fileID: 3964172420522024929, guid: bbce44428451d49eb824aef5a898d6f3, type: 3}
       propertyPath: m_Pivot.x
@@ -1934,7 +1930,10 @@ PrefabInstance:
       objectReference: {fileID: 21300000, guid: cb16558d76b468647838e8041aecbee5, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6025827312523487179, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1969569274}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
 --- !u!1001 &1334892571630361801
@@ -2076,7 +2075,10 @@ PrefabInstance:
     m_RemovedComponents:
     - {fileID: 244883605576343757, guid: 437bf349aa3724a629a480317187300e, type: 3}
     m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 6174140359109168665, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1271199046}
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 6413084990607210419, guid: 437bf349aa3724a629a480317187300e, type: 3}
       insertIndex: -1

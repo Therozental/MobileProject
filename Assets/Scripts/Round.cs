@@ -4,21 +4,25 @@ using Unity.VisualScripting;
 using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading;
+using Task = System.Threading.Tasks.Task;
 
 public class Round : MonoBehaviour
 {
     public Deck playerDeck;
     public Deck cpuDeck;
+
     public Player Player;
+
     // public CPU Cpu;
     private Card _playerCard;
     private Card _cpuCard;
     private bool _isInTie = false;
+    private bool isReturningCards;
     [SerializeField] private GameObject PlayerCard;
     [SerializeField] private GameObject CpuCard;
-    [SerializeField] private Cooldown CardCooldown;
-    [SerializeField] private float CooldownTimer;
-    public Timer Timer;
+    [SerializeField] private int restoreTime;
+
 
     public void InitRound()
     {
@@ -121,15 +125,50 @@ public class Round : MonoBehaviour
         //retun
     }
 
-    public void RestoreToPile()
+    public async void RestoreToPile()
     {
-        //  playerDeck.DiscardPile.RemoveAt(0);
+        await Task.Delay(restoreTime);
     }
+
 
     public void CleanCards()
     {
         playerDeck.DiscardPile.Add(_playerCard); // add the card to the discard pile
         cpuDeck.deck.Insert(cpuDeck.deck.Count, _cpuCard); // add it to the end of the cpu deck so it can be repeated
+
+        // Start the card return sequence if it's not already running
+        if (!isReturningCards)
+        {
+            StartReturningCards();
+        }
+    }
+
+    private async void StartReturningCards()
+    {
+        isReturningCards = true;
+
+        while (playerDeck.DiscardPile.Count > 0) // Keep running until the discard pile is empty
+        {
+            await Task.Delay(restoreTime); // Wait 
+
+            if (playerDeck.DiscardPile.Count > 0) // Check if the discard pile still has cards
+            {
+                ReturnRandomCardToDeck();
+            }
+        }
+
+        isReturningCards = false; // Reset the flag when the sequence ends
+    }
+
+    private void ReturnRandomCardToDeck()
+    {
+        int randomIndex = Random.Range(0, playerDeck.DiscardPile.Count); // Get a random card index
+        Card card = playerDeck.DiscardPile[randomIndex]; // Get the card at the random index
+
+        playerDeck.DiscardPile.RemoveAt(randomIndex); // Remove it from the discard pile
+        playerDeck.deck.Add(card); // Add it back to the player's deck
+
+        Debug.Log($"Card {card.name} returned to the player's deck.");
     }
 
     private void Remove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
