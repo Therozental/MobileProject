@@ -109,6 +109,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7372735291054852600, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
+      propertyPath: Suit
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7372735291054852600, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: Value
       value: 4
       objectReference: {fileID: 0}

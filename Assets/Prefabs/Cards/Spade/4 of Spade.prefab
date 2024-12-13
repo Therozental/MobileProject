@@ -11,7 +11,7 @@ PrefabInstance:
     - target: {fileID: 5733751795209444330, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 2140210962, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+      objectReference: {fileID: 786609040, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
     - target: {fileID: 5733751795209444330, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_PreserveAspect
       value: 1
@@ -42,7 +42,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6216214522497253366, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 100
+      value: 62.5
       objectReference: {fileID: 0}
     - target: {fileID: 6216214522497253366, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_SizeDelta.y
@@ -110,7 +110,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7372735291054852600, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: Suit
-      value: Spade
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7372735291054852600, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: Value
