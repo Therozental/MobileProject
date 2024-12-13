@@ -8,7 +8,6 @@ public class Player : MonoBehaviour
     public int Exp = 0;
     public int MaxExp = 100;
     public int Level = 0;
-    public Deck PlayerDeck;
 
     [SerializeField] private Transform playerPile;
 

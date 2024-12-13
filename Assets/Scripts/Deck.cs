@@ -1,13 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Deck : MonoBehaviour
 {
-    //  public List<Card> playerDeck = new List<Card>();
-    // public List<Card> cpuDeck = new List<Card>();
-
     public List<Card> deck = new List<Card>();
     public List<Card> DiscardPile = new List<Card>();
 
@@ -22,12 +20,21 @@ public class Deck : MonoBehaviour
 
         Debug.Log("Cards Shuffled");
     }
-    
-    private void Remove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
+
+    public Card DrawTopCard()
     {
+        Card topCard = deck[0];
+        deck.RemoveAt(0); // remove card from the player pile
+        return topCard;
+    }
+/*
+    public void Remove3Cards() // take out 3 cards from each deck
+    {
+        //have some cool animation
         deck.RemoveRange(0, 3);
     }
-    
+    */
+
     /*
     public void DiscardCard(Card card)
     {
@@ -36,4 +43,3 @@ public class Deck : MonoBehaviour
     }
     */
 }
-

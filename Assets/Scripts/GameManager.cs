@@ -9,15 +9,12 @@ public class GameManager : MonoBehaviour
     public static GameManager instance;
     public Player Player;
     public CPU Cpu;
+    public Round Round;
 
     // Start is called before the first frame update
     void Start()
     {
-        Player.PlayerDeck.Shuffle();
-        Cpu.cpuDeck.Shuffle();
-        // deck.Shuffle();
-        // deck.DealCards();
-        // Gameloop();
+        Round.InitRound();
     }
 
     public void Awake()
@@ -38,6 +35,7 @@ public class GameManager : MonoBehaviour
     private void Initialize()
     {
         instance = this;
+        
     }
 
 }
