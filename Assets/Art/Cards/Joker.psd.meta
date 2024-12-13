@@ -106,17 +106,30 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Joker_red
+      name: Joker_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 67
+        y: 964
+        width: 291
+        height: 462
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +137,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 6a4bf755ee8148b44b153be8231da79c
-      internalID: 1569314710
+      spriteID: 2fd8d2d8e8e2b4ad28e48c6df256f00b
+      internalID: -158170927
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Joker_black
+      name: Joker_1
       rect:
         serializedVersion: 2
-        x: 426
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 495
+        y: 964
+        width: 290
+        height: 462
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +158,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 96d8f30b488adbd49ba727261f815f59
-      internalID: 62784805
+      spriteID: 78513b26fd1634f11bf02ca37e7f43eb
+      internalID: 1304077350
       vertices: []
       indices: 
       edges: []
@@ -162,10 +175,8 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      Joker_2: -6603483
-      Joker_3: 2135951909
-      Joker_black: 62784805
-      Joker_red: 1569314710
+      Joker_0: -158170927
+      Joker_1: 1304077350
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

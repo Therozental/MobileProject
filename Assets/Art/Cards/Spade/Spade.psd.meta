@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -113,12 +126,12 @@ TextureImporter:
       name: Spade_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 497
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +147,12 @@ TextureImporter:
       name: Spade_2
       rect:
         serializedVersion: 2
-        x: 426
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 924
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +168,12 @@ TextureImporter:
       name: Spade_3
       rect:
         serializedVersion: 2
-        x: 852
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 1350
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +189,12 @@ TextureImporter:
       name: Spade_4
       rect:
         serializedVersion: 2
-        x: 1278
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 1777
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +210,12 @@ TextureImporter:
       name: Spade_5
       rect:
         serializedVersion: 2
-        x: 1704
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 2204
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +231,12 @@ TextureImporter:
       name: Spade_6
       rect:
         serializedVersion: 2
-        x: 2130
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 70
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +252,12 @@ TextureImporter:
       name: Spade_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 497
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +273,12 @@ TextureImporter:
       name: Spade_8
       rect:
         serializedVersion: 2
-        x: 426
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 924
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,12 +294,12 @@ TextureImporter:
       name: Spade_9
       rect:
         serializedVersion: 2
-        x: 852
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 1350
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,12 +315,12 @@ TextureImporter:
       name: Spade_10
       rect:
         serializedVersion: 2
-        x: 1278
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 1777
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,12 +336,12 @@ TextureImporter:
       name: Spade_11
       rect:
         serializedVersion: 2
-        x: 1704
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 2204
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,12 +357,12 @@ TextureImporter:
       name: Spade_12
       rect:
         serializedVersion: 2
-        x: 2130
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 70
+        y: 7
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,22 +375,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Spade_13
+      name: Spade_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 426.66666
-        height: 480
+        x: 70
+        y: 975
+        width: 286
+        height: 458
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e67b7a9475b81a540931efab9d3af8b5
-      internalID: 1438700384
+      spriteID: 56b6709b629934b0c825a58826e14cac
+      internalID: -639452151
       vertices: []
       indices: 
       edges: []
@@ -393,15 +406,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Spade_0: -639452151
       Spade_1: -1095090525
       Spade_10: -115451461
       Spade_11: -51028739
       Spade_12: -649195884
-      Spade_13: 1438700384
-      Spade_14: -1691834170
-      Spade_15: 373828615
-      Spade_16: 1143704101
-      Spade_17: -1940821698
       Spade_2: 1867037631
       Spade_3: 786609040
       Spade_4: 2140210962
