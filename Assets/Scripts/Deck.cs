@@ -24,22 +24,7 @@ public class Deck : MonoBehaviour
     public Card DrawTopCard()
     {
         Card topCard = deck[0];
-        deck.RemoveAt(0); // remove card from the player pile
+        deck.RemoveAt(0); // remove the top card from the deck pile
         return topCard;
     }
-/*
-    public void Remove3Cards() // take out 3 cards from each deck
-    {
-        //have some cool animation
-        deck.RemoveRange(0, 3);
-    }
-    */
-
-    /*
-    public void DiscardCard(Card card)
-    {
-        DiscardPile.Add(card);
-        //get the card from the player/cpu
-    }
-    */
 }

@@ -7,8 +7,6 @@ using UnityEngine;
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-    public Player Player;
-    public CPU Cpu;
     public Round Round;
 
     // Start is called before the first frame update
@@ -30,13 +28,10 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        
     }
 
     private void Initialize()
     {
         instance = this;
-        
     }
-
 }
