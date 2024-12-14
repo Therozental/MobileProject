@@ -11,14 +11,11 @@ public class Round : MonoBehaviour
 {
     public Deck playerDeck;
     public Deck cpuDeck;
-
     public Player Player;
-
-    // public CPU Cpu;
     private Card _playerCard;
     private Card _cpuCard;
     private bool _isInTie = false;
-    private bool isReturningCards;
+    private bool _isReturningCards;
     [SerializeField] private GameObject PlayerCard;
     [SerializeField] private GameObject CpuCard;
     [SerializeField] private int restoreTime;
@@ -40,8 +37,9 @@ public class Round : MonoBehaviour
     }
 
 
-    private void PlayerDrawCard()
+    private async Task PlayerDrawCard()
     {
+        await Task.Delay(100);
         _playerCard = playerDeck.DrawTopCard(); // remove the top card from the pile
         Debug.Log($"Player card {_playerCard}");
 
@@ -49,8 +47,9 @@ public class Round : MonoBehaviour
         _playerCard.transform.position = PlayerCard.transform.position;
     }
 
-    private void CPUDrawCard()
+    private async Task CPUDrawCard()
     {
+        await Task.Delay(500);
         _cpuCard = cpuDeck.DrawTopCard(); // remove the top card from the pile
         Debug.Log($"CPU card {_cpuCard}");
 
@@ -58,8 +57,9 @@ public class Round : MonoBehaviour
         _cpuCard.transform.position = CpuCard.transform.position;
     }
 
-    private void CompareCards()
+    private async Task CompareCards()
     {
+        
         int differenceValue = 0;
 
         if (_playerCard.Value > _cpuCard.Value) // if player wins
@@ -99,7 +99,7 @@ public class Round : MonoBehaviour
             CardTie();
         }
 
-        CleanCards();
+        CleanCards(); // remove the round cards to discard pile/return the last on deck list
         _isInTie = false;
     }
 
@@ -111,41 +111,46 @@ public class Round : MonoBehaviour
         StartRound();
     }
 
-    public void CheckPileCount() // check the number of cards the player has, send a signal if player's out of cards
+    private void Remove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
+    {
+        for (int i = 0; i < 3; i++)
+        {
+            Card removedPlayerCard = playerDeck.DrawTopCard(); //remove the first card from the player pile
+            playerDeck.DiscardPile.Add(removedPlayerCard); // add the card to the player discard pile
+            Debug.Log("Player removed 3 cards");
+
+            Card removedCpuCard = cpuDeck.DrawTopCard(); // remove the first card from the cpu pile
+            cpuDeck.deck.Insert(cpuDeck.deck.Count, removedCpuCard); // put the card last in the cpu deck
+            Debug.Log("CPU removed 3 cards");
+        }
+        //have some cool animation each card removal
+    }
+
+    private void CheckPileCount() // check the number of cards the player has, send a signal if player's out of cards
     {
         if (playerDeck.deck.Count <= 0)
         {
             Debug.Log("player deck is empty");
             // do a pop up that your deck is empty
-            //start Cardcooldown?
-
-            // if deck is full stop cooldown
-            // if deck is not full - start cooldown
         }
-        //retun
     }
 
-    public async void RestoreToPile()
-    {
-        await Task.Delay(restoreTime);
-    }
-
-
-    public void CleanCards()
+    private void CleanCards()
     {
         playerDeck.DiscardPile.Add(_playerCard); // add the card to the discard pile
         cpuDeck.deck.Insert(cpuDeck.deck.Count, _cpuCard); // add it to the end of the cpu deck so it can be repeated
 
         // Start the card return sequence if it's not already running
-        if (!isReturningCards)
+        if (!_isReturningCards)
         {
             StartReturningCards();
         }
     }
 
+
     private async void StartReturningCards()
     {
-        isReturningCards = true;
+        _isReturningCards = true;
 
         while (playerDeck.DiscardPile.Count > 0) // Keep running until the discard pile is empty
         {
@@ -157,7 +162,7 @@ public class Round : MonoBehaviour
             }
         }
 
-        isReturningCards = false; // Reset the flag when the sequence ends
+        _isReturningCards = false; // Reset the flag when the sequence ends
     }
 
     private void ReturnRandomCardToDeck()
@@ -170,50 +175,4 @@ public class Round : MonoBehaviour
 
         Debug.Log($"Card {card.name} returned to the player's deck.");
     }
-
-    private void Remove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
-    {
-        // playerDeck.deck.RemoveRange(0, 3);
-        for (int i = 0; i < 3; i++)
-        {
-            Card removedPlayerCard = playerDeck.DrawTopCard(); //remove the first card from the player pile
-            playerDeck.DiscardPile.Add(removedPlayerCard); // add the card to the player discard pile
-
-            Card removedCpuCard = cpuDeck.DrawTopCard(); // remove the first card from the cpu pile
-            cpuDeck.deck.Insert(cpuDeck.deck.Count, removedCpuCard); // put the card last in the cpu deck
-        }
-    }
-    // every x time, return a card rom the discard pile into the player deck.
-    // put the card in a random index.
-    // if 
 }
-
-
-/*
-
-
-
-
-   private void TieRound()
-   {
-       PlayerDrawCard();
-       CPUDrawCard();
-       if (playerCard.Value > cpuCard.Value) // if player wins
-       {
-           int differenceValue = playerCard.Value - cpuCard.Value; // get the differance between the values
-           player.Points += (differenceValue * 3); // add it to the player overall points
-
-           Debug.Log($"player points increased by {player.Points}, its value is {differenceValue}");
-       }
-       else if (playerCard.Value < cpuCard.Value) // if cpu wins
-       {
-           int differenceValue = cpuCard.Value - playerCard.Value;
-           player.Points -= (differenceValue * 3);
-           Debug.Log("opponent points");
-       }
-       else if (playerCard.Value == cpuCard.Value)
-       {
-           CardTie();
-       }
-   }
-   */
