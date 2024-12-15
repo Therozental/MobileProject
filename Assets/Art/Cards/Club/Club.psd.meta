@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -113,10 +126,10 @@ TextureImporter:
       name: Club_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 497
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -134,10 +147,10 @@ TextureImporter:
       name: Club_2
       rect:
         serializedVersion: 2
-        x: 426
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 924
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -155,10 +168,10 @@ TextureImporter:
       name: Club_3
       rect:
         serializedVersion: 2
-        x: 852
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 1350
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -176,10 +189,10 @@ TextureImporter:
       name: Club_4
       rect:
         serializedVersion: 2
-        x: 1278
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 1777
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,10 +210,10 @@ TextureImporter:
       name: Club_5
       rect:
         serializedVersion: 2
-        x: 1704
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 2204
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -218,10 +231,10 @@ TextureImporter:
       name: Club_6
       rect:
         serializedVersion: 2
-        x: 2130
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 70
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -239,10 +252,10 @@ TextureImporter:
       name: Club_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 497
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -260,10 +273,10 @@ TextureImporter:
       name: Club_8
       rect:
         serializedVersion: 2
-        x: 426
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 924
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -281,10 +294,10 @@ TextureImporter:
       name: Club_9
       rect:
         serializedVersion: 2
-        x: 852
-        y: 479
-        width: 427
-        height: 480
+        x: 1350
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -302,10 +315,10 @@ TextureImporter:
       name: Club_10
       rect:
         serializedVersion: 2
-        x: 1278
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 1777
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -323,10 +336,10 @@ TextureImporter:
       name: Club_11
       rect:
         serializedVersion: 2
-        x: 1704
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 2204
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +357,10 @@ TextureImporter:
       name: Club_12
       rect:
         serializedVersion: 2
-        x: 2130
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 70
+        y: 7
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -362,13 +375,13 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Club_13
+      name: Club_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 426.66666
-        height: 480
+        x: 70
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -376,8 +389,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9e92926aa245134fa1dc9b2eb9c8d12
-      internalID: -951525626
+      spriteID: 3b4c88a61b2ac42abb5ef27f6ef1cdd6
+      internalID: -2112454601
       vertices: []
       indices: 
       edges: []
@@ -393,15 +406,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Club_0: -2112454601
       Club_1: -1213137931
       Club_10: -1858003281
       Club_11: -467143236
       Club_12: 1028256354
-      Club_13: -951525626
-      Club_14: -1051116434
-      Club_15: 1424444919
-      Club_16: 545847204
-      Club_17: 1608357641
       Club_2: 209420051
       Club_3: -1683404462
       Club_4: 1955317399

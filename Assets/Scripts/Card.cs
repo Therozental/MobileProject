@@ -6,10 +6,19 @@ using TMPro;
 using Unity.VisualScripting;
 using UnityEngine.UI;
 
+public enum Suits
+{
+    Club,
+    Heart,
+    Diamond,
+    Spade,
+    Joker
+}
+
 [Serializable]
 public class Card : MonoBehaviour
 {
     public int Value;
-    public string Suit;
+    public Suits Suit;
     
 }

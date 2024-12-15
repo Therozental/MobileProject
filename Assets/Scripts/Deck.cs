@@ -1,15 +1,13 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class Deck : MonoBehaviour
 {
     public List<Card> deck = new List<Card>();
-    public List<Card> playerDeck = new List<Card>();
-    public List<Card> cpuDeck = new List<Card>();
-    [SerializeField] private Transform playerPile;
-    [SerializeField] private Transform cpuPile;
+    public List<Card> DiscardPile = new List<Card>();
 
     // Shuffle method to randomize the order of cards in the deck.
     public void Shuffle()
@@ -19,26 +17,14 @@ public class Deck : MonoBehaviour
             int randomIndex = Random.Range(0, deck.Count); // Get a random index.
             (deck[i], deck[randomIndex]) = (deck[randomIndex], deck[i]); //Swap between the random index and the i
         }
+
         Debug.Log("Cards Shuffled");
     }
 
-    public void DealCards()
+    public Card DrawTopCard()
     {
-        for (int i = 0; i < deck.Count; i++)
-        {
-            if (i % 2 == 0) // Even index: assign to player
-            {
-                playerDeck.Add(deck[i]);
-                deck[i].transform.SetParent(playerPile);
-                deck[i].transform.position = playerPile.position;
-            }
-            else if (i % 2 != 0) // Odd index: assign to CPU
-            {
-                cpuDeck.Add(deck[i]);
-                deck[i].transform.SetParent(cpuPile);
-                deck[i].transform.position = cpuPile.position;
-            }
-        }
-        Debug.Log("cards Been Dealed");
+        Card topCard = deck[0];
+        deck.RemoveAt(0); // remove the top card from the deck pile
+        return topCard;
     }
 }

@@ -17,7 +17,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!224 &6216214522497253366
 RectTransform:
@@ -36,7 +36,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 187, y: 269}
+  m_SizeDelta: {x: 62.5, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1900355319575501961
 CanvasRenderer:
@@ -66,9 +66,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 06e4454d1b0074aa4b6aa86f1b2c6bb8, type: 3}
+  m_Sprite: {fileID: -1213137931, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
   m_Type: 0
-  m_PreserveAspect: 0
+  m_PreserveAspect: 1
   m_FillCenter: 1
   m_FillMethod: 4
   m_FillAmount: 1
@@ -89,4 +89,61 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Value: 2
-  Suit: Hearts
+  Suit: 0
+  CardArt: {fileID: 5733751795209444330}
+  Club:
+  - {fileID: -2112454601, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: -1213137931, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: 209420051, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: -1683404462, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: 1955317399, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: 994383935, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: -1473668559, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: 22543657, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: 824072606, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: 14220304, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: -1858003281, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: -467143236, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  - {fileID: 1028256354, guid: 7c948d5563e4e6d4f87f6e6f27a62862, type: 3}
+  Spade:
+  - {fileID: -639452151, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: -1095090525, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: 1867037631, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: 786609040, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: 2140210962, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: 1444397269, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: -237786735, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: -511145689, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: -728530009, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: 348633601, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: -115451461, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: -51028739, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  - {fileID: -649195884, guid: eb5c7cd67957b57489ab72db714b2bfc, type: 3}
+  Heart:
+  - {fileID: 574243839, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: 661669149, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: 685884923, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: 1869808688, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: 733552288, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: 553055457, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: 193586230, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: -1528549953, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: -1249773322, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: -313146880, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: -37374267, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: 1446902920, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  - {fileID: 40861236, guid: 6feafd2aa4b24ed44937d1fc2a55b3c8, type: 3}
+  Diamond:
+  - {fileID: -1395079393, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: 607957215, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: 442425165, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: -2020911697, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: 822671433, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: -1060593131, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: -1740259641, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: -1765974291, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: 844310834, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: -1489491988, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: -2065945856, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: -1201137714, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}
+  - {fileID: -209827915, guid: 39e7f1b170b56154dae2db3d476478c1, type: 3}

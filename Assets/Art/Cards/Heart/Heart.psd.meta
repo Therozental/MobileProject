@@ -106,6 +106,19 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -113,12 +126,12 @@ TextureImporter:
       name: Heart_1
       rect:
         serializedVersion: 2
-        x: 0
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 497
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -134,12 +147,12 @@ TextureImporter:
       name: Heart_2
       rect:
         serializedVersion: 2
-        x: 426
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 924
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -155,12 +168,12 @@ TextureImporter:
       name: Heart_3
       rect:
         serializedVersion: 2
-        x: 852
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 1350
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -176,12 +189,12 @@ TextureImporter:
       name: Heart_4
       rect:
         serializedVersion: 2
-        x: 1278
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 1777
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -197,12 +210,12 @@ TextureImporter:
       name: Heart_5
       rect:
         serializedVersion: 2
-        x: 1704
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 2204
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -218,12 +231,12 @@ TextureImporter:
       name: Heart_6
       rect:
         serializedVersion: 2
-        x: 2130
-        y: 960
-        width: 426.66666
-        height: 480
+        x: 70
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -239,12 +252,12 @@ TextureImporter:
       name: Heart_7
       rect:
         serializedVersion: 2
-        x: 0
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 497
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -260,12 +273,12 @@ TextureImporter:
       name: Heart_8
       rect:
         serializedVersion: 2
-        x: 426
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 924
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -281,12 +294,12 @@ TextureImporter:
       name: Heart_9
       rect:
         serializedVersion: 2
-        x: 852
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 1350
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -302,12 +315,12 @@ TextureImporter:
       name: Heart_10
       rect:
         serializedVersion: 2
-        x: 1278
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 1777
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -323,12 +336,12 @@ TextureImporter:
       name: Heart_11
       rect:
         serializedVersion: 2
-        x: 1704
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 2204
+        y: 487
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -344,12 +357,12 @@ TextureImporter:
       name: Heart_12
       rect:
         serializedVersion: 2
-        x: 2130
-        y: 480
-        width: 426.66666
-        height: 480
+        x: 70
+        y: 7
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -362,22 +375,22 @@ TextureImporter:
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Heart_13
+      name: Heart_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 427
-        height: 480
+        x: 70
+        y: 967
+        width: 286
+        height: 457
       alignment: 0
-      pivot: {x: 0.5, y: 0.5}
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e6a1fd5968457d942ae30d02758286ef
-      internalID: 1184163365
+      spriteID: 888f26b69f5ac4709a980286b9db89a6
+      internalID: 574243839
       vertices: []
       indices: 
       edges: []
@@ -393,15 +406,11 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
+      Heart_0: 574243839
       Heart_1: 661669149
       Heart_10: -37374267
       Heart_11: 1446902920
       Heart_12: 40861236
-      Heart_13: 1184163365
-      Heart_14: -1997569989
-      Heart_15: 1708196808
-      Heart_16: -601583030
-      Heart_17: -1183202821
       Heart_2: 685884923
       Heart_3: 1869808688
       Heart_4: 733552288
