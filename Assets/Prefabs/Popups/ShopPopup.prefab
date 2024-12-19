@@ -6791,6 +6791,7 @@ GameObject:
   - component: {fileID: 1419744793907441646}
   - component: {fileID: 6619646900386701753}
   - component: {fileID: 6025373648208378683}
+  - component: {fileID: 5590281542331195439}
   m_Layer: 5
   m_Name: ShopPopup
   m_TagString: Untagged
@@ -6916,6 +6917,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328936ee22707984e8ab618acc954b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &5590281542331195439
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2238100264862634093}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96bb32ea32a4c4074bffb07fec58cbeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BuyButton: {fileID: 0}
+  player: {fileID: 0}
+  availablePacks:
+  - {fileID: 11400000, guid: b01464a74dad64f9d87cceabaf835463, type: 2}
+  - {fileID: 11400000, guid: 92e99471ec25e4d888102b72331dbe50, type: 2}
+  - {fileID: 11400000, guid: 2dd0ddfda0fec41a381960c1b60b6297, type: 2}
+  - {fileID: 11400000, guid: 4723ad127c2b34353b901d34c873d691, type: 2}
+  playerCash: 0
+  playerDeck: {fileID: 0}
 --- !u!1 &2318556836554950362
 GameObject:
   m_ObjectHideFlags: 0
