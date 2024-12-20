@@ -6929,13 +6929,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96bb32ea32a4c4074bffb07fec58cbeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  BuyButton: {fileID: 0}
   player: {fileID: 0}
-  availablePacks:
-  - {fileID: 11400000, guid: b01464a74dad64f9d87cceabaf835463, type: 2}
-  - {fileID: 11400000, guid: 92e99471ec25e4d888102b72331dbe50, type: 2}
-  - {fileID: 11400000, guid: 2dd0ddfda0fec41a381960c1b60b6297, type: 2}
-  - {fileID: 11400000, guid: 4723ad127c2b34353b901d34c873d691, type: 2}
   playerCash: 0
   playerDeck: {fileID: 0}
 --- !u!1 &2318556836554950362
