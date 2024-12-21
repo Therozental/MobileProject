@@ -21,7 +21,7 @@ public class Player : MonoBehaviour
 
     public void Update()
     {
-        ValueText.text = progressBar.value.ToString() + "/100";
+        ValueText.text = progressBar.value.ToString() + "/" + progressBar.maxValue.ToString();
     }
 
     public void GetExp()

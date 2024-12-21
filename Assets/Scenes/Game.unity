@@ -759,7 +759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &327330249
 RectTransform:
   m_ObjectHideFlags: 0
@@ -878,7 +878,7 @@ MonoBehaviour:
   playerDeck: {fileID: 1277059408}
   cpuDeck: {fileID: 1804215221}
   Player: {fileID: 737914504}
-  ProgressBar: {fileID: 0}
+  coinCounter: {fileID: 1790451758}
   PlayerCard: {fileID: 882363449}
   CpuCard: {fileID: 1635610667}
   restoreTime: 8000
@@ -2621,6 +2621,7 @@ GameObject:
   - component: {fileID: 1790451755}
   - component: {fileID: 1790451757}
   - component: {fileID: 1790451756}
+  - component: {fileID: 1790451758}
   m_Layer: 5
   m_Name: CoinIcon
   m_TagString: Untagged
@@ -2686,6 +2687,19 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1790451754}
   m_CullTransparentMesh: 1
+--- !u!114 &1790451758
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1790451754}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c9228bad3603f4f0da0fde8354dd0fb7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AmountText: {fileID: 801671761}
 --- !u!114 &1804215221 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3186478531320495926, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
