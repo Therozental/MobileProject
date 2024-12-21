@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d866afd197715417eb511b160bdb2af8, type: 3}
+  m_Name: CardPack 2
+  m_EditorClassIdentifier: 
+  costInPoints: 45
+  costInCash: 5
+  packCards:
+  - {fileID: 5389388366592351567, guid: 72ef078a274a4b94f98a3852bd8c6237, type: 3}
+  - {fileID: 5389388366592351567, guid: 3f7c23407728f9042876086ee7c615a3, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}

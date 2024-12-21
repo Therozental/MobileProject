@@ -16,6 +16,7 @@ public class Round : MonoBehaviour
     private Card _cpuCard;
     private bool _isInTie = false;
     private bool _isReturningCards;
+    public CoinCounter coinCounter;
     [SerializeField] private GameObject PlayerCard;
     [SerializeField] private GameObject CpuCard;
     [SerializeField] private int restoreTime;
@@ -27,7 +28,7 @@ public class Round : MonoBehaviour
         cpuDeck.Shuffle();
     }
 
-    public void StartRound()
+    public async void StartRound()
     {
         Debug.Log("StartRound");
         PlayerDrawCard();
@@ -59,7 +60,6 @@ public class Round : MonoBehaviour
 
     private async Task CompareCards()
     {
-        
         int differenceValue = 0;
 
         if (_playerCard.Value > _cpuCard.Value) // if player wins
@@ -71,12 +71,15 @@ public class Round : MonoBehaviour
             if (_isInTie) // if it's a tie round
             {
                 Player.Points += (differenceValue * 3); // if it's a tie round decrease the points
+                coinCounter.AddPoints(Player.Points);
+                
             }
             else // if not in tie round
             {
                 Player.Points += differenceValue;
+                coinCounter.AddPoints(Player.Points);
             }
-
+            
             Player.GetExp();
 
             Debug.Log($"PLAYER WON! player points increased by {differenceValue}, its value is {Player.Points}");
@@ -86,6 +89,7 @@ public class Round : MonoBehaviour
             if (_isInTie) // if it's a tie round increase the points
             {
                 Player.Points -= (differenceValue * 3);
+                
             }
             else // if not in tie round
             {
@@ -96,7 +100,8 @@ public class Round : MonoBehaviour
         }
         else if (_playerCard.Value == _cpuCard.Value)
         {
-            CardTie();
+            Debug.Log("card tie (will be fixed later)");
+            //   CardTie();
         }
 
         CleanCards(); // remove the round cards to discard pile/return the last on deck list
@@ -126,8 +131,9 @@ public class Round : MonoBehaviour
         //have some cool animation each card removal
     }
 
-    private void CheckPileCount() // check the number of cards the player has, send a signal if player's out of cards
+    private void CheckPileCount()
     {
+        // check the number of cards the player has, send a signal if player's out of cards
         if (playerDeck.deck.Count <= 0)
         {
             Debug.Log("player deck is empty");

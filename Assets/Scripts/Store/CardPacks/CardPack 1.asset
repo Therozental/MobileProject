@@ -10,11 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: d866afd197715417eb511b160bdb2af8, type: 3}
-  m_Name: NewCardPack
+  m_Name: CardPack 1
   m_EditorClassIdentifier: 
-  costInPoints: 5
+  costInPoints: 25
   costInCash: 3
   packCards:
   - {fileID: 5389388366592351567, guid: 72ef078a274a4b94f98a3852bd8c6237, type: 3}
   - {fileID: 5389388366592351567, guid: 3f7c23407728f9042876086ee7c615a3, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
+  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
   - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
