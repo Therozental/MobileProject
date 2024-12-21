@@ -16,6 +16,7 @@ public class Round : MonoBehaviour
     private Card _cpuCard;
     private bool _isInTie = false;
     private bool _isReturningCards;
+    public Slider ProgressBar;
     [SerializeField] private GameObject PlayerCard;
     [SerializeField] private GameObject CpuCard;
     [SerializeField] private int restoreTime;
@@ -75,7 +76,7 @@ public class Round : MonoBehaviour
             {
                 Player.Points += differenceValue;
             }
-
+            
             Player.GetExp();
 
             Debug.Log($"PLAYER WON! player points increased by {differenceValue}, its value is {Player.Points}");
@@ -85,6 +86,7 @@ public class Round : MonoBehaviour
             if (_isInTie) // if it's a tie round increase the points
             {
                 Player.Points -= (differenceValue * 3);
+                
             }
             else // if not in tie round
             {

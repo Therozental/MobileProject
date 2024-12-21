@@ -759,7 +759,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &327330249
 RectTransform:
   m_ObjectHideFlags: 0
@@ -878,6 +878,7 @@ MonoBehaviour:
   playerDeck: {fileID: 1277059408}
   cpuDeck: {fileID: 1804215221}
   Player: {fileID: 737914504}
+  ProgressBar: {fileID: 0}
   PlayerCard: {fileID: 882363449}
   CpuCard: {fileID: 1635610667}
   restoreTime: 8000
@@ -2060,6 +2061,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1444367144}
   - component: {fileID: 1444367145}
+  - component: {fileID: 1444367146}
   m_Layer: 5
   m_Name: ProgressBar
   m_TagString: Untagged
@@ -2129,30 +2131,32 @@ MonoBehaviour:
     m_PressedTrigger: Pressed
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
-  m_Interactable: 1
+  m_Interactable: 0
   m_TargetGraphic: {fileID: 0}
   m_FillRect: {fileID: 103196005}
   m_HandleRect: {fileID: 0}
   m_Direction: 0
   m_MinValue: 0
-  m_MaxValue: 1
-  m_WholeNumbers: 0
-  m_Value: 1
+  m_MaxValue: 100
+  m_WholeNumbers: 1
+  m_Value: 0
   m_OnValueChanged:
     m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
-        m_Mode: 1
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+      m_Calls: []
+--- !u!114 &1444367146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1444367143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681945e5863c448d6a6c8eaa40841320, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ValueText: {fileID: 1600992973}
+  _player: {fileID: 737914504}
 --- !u!1 &1504123102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3834,6 +3838,10 @@ PrefabInstance:
       value: Player
       objectReference: {fileID: 0}
     - target: {fileID: 5172329151673339059, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      propertyPath: ValueText
+      value: 
+      objectReference: {fileID: 1600992973}
+    - target: {fileID: 5172329151673339059, guid: 437bf349aa3724a629a480317187300e, type: 3}
       propertyPath: PlayerDeck
       value: 
       objectReference: {fileID: 0}
@@ -3841,6 +3849,10 @@ PrefabInstance:
       propertyPath: playerPile
       value: 
       objectReference: {fileID: 910387631}
+    - target: {fileID: 5172329151673339059, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      propertyPath: progressBar
+      value: 
+      objectReference: {fileID: 1444367145}
     - target: {fileID: 5249654116441489750, guid: 437bf349aa3724a629a480317187300e, type: 3}
       propertyPath: m_SizeDelta.x
       value: 425
