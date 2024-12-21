@@ -27,7 +27,7 @@ public class Round : MonoBehaviour
         cpuDeck.Shuffle();
     }
 
-    public void StartRound()
+    public async void StartRound()
     {
         Debug.Log("StartRound");
         PlayerDrawCard();
@@ -59,7 +59,6 @@ public class Round : MonoBehaviour
 
     private async Task CompareCards()
     {
-        
         int differenceValue = 0;
 
         if (_playerCard.Value > _cpuCard.Value) // if player wins
@@ -96,7 +95,8 @@ public class Round : MonoBehaviour
         }
         else if (_playerCard.Value == _cpuCard.Value)
         {
-            CardTie();
+            Debug.Log("card tie (will be fixed later)");
+            //   CardTie();
         }
 
         CleanCards(); // remove the round cards to discard pile/return the last on deck list
@@ -126,8 +126,9 @@ public class Round : MonoBehaviour
         //have some cool animation each card removal
     }
 
-    private void CheckPileCount() // check the number of cards the player has, send a signal if player's out of cards
+    private void CheckPileCount()
     {
+        // check the number of cards the player has, send a signal if player's out of cards
         if (playerDeck.deck.Count <= 0)
         {
             Debug.Log("player deck is empty");
