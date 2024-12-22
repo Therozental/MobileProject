@@ -5,10 +5,8 @@ using UnityEngine.UI;
 
 public class PileClick : MonoBehaviour
 {
-    public Round round;
-
     void OnPointerDown()
     {
-        round.StartRound();
+        GameManager.instance.RoundPlay();
     }
 }

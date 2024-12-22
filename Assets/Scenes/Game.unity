@@ -847,7 +847,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45148a73520e84b8fa4520c2cbe11711, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Player: {fileID: 737914504}
   Round: {fileID: 440656978}
+  coinCounter: {fileID: 1790451758}
+  Cpu: {fileID: 1456734601}
+  _isInTie: 0
 --- !u!4 &440656977
 Transform:
   m_ObjectHideFlags: 0
@@ -875,13 +879,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6517ce63e0bad475cb25cd65ca6418c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerDeck: {fileID: 1277059408}
-  cpuDeck: {fileID: 1804215221}
-  Player: {fileID: 737914504}
-  coinCounter: {fileID: 1790451758}
+  player: {fileID: 737914504}
+  cpu: {fileID: 1456734601}
   PlayerCard: {fileID: 882363449}
   CpuCard: {fileID: 1635610667}
-  restoreTime: 8000
 --- !u!1 &443661932
 GameObject:
   m_ObjectHideFlags: 0
@@ -1888,37 +1889,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1323279435}
   m_CullTransparentMesh: 1
---- !u!1 &1323860822
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1323860823}
-  m_Layer: 0
-  m_Name: UIManager
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1323860823
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1323860822}
-  serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.81995606, y: -0.043458607, z: 544.1085}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1381153805
 GameObject:
   m_ObjectHideFlags: 0
@@ -2157,6 +2127,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ValueText: {fileID: 1600992973}
   _player: {fileID: 737914504}
+--- !u!114 &1456734601 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4511109647116898087, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
+  m_PrefabInstance: {fileID: 515678914842479503}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 700ba3f87e3b4feaa659e98f080b41e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1504123102
 GameObject:
   m_ObjectHideFlags: 0
@@ -3170,6 +3151,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4511109647116898087, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
+      propertyPath: Deck
+      value: 
+      objectReference: {fileID: 1804215221}
     - target: {fileID: 5385490989752780935, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
       propertyPath: m_Color.b
       value: 1
@@ -3862,6 +3847,14 @@ PrefabInstance:
     - target: {fileID: 5104383792897080168, guid: 437bf349aa3724a629a480317187300e, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5172329151673339059, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      propertyPath: Deck
+      value: 
+      objectReference: {fileID: 1277059408}
+    - target: {fileID: 5172329151673339059, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      propertyPath: Level
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5172329151673339059, guid: 437bf349aa3724a629a480317187300e, type: 3}
       propertyPath: ValueText
@@ -4862,4 +4855,3 @@ SceneRoots:
   - {fileID: 519420032}
   - {fileID: 1887714809}
   - {fileID: 265960904}
-  - {fileID: 1323860823}

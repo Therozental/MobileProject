@@ -1,21 +1,22 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading.Tasks;
 using UnityEngine.UI;
 using TMPro;
 
 public class Player : MonoBehaviour
 {
+    [Header("Stats")]
     public int Points = 0;
-    public int Exp = 0;
-    public int MaxExpValue = 100;
     public int Level = 0;
     public int Cash = 0;
+    public Deck Deck;
 
-    [Header("ProgressBar")] public Slider progressBar;
+    [Header("Progress Bar Stats")]
+    public Slider progressBar;
     public TextMeshProUGUI ValueText;
-
-
+    
     [SerializeField] private Transform playerPile;
 
 
@@ -24,6 +25,16 @@ public class Player : MonoBehaviour
         ValueText.text = progressBar.value.ToString() + "/" + progressBar.maxValue.ToString();
     }
 
+    private async Task DrawCard(Card _playerCard)
+    {
+        await Task.Delay(100);
+        _playerCard = Deck.DrawTopCard(); // remove the top card from the pile
+        // _playerCard.gameObject.SetActive(true);
+        Debug.Log($"Player card {_playerCard}");
+
+        
+    }
+    
     public void GetExp()
     {
         int expPoints = 10;
