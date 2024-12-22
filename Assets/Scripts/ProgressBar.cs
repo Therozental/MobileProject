@@ -15,8 +15,7 @@ public class ProgressBar : MonoBehaviour
     
     public void Update()
     {
-        ValueText.text = _player.progressBar.value.ToString() + "/100";
-        
+      //  ValueText.text = _player.progressBar.value.ToString() + "/" + _player.progressBar.maxValue.ToString(); 
     }
     
 }

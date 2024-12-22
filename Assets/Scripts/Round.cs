@@ -31,9 +31,10 @@ public class Round : MonoBehaviour
     public async void StartRound()
     {
         Debug.Log("StartRound");
-        PlayerDrawCard();
-        CPUDrawCard();
-        CompareCards();
+       // await PlayerDrawCard();
+       // await CPUDrawCard();
+        await Task.WhenAll(PlayerDrawCard(), CPUDrawCard());
+        await CompareCards();
         CheckPileCount();
     }
 
@@ -42,6 +43,7 @@ public class Round : MonoBehaviour
     {
         await Task.Delay(100);
         _playerCard = playerDeck.DrawTopCard(); // remove the top card from the pile
+        _playerCard.gameObject.SetActive(true);
         Debug.Log($"Player card {_playerCard}");
 
         _playerCard.transform.SetParent(PlayerCard.transform);
@@ -52,6 +54,7 @@ public class Round : MonoBehaviour
     {
         await Task.Delay(500);
         _cpuCard = cpuDeck.DrawTopCard(); // remove the top card from the pile
+        _cpuCard.gameObject.SetActive(true);
         Debug.Log($"CPU card {_cpuCard}");
 
         _cpuCard.transform.SetParent(CpuCard.transform);
@@ -72,14 +75,13 @@ public class Round : MonoBehaviour
             {
                 Player.Points += (differenceValue * 3); // if it's a tie round decrease the points
                 coinCounter.AddPoints(Player.Points);
-                
             }
             else // if not in tie round
             {
                 Player.Points += differenceValue;
                 coinCounter.AddPoints(Player.Points);
             }
-            
+
             Player.GetExp();
 
             Debug.Log($"PLAYER WON! player points increased by {differenceValue}, its value is {Player.Points}");
@@ -89,7 +91,6 @@ public class Round : MonoBehaviour
             if (_isInTie) // if it's a tie round increase the points
             {
                 Player.Points -= (differenceValue * 3);
-                
             }
             else // if not in tie round
             {
@@ -144,7 +145,9 @@ public class Round : MonoBehaviour
     private void CleanCards()
     {
         playerDeck.DiscardPile.Add(_playerCard); // add the card to the discard pile
+        _playerCard.gameObject.SetActive(false);
         cpuDeck.deck.Insert(cpuDeck.deck.Count, _cpuCard); // add it to the end of the cpu deck so it can be repeated
+        _cpuCard.gameObject.SetActive(false);
 
         // Start the card return sequence if it's not already running
         if (!_isReturningCards)
