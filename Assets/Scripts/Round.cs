@@ -31,10 +31,10 @@ public class Round : MonoBehaviour
     public async void StartRound()
     {
         Debug.Log("StartRound");
-       // await PlayerDrawCard();
-       // await CPUDrawCard();
-        await Task.WhenAll(PlayerDrawCard(), CPUDrawCard());
-        await CompareCards();
+      await  PlayerDrawCard();
+      await  CPUDrawCard();
+      //  await Task.WhenAll(PlayerDrawCard(), CPUDrawCard());
+         CompareCards();
         CheckPileCount();
     }
 
@@ -43,7 +43,7 @@ public class Round : MonoBehaviour
     {
         await Task.Delay(100);
         _playerCard = playerDeck.DrawTopCard(); // remove the top card from the pile
-        _playerCard.gameObject.SetActive(true);
+        // _playerCard.gameObject.SetActive(true);
         Debug.Log($"Player card {_playerCard}");
 
         _playerCard.transform.SetParent(PlayerCard.transform);
@@ -54,7 +54,7 @@ public class Round : MonoBehaviour
     {
         await Task.Delay(500);
         _cpuCard = cpuDeck.DrawTopCard(); // remove the top card from the pile
-        _cpuCard.gameObject.SetActive(true);
+       // _cpuCard.gameObject.SetActive(true);
         Debug.Log($"CPU card {_cpuCard}");
 
         _cpuCard.transform.SetParent(CpuCard.transform);
@@ -145,9 +145,9 @@ public class Round : MonoBehaviour
     private void CleanCards()
     {
         playerDeck.DiscardPile.Add(_playerCard); // add the card to the discard pile
-        _playerCard.gameObject.SetActive(false);
+      //  _playerCard.gameObject.SetActive(false);
         cpuDeck.deck.Insert(cpuDeck.deck.Count, _cpuCard); // add it to the end of the cpu deck so it can be repeated
-        _cpuCard.gameObject.SetActive(false);
+      //  _cpuCard.gameObject.SetActive(false);
 
         // Start the card return sequence if it's not already running
         if (!_isReturningCards)
