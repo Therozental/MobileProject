@@ -256,6 +256,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6025827312523487179}
     m_Modifications:
+    - target: {fileID: 1350620233435527610, guid: bbce44428451d49eb824aef5a898d6f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2148625445234271631, guid: bbce44428451d49eb824aef5a898d6f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3011117847991078474, guid: bbce44428451d49eb824aef5a898d6f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3964172420522024929, guid: bbce44428451d49eb824aef5a898d6f3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -336,9 +348,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4892079053810669886, guid: bbce44428451d49eb824aef5a898d6f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4930139702978014615, guid: bbce44428451d49eb824aef5a898d6f3, type: 3}
       propertyPath: m_Name
       value: CpuDeck
+      objectReference: {fileID: 0}
+    - target: {fileID: 7360687908351745806, guid: bbce44428451d49eb824aef5a898d6f3, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

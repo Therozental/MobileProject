@@ -9,8 +9,8 @@ public class Deck : MonoBehaviour
     public List<Card> deck = new List<Card>();
     public List<Card> DiscardPile = new List<Card>();
 
-    // Shuffle method to randomize the order of cards in the deck.
-    public void Shuffle()
+    
+    public void Shuffle() // Shuffle method to randomize the order of cards in the deck.
     {
         for (int i = 0; i < deck.Count; i++)
         {
