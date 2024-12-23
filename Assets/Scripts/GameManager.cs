@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
     public CoinCounter coinCounter;
     public RestoreCard RestoreCard;
     public CPU Cpu;
+    public ProgressBar progressBar;
 
     public bool _isInTie = false;
 
@@ -75,7 +76,7 @@ public class GameManager : MonoBehaviour
                 }
 
                 Debug.Log($"PLAYER WON! player points increased by {differenceValue}, its value is {Player.Points}");
-                Player.GetExp();
+                progressBar.GetExp(differenceValue);
                 break;
             }
             case (Result.Lose):
