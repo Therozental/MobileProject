@@ -14,8 +14,8 @@ public class Round : MonoBehaviour
     [SerializeField] private CPU cpu;
     private Card _playerCard;
     private Card _cpuCard;
-    [SerializeField] private GameObject PlayerCard;
-    [SerializeField] private GameObject CpuCard;
+    [SerializeField] private GameObject PlayerCardPlacement;
+    [SerializeField] private GameObject CpuCardPlacement;
 
     public void InitRound()
     {
@@ -51,18 +51,18 @@ public class Round : MonoBehaviour
     public void PlayerTurn()
     {
         player.Deck.PlayCard(_playerCard);
-        PlaceCard(_playerCard, PlayerCard);
+        PlaceCard(_playerCard, PlayerCardPlacement);
     }
 
     public void CpuTurn()
     {
         cpu.Deck.PlayCard(_cpuCard);
-        PlaceCard(_cpuCard, CpuCard);
+        PlaceCard(_cpuCard, CpuCardPlacement);
     }
 
-    public void PlaceCard(Card card, GameObject pile)
+    public void PlaceCard(Card card, GameObject pilePlacement)
     {
-        card.transform.SetParent(pile.transform);
-        card.transform.position = pile.transform.position;
+        card.transform.SetParent(pilePlacement.transform);
+        card.transform.position = pilePlacement.transform.position;
     }
 }
