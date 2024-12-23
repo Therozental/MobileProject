@@ -4,18 +4,52 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
-using TMPro;
 
 public class ProgressBar : MonoBehaviour
 {
-    // public Player _progressBar;
-   // public int IncreasedValue = 5;
+    [Header("Progress Bar Stats")]
+    public Slider progressBar;
     public TextMeshProUGUI ValueText;
-    public Player _player;
+    public Player Player;
     
     public void Update()
     {
-      //  ValueText.text = _player.progressBar.value.ToString() + "/" + _player.progressBar.maxValue.ToString(); 
+        ValueText.text = progressBar.value.ToString() + "/" + progressBar.maxValue.ToString();
     }
     
+    public void GetExp(int expPoints)
+    {
+        // int expPoints = Random.Range(5, 20);
+        progressBar.value += expPoints;
+        //Exp += expPoints;
+
+        if (progressBar.value >= 100) //(Exp >= 100)
+        {
+            LevelUp();
+        }
+    }
+
+    private void LevelUp()
+    {
+        Player.Level++;
+        IncreaseMaxBarValue();
+        ResetExp();
+    }
+    
+    private int ResetExp()
+    {
+        return (int)(progressBar.value = 0);
+        //  return Exp = 0;
+    }
+
+    private int IncreaseMaxBarValue()
+    {
+        int levelInt = Player.Level * 5; //get the int for the player level and multiply by 5
+        progressBar.maxValue += levelInt;
+        // MaxExpValue += levelInt; // add the number to the exp
+        //progressBar.maxValue = MaxExpValue;
+
+        Debug.Log($"max exp increased to {progressBar.maxValue}");
+        return (int)progressBar.maxValue;
+    }
 }

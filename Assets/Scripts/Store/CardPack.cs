@@ -18,7 +18,7 @@ public class CardPack : MonoBehaviour
             // add the pack cards to the deck
             for (int i = 0; i < ScriptableObject.packCards.Count; i++)
             {
-                store.playerDeck.deck.Add(ScriptableObject.packCards[i]);
+                store.playerDeck.cards.Add(ScriptableObject.packCards[i]);
                 Debug.Log($"{ScriptableObject.packCards[i]} added to you deck");
             }
         }

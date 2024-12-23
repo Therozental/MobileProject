@@ -4,5 +4,7 @@ using UnityEngine;
 
 public class CPU : MonoBehaviour
 {
+    [Header("References")]
+    public Deck Deck;
     [SerializeField] private Transform cpuPile;
 }
