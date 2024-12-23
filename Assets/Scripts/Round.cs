@@ -10,12 +10,17 @@ using Task = System.Threading.Tasks.Task;
 
 public class Round : MonoBehaviour
 {
-    [SerializeField] private Player player;
+    public Card _playerCard;
+    public Card _cpuCard;
+
+    [Header("References")]
+    [SerializeField]  private Player player;
     [SerializeField] private CPU cpu;
-    private Card _playerCard;
-    private Card _cpuCard;
+
+    [Header("Placements")]
     [SerializeField] private GameObject PlayerCardPlacement;
     [SerializeField] private GameObject CpuCardPlacement;
+
 
     public void InitRound()
     {
@@ -23,13 +28,32 @@ public class Round : MonoBehaviour
         cpu.Deck.Shuffle();
     }
 
-    public async void StartRound()
+    public void StartRound()
     {
         Debug.Log("StartRound");
-        PlayerTurn();
-        CpuTurn();
+       PlayerTurn();
+       CpuTurn();
+       //set event endround
     }
 
+    public void PlaceCard(Card currentCard, GameObject cardPilePlacement)
+    {
+        currentCard.transform.SetParent(cardPilePlacement.transform);
+        currentCard.transform.position = cardPilePlacement.transform.position;
+    }
+
+    private void PlayerTurn()
+    {
+        _playerCard = player.Deck.DrawTopCard();
+        PlaceCard(_playerCard, PlayerCardPlacement);
+    }
+
+    private void CpuTurn()
+    {
+        _cpuCard = cpu.Deck.DrawTopCard();
+        PlaceCard(_cpuCard, CpuCardPlacement);
+    }
+    
     public void CompareCards()
     {
         int differenceValue = 0;
@@ -46,23 +70,5 @@ public class Round : MonoBehaviour
         {
             GameManager.instance.RoundResult(Result.Tie, differenceValue);
         }
-    }
-
-    public void PlayerTurn()
-    {
-        player.Deck.PlayCard(_playerCard);
-        PlaceCard(_playerCard, PlayerCardPlacement);
-    }
-
-    public void CpuTurn()
-    {
-        cpu.Deck.PlayCard(_cpuCard);
-        PlaceCard(_cpuCard, CpuCardPlacement);
-    }
-
-    public void PlaceCard(Card card, GameObject pilePlacement)
-    {
-        card.transform.SetParent(pilePlacement.transform);
-        card.transform.position = pilePlacement.transform.position;
     }
 }

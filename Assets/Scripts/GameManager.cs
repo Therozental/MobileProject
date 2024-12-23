@@ -15,13 +15,19 @@ public enum Result
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
+    
+    [Header("References")]
     public Player Player;
-    public Round Round;
-    public CoinCounter coinCounter;
-    public RestoreCard RestoreCard;
     public CPU Cpu;
+    public Round Round;
+    
+    [Header("UI Elements")]
+    public CoinCounter coinCounter;
     public ProgressBar progressBar;
 
+    [Header("Game Elements")]
+    [SerializeField] private int CardRestoreTime;
+    public CardRestoration CardRestoration;
     public bool _isInTie = false;
 
 
@@ -29,6 +35,7 @@ public class GameManager : MonoBehaviour
     {
         Round.InitRound(); //initialize the round
         Debug.Log("round initialized");
+        CardRestoration = new CardRestoration(Player);
     }
 
     public void Awake()
@@ -52,12 +59,13 @@ public class GameManager : MonoBehaviour
     public void RoundPlay()
     {
         Round.StartRound();
+        //event of endround
         Round.CompareCards();
-        //  CleanCards(); // remove the round cards to discard pile/return the last on deck list
+        CleanCards(); // remove the round cards to discard pile/return the last on deck list
         ResetTieParameter();
         CheckPileCount();
     }
-
+    
     public void RoundResult(Result result, int differenceValue)
     {
         switch (result)
@@ -112,18 +120,20 @@ public class GameManager : MonoBehaviour
         }
     }
 
-    private void CleanCards(Card _playerCard, Card _cpuCard)
+    private void CleanCards()
     {
-        Player.Deck.DiscardPile.Add(_playerCard); // add the card to the discard pile
-        //  _playerCard.gameObject.SetActive(false);
-        Cpu.Deck.cards.Insert(Cpu.Deck.cards.Count,
-            _cpuCard); // add it to the end of the cpu deck so it can be repeated
-        //  _cpuCard.gameObject.SetActive(false);
+        // add the card to the discard pile
+        Player.Deck.DiscardPile.Add(Round._playerCard); 
+        Debug.Log($"{Round._playerCard} has card discarded");
+        
+        // add it to the end of the cpu deck so it can be repeated
+        Cpu.Deck.cards.Insert(Cpu.Deck.cards.Count,Round._cpuCard); 
+        Debug.Log($"{Round._cpuCard} has card discarded");
 
         // Start the card return sequence if it's not already running
-        if (!RestoreCard._isReturningCards)
+        if (!CardRestoration._isReturningCards)
         {
-            RestoreCard.StartReturningCards();
+            CardRestoration.StartReturningCards(CardRestoreTime);
         }
     }
 

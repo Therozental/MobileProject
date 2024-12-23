@@ -24,19 +24,23 @@ public class Deck : MonoBehaviour
 
     public Card DrawTopCard()
     {
-        Card topCard = cards[0];
-        cards.RemoveAt(0); // remove the top card from the cards pile
+        // the top card of the deck
+        Card topCard = cards[0]; 
+        
+        // remove the top card from the cards pile
+        cards.RemoveAt(0); 
+        Debug.Log($"card drawn {topCard}");
         return topCard;
-    }
-    
-    public async Task PlayCard(Card card)
-    {
-        await Task.Delay(100);
-        card = DrawTopCard(); // remove the top card from the pile
-        // _playerCard.gameObject.SetActive(true);
-        Debug.Log($"Player card {card}");
         
     }
+    
+    // public Card PlayCard()
+    // {
+    //     // the top card from the deck
+    //     Card currentCard = DrawTopCard();  
+    //     Debug.Log($"Player card {currentCard}");
+    //     return currentCard;
+    // }
 
     public void PlayerRemove3Cards() // if both cards has the same value, take out 3 cards from each deck and try again
         {

@@ -58,7 +58,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6216214522497253366, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6216214522497253366, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_LocalRotation.w
@@ -78,7 +78,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6216214522497253366, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 1.06875
       objectReference: {fileID: 0}
     - target: {fileID: 6216214522497253366, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: m_AnchoredPosition.y
@@ -98,7 +98,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7372735291054852600, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: Suit
-      value: Club
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7372735291054852600, guid: 7a7c4627fd543456d9ec5d7eec63b713, type: 3}
       propertyPath: Value

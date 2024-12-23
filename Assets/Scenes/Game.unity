@@ -698,10 +698,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 737914504}
+  Cpu: {fileID: 1456734601}
   Round: {fileID: 440656978}
   coinCounter: {fileID: 1790451758}
-  Cpu: {fileID: 1456734601}
-  progressBar: {fileID: 0}
+  progressBar: {fileID: 1444367146}
+  CardRestoreTime: 8000
   _isInTie: 0
 --- !u!4 &440656977
 Transform:
@@ -1360,9 +1361,9 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls:
-        - m_Target: {fileID: 440656978}
-          m_TargetAssemblyTypeName: Round, Assembly-CSharp
-          m_MethodName: StartRound
+        - m_Target: {fileID: 440656976}
+          m_TargetAssemblyTypeName: GameManager, Assembly-CSharp
+          m_MethodName: RoundPlay
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
@@ -1886,6 +1887,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 67db9e8f0e2ae9c40bc1e2b64352a6b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1444367146 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
+  m_PrefabInstance: {fileID: 2426389371349242627}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 681945e5863c448d6a6c8eaa40841320, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &1456734601 stripped
