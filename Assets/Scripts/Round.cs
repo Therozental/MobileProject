@@ -61,6 +61,7 @@ public class Round : MonoBehaviour
         if (_playerCard.Value > _cpuCard.Value) // if player wins
         {
             GameManager.instance.RoundResult(Result.Win, differenceValue);
+            
         }
         else if (_playerCard.Value < _cpuCard.Value) // if cpu wins
         {

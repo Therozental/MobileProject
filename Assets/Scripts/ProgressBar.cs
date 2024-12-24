@@ -12,6 +12,7 @@ public class ProgressBar : MonoBehaviour
     public TextMeshProUGUI ValueText;
     public Player Player;
     
+    
     public void Update()
     {
         ValueText.text = progressBar.value.ToString() + "/" + progressBar.maxValue.ToString();
@@ -26,12 +27,14 @@ public class ProgressBar : MonoBehaviour
         if (progressBar.value >= 100) //(Exp >= 100)
         {
             LevelUp();
+            
         }
     }
 
     private void LevelUp()
     {
         Player.Level++;
+       // GameManager.instance.audioManager.PlaySfx(audioManager.warWin);
         IncreaseMaxBarValue();
         ResetExp();
     }
