@@ -27,12 +27,17 @@ public class GameManager : MonoBehaviour
 
     [Header("Game Elements")]
     [SerializeField] private int CardRestoreTime;
+    public AudioManager audioManager;
     public CardRestoration CardRestoration;
     public bool _isInTie = false;
 
+    
+    
 
+   
     void Start()
     {
+        
         Round.InitRound(); //initialize the round
         Debug.Log("round initialized");
         CardRestoration = new CardRestoration(Player);
@@ -49,6 +54,7 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+        audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
     private void Initialize()
@@ -76,11 +82,14 @@ public class GameManager : MonoBehaviour
                 {
                     Player.Points += (differenceValue * 3); // if it's a tie round decrease the points
                     coinCounter.AddPoints(Player.Points);
+                    audioManager.PlaySfx(audioManager.warWin);
                 }
                 else // if not in tie round
                 {
                     Player.Points += differenceValue;
                     coinCounter.AddPoints(Player.Points);
+                  //  audioManager.PlaySfx(audioManager.warWin);
+                    audioManager.PlaySfx(audioManager.winPoints);
                 }
 
                 Debug.Log($"PLAYER WON! player points increased by {differenceValue}, its value is {Player.Points}");
@@ -92,10 +101,12 @@ public class GameManager : MonoBehaviour
                 if (_isInTie) // if it's a tie round increase the points
                 {
                     Player.Points -= (differenceValue * 3);
+                    audioManager.PlaySfx(audioManager.warLose);
                 }
                 else // if not in tie round
                 {
                     Player.Points -= differenceValue;
+                   
                 }
 
                 Debug.Log($"CPU WON! player points decreased by {differenceValue}, its value is {Player.Points}");
@@ -105,6 +116,7 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("card tie (will be fixed later)");
                 //  CardTie();
+                audioManager.PlaySfx(audioManager.playCard);
                 break;
             }
         }
@@ -115,6 +127,7 @@ public class GameManager : MonoBehaviour
         // check the number of cards the player has, send a signal if player's out of cards
         if (Player.Deck.cards.Count <= 0)
         {
+            audioManager.PlaySfx(audioManager.noMoreCards);
             Debug.Log("player deck is empty");
             // do a pop up that your deck is empty
         }
