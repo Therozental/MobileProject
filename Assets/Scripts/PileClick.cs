@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -8,5 +9,10 @@ public class PileClick : MonoBehaviour
     void OnPointerDown()
     {
         GameManager.instance.RoundPlay();
+    }
+
+    private void Update()
+    {
+        
     }
 }
