@@ -17707,17 +17707,6 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 2102341566051616697, guid: e9a20037109534565943e8c83a4328a2, type: 3}
   m_PrefabInstance: {fileID: 312157499166396092}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &4090878023344643892 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4364188649246511496, guid: e9a20037109534565943e8c83a4328a2, type: 3}
-  m_PrefabInstance: {fileID: 312157499166396092}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3fce264adb44e15a1b233a412d559c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &1485451969297501352
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17807,17 +17796,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1419744793907441646}
-    - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 5421461690523766133}
-    - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PurchaseCardPoints
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1419744793907441646}
     - target: {fileID: 5550836369957594954, guid: fcc022b508e1340b593342ac98535034, type: 3}
       propertyPath: m_Name
       value: Button 20
@@ -17925,17 +17906,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1419744793907441646}
-    - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 6383815856680925703}
-    - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PurchaseCardPoints
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1419744793907441646}
     - target: {fileID: 5550836369957594954, guid: fcc022b508e1340b593342ac98535034, type: 3}
       propertyPath: m_Name
       value: Button 10
@@ -18043,17 +18016,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1419744793907441646}
-    - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 775911915442919295}
-    - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PurchaseCardPoints
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1419744793907441646}
     - target: {fileID: 5550836369957594954, guid: fcc022b508e1340b593342ac98535034, type: 3}
       propertyPath: m_Name
       value: Button 5
@@ -18173,17 +18138,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9a20037109534565943e8c83a4328a2, type: 3}
---- !u!114 &775911915442919295 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4364188649246511496, guid: e9a20037109534565943e8c83a4328a2, type: 3}
-  m_PrefabInstance: {fileID: 3914791026825791223}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3fce264adb44e15a1b233a412d559c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &3132575932001091918 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2102341566051616697, guid: e9a20037109534565943e8c83a4328a2, type: 3}
@@ -18278,17 +18232,9 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
-      value: 
-      objectReference: {fileID: 1419744793907441646}
-    - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
-      objectReference: {fileID: 4090878023344643892}
-    - target: {fileID: 2833113316043479371, guid: fcc022b508e1340b593342ac98535034, type: 3}
-      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
-      value: PurchaseCardPoints
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1419744793907441646}
     - target: {fileID: 5550836369957594954, guid: fcc022b508e1340b593342ac98535034, type: 3}
       propertyPath: m_Name
       value: Button 50
@@ -18416,17 +18362,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9a20037109534565943e8c83a4328a2, type: 3}
---- !u!114 &6383815856680925703 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4364188649246511496, guid: e9a20037109534565943e8c83a4328a2, type: 3}
-  m_PrefabInstance: {fileID: 7207844931931057039}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3fce264adb44e15a1b233a412d559c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &8730909862005976118 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2102341566051616697, guid: e9a20037109534565943e8c83a4328a2, type: 3}
@@ -18547,17 +18482,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e9a20037109534565943e8c83a4328a2, type: 3}
---- !u!114 &5421461690523766133 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4364188649246511496, guid: e9a20037109534565943e8c83a4328a2, type: 3}
-  m_PrefabInstance: {fileID: 8623356287099313405}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1c3fce264adb44e15a1b233a412d559c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!224 &7674508006094281540 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2102341566051616697, guid: e9a20037109534565943e8c83a4328a2, type: 3}
