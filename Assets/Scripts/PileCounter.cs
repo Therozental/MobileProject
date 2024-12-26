@@ -13,7 +13,7 @@ public class PileCounter : MonoBehaviour
     }
     void Update()
     {
-    //    ValueText.text = progressBar.value.ToString() + "/" + progressBar.maxValue.ToString();
+    
        // NumberText.text =  + "Cards Left";
     }
 }

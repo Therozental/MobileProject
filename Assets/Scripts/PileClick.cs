@@ -10,9 +10,4 @@ public class PileClick : MonoBehaviour
     {
         GameManager.instance.RoundPlay();
     }
-
-    private void Update()
-    {
-        
-    }
 }

@@ -16,15 +16,7 @@ public class Player : MonoBehaviour
     [SerializeField] private Transform playerPile;
     [SerializeField] private PileCounter pileCounter;
 
-    private async Task DrawCard(Card playerCard)
-    {
-        await Task.Delay(100);
-        playerCard = Deck.DrawTopCard(); // remove the top card from the pile
-        // _playerCard.gameObject.SetActive(true);
-        Debug.Log($"Player card {playerCard}");
-
-
-    }
+ 
 
     private void Update()
     {
@@ -32,3 +24,13 @@ public class Player : MonoBehaviour
        pileCounter.NumberText.text = $"{number} Cards Left";
     }
 }
+
+// private async Task DrawCard(Card playerCard)
+// {
+//     await Task.Delay(100);
+//     playerCard = Deck.DrawTopCard(); // remove the top card from the pile
+//     // _playerCard.gameObject.SetActive(true);
+//     Debug.Log($"Player card {playerCard}");
+//
+//
+// }

@@ -8,7 +8,7 @@ public class CoinCounter : MonoBehaviour
 {
     public TextMeshProUGUI AmountText;
 
-    public void AddPoints(int Points)
+    public void UpdatePoints(int Points)
     {
         AmountText.text = Points.ToString();
     }
