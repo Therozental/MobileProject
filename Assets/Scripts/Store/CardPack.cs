@@ -6,11 +6,13 @@ public class CardPack : MonoBehaviour
 {
     [SerializeField] private CardPackScriptableobject ScriptableObject;
     public Store store;
+    public ParticleSystem buttonParticles;
 
     public void PurchaseCardPoints()
     {
         if (store.player.Points >= ScriptableObject.costInPoints) // if player has enough points
         {
+            buttonParticles.Play();
             // remove the points from the player
             store.player.Points -= ScriptableObject.costInPoints; 
             Debug.Log($"your sum points:{store.player.Points}");
@@ -22,8 +24,11 @@ public class CardPack : MonoBehaviour
                 Debug.Log($"{ScriptableObject.packCards[i]} added to you deck");
             }
         }
-        Debug.Log("not enough point!");
-        return;
+        else if (store.player.Points < ScriptableObject.costInPoints)
+        {
+            Debug.Log("not enough point!");
+        }
+        
     }
     /*
     public void PurchasePointsByCash()

@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using System.Threading.Tasks;
+using Unity.VisualScripting;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
@@ -32,12 +33,8 @@ public class GameManager : MonoBehaviour
     public bool _isInTie = false;
 
     
-    
-
-   
     void Start()
     {
-        
         Round.InitRound(); //initialize the round
         Debug.Log("round initialized");
         CardRestoration = new CardRestoration(Player);
@@ -80,15 +77,18 @@ public class GameManager : MonoBehaviour
             {
                 if (_isInTie) // if it's a tie round
                 {
+                    // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points += (differenceValue * 3); // if it's a tie round decrease the points
-                    coinCounter.AddPoints(Player.Points);
+                    
+                    coinCounter.UpdatePoints(Player.Points);
                     audioManager.PlaySfx(audioManager.warWin);
                 }
                 else // if not in tie round
                 {
+                    // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points += differenceValue;
-                    coinCounter.AddPoints(Player.Points);
-                  //  audioManager.PlaySfx(audioManager.warWin);
+                    
+                    coinCounter.UpdatePoints(Player.Points);
                     audioManager.PlaySfx(audioManager.winPoints);
                 }
 
@@ -100,13 +100,14 @@ public class GameManager : MonoBehaviour
             {
                 if (_isInTie) // if it's a tie round increase the points
                 {
+                    // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points -= (differenceValue * 3);
                     audioManager.PlaySfx(audioManager.warLose);
                 }
                 else // if not in tie round
                 {
+                    // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points -= differenceValue;
-                   
                 }
 
                 Debug.Log($"CPU WON! player points decreased by {differenceValue}, its value is {Player.Points}");
@@ -115,7 +116,7 @@ public class GameManager : MonoBehaviour
             case (Result.Tie):
             {
                 Debug.Log("card tie (will be fixed later)");
-                //  CardTie();
+               // CardTie();
                 audioManager.PlaySfx(audioManager.playCard);
                 break;
             }
@@ -127,9 +128,10 @@ public class GameManager : MonoBehaviour
         // check the number of cards the player has, send a signal if player's out of cards
         if (Player.Deck.cards.Count <= 0)
         {
+            // ***add an pop up event that say your deck is empty***
             audioManager.PlaySfx(audioManager.noMoreCards);
             Debug.Log("player deck is empty");
-            // do a pop up that your deck is empty
+            
         }
     }
 

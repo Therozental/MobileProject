@@ -14,12 +14,23 @@ public class Player : MonoBehaviour
     [Header("References")]
     public Deck Deck;
     [SerializeField] private Transform playerPile;
-    
-    private async Task DrawCard(Card playerCard)
+    [SerializeField] private PileCounter pileCounter;
+
+ 
+
+    private void Update()
     {
-        await Task.Delay(100);
-        playerCard = Deck.DrawTopCard(); // remove the top card from the pile
-        // _playerCard.gameObject.SetActive(true);
-        Debug.Log($"Player card {playerCard}");
+       int number = Deck.cards.Count;
+       pileCounter.NumberText.text = $"{number} Cards Left";
     }
 }
+
+// private async Task DrawCard(Card playerCard)
+// {
+//     await Task.Delay(100);
+//     playerCard = Deck.DrawTopCard(); // remove the top card from the pile
+//     // _playerCard.gameObject.SetActive(true);
+//     Debug.Log($"Player card {playerCard}");
+//
+//
+// }
