@@ -126,10 +126,10 @@ TextureImporter:
       name: Spade_1
       rect:
         serializedVersion: 2
-        x: 497
-        y: 967
-        width: 286
-        height: 457
+        x: 426
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Spade_2
       rect:
         serializedVersion: 2
-        x: 924
-        y: 967
-        width: 286
-        height: 457
+        x: 852
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: Spade_3
       rect:
         serializedVersion: 2
-        x: 1350
-        y: 967
-        width: 286
-        height: 457
+        x: 1278
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: Spade_4
       rect:
         serializedVersion: 2
-        x: 1777
-        y: 967
-        width: 286
-        height: 457
+        x: 1704
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: Spade_5
       rect:
         serializedVersion: 2
-        x: 2204
-        y: 967
-        width: 286
-        height: 457
+        x: 2130
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: Spade_6
       rect:
         serializedVersion: 2
-        x: 70
-        y: 487
-        width: 286
-        height: 457
+        x: 0
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: Spade_7
       rect:
         serializedVersion: 2
-        x: 497
-        y: 487
-        width: 286
-        height: 457
+        x: 426
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: Spade_8
       rect:
         serializedVersion: 2
-        x: 924
-        y: 487
-        width: 286
-        height: 457
+        x: 852
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: Spade_9
       rect:
         serializedVersion: 2
-        x: 1350
-        y: 487
-        width: 286
-        height: 457
+        x: 1278
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: Spade_10
       rect:
         serializedVersion: 2
-        x: 1777
-        y: 487
-        width: 286
-        height: 457
+        x: 1704
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: Spade_11
       rect:
         serializedVersion: 2
-        x: 2204
-        y: 487
-        width: 286
-        height: 457
+        x: 2130
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: Spade_12
       rect:
         serializedVersion: 2
-        x: 70
-        y: 7
-        width: 286
-        height: 457
+        x: 0
+        y: 0
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: Spade_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 975
-        width: 286
-        height: 458
+        x: 0
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -391,6 +391,111 @@ TextureImporter:
       bones: []
       spriteID: 56b6709b629934b0c825a58826e14cac
       internalID: -639452151
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spade_13
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 0
+        width: 426.66666
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 814f87e0e6772914d8bee12bb3524936
+      internalID: 786424332
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spade_14
+      rect:
+        serializedVersion: 2
+        x: 852
+        y: 0
+        width: 426.66666
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8b3ba8e8af5a08246b216f4941b8c42e
+      internalID: 160960520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spade_15
+      rect:
+        serializedVersion: 2
+        x: 1278
+        y: 0
+        width: 426.66666
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ff2f49ca7ae6d24e86157f3859edc8c
+      internalID: 2013071236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spade_16
+      rect:
+        serializedVersion: 2
+        x: 1704
+        y: 0
+        width: 426.66666
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffd81ed7d940b03459b734076483c87d
+      internalID: 1653712225
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Spade_17
+      rect:
+        serializedVersion: 2
+        x: 2130
+        y: 0
+        width: 426.66666
+        height: 480
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b987cb4f2dd1ef748916662d3617733d
+      internalID: 400080030
       vertices: []
       indices: 
       edges: []
@@ -411,6 +516,11 @@ TextureImporter:
       Spade_10: -115451461
       Spade_11: -51028739
       Spade_12: -649195884
+      Spade_13: 786424332
+      Spade_14: 160960520
+      Spade_15: 2013071236
+      Spade_16: 1653712225
+      Spade_17: 400080030
       Spade_2: 1867037631
       Spade_3: 786609040
       Spade_4: 2140210962

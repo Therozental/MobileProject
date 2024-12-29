@@ -126,10 +126,10 @@ TextureImporter:
       name: Heart_1
       rect:
         serializedVersion: 2
-        x: 497
-        y: 967
-        width: 286
-        height: 457
+        x: 426
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,10 +147,10 @@ TextureImporter:
       name: Heart_2
       rect:
         serializedVersion: 2
-        x: 924
-        y: 967
-        width: 286
-        height: 457
+        x: 852
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,10 +168,10 @@ TextureImporter:
       name: Heart_3
       rect:
         serializedVersion: 2
-        x: 1350
-        y: 967
-        width: 286
-        height: 457
+        x: 1278
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,10 +189,10 @@ TextureImporter:
       name: Heart_4
       rect:
         serializedVersion: 2
-        x: 1777
-        y: 967
-        width: 286
-        height: 457
+        x: 1704
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -210,10 +210,10 @@ TextureImporter:
       name: Heart_5
       rect:
         serializedVersion: 2
-        x: 2204
-        y: 967
-        width: 286
-        height: 457
+        x: 2130
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -231,10 +231,10 @@ TextureImporter:
       name: Heart_6
       rect:
         serializedVersion: 2
-        x: 70
-        y: 487
-        width: 286
-        height: 457
+        x: 0
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -252,10 +252,10 @@ TextureImporter:
       name: Heart_7
       rect:
         serializedVersion: 2
-        x: 497
-        y: 487
-        width: 286
-        height: 457
+        x: 426
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -273,10 +273,10 @@ TextureImporter:
       name: Heart_8
       rect:
         serializedVersion: 2
-        x: 924
-        y: 487
-        width: 286
-        height: 457
+        x: 852
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: Heart_9
       rect:
         serializedVersion: 2
-        x: 1350
-        y: 487
-        width: 286
-        height: 457
+        x: 1278
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -315,10 +315,10 @@ TextureImporter:
       name: Heart_10
       rect:
         serializedVersion: 2
-        x: 1777
-        y: 487
-        width: 286
-        height: 457
+        x: 1704
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -336,10 +336,10 @@ TextureImporter:
       name: Heart_11
       rect:
         serializedVersion: 2
-        x: 2204
-        y: 487
-        width: 286
-        height: 457
+        x: 2130
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -357,10 +357,10 @@ TextureImporter:
       name: Heart_12
       rect:
         serializedVersion: 2
-        x: 70
-        y: 7
-        width: 286
-        height: 457
+        x: 0
+        y: 0
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -378,10 +378,10 @@ TextureImporter:
       name: Heart_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 967
-        width: 286
-        height: 457
+        x: 0
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

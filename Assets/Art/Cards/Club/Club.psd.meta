@@ -126,12 +126,12 @@ TextureImporter:
       name: Club_1
       rect:
         serializedVersion: 2
-        x: 497
-        y: 967
-        width: 286
-        height: 457
+        x: 426
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -147,12 +147,12 @@ TextureImporter:
       name: Club_2
       rect:
         serializedVersion: 2
-        x: 924
-        y: 967
-        width: 286
-        height: 457
+        x: 852
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -168,12 +168,12 @@ TextureImporter:
       name: Club_3
       rect:
         serializedVersion: 2
-        x: 1350
-        y: 967
-        width: 286
-        height: 457
+        x: 1278
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -189,12 +189,12 @@ TextureImporter:
       name: Club_4
       rect:
         serializedVersion: 2
-        x: 1777
-        y: 967
-        width: 286
-        height: 457
+        x: 1704
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +210,12 @@ TextureImporter:
       name: Club_5
       rect:
         serializedVersion: 2
-        x: 2204
-        y: 967
-        width: 286
-        height: 457
+        x: 2130
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -231,12 +231,12 @@ TextureImporter:
       name: Club_6
       rect:
         serializedVersion: 2
-        x: 70
-        y: 487
-        width: 286
-        height: 457
+        x: 0
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -252,12 +252,12 @@ TextureImporter:
       name: Club_7
       rect:
         serializedVersion: 2
-        x: 497
-        y: 487
-        width: 286
-        height: 457
+        x: 426
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -273,12 +273,12 @@ TextureImporter:
       name: Club_8
       rect:
         serializedVersion: 2
-        x: 924
-        y: 487
-        width: 286
-        height: 457
+        x: 852
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -294,12 +294,12 @@ TextureImporter:
       name: Club_9
       rect:
         serializedVersion: 2
-        x: 1350
-        y: 487
-        width: 286
-        height: 457
+        x: 1278
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -315,12 +315,12 @@ TextureImporter:
       name: Club_10
       rect:
         serializedVersion: 2
-        x: 1777
-        y: 487
-        width: 286
-        height: 457
+        x: 1704
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -336,12 +336,12 @@ TextureImporter:
       name: Club_11
       rect:
         serializedVersion: 2
-        x: 2204
-        y: 487
-        width: 286
-        height: 457
+        x: 2130
+        y: 480
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -357,12 +357,12 @@ TextureImporter:
       name: Club_12
       rect:
         serializedVersion: 2
-        x: 70
-        y: 7
-        width: 286
-        height: 457
+        x: 0
+        y: 0
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -378,12 +378,12 @@ TextureImporter:
       name: Club_0
       rect:
         serializedVersion: 2
-        x: 70
-        y: 967
-        width: 286
-        height: 457
+        x: 0
+        y: 960
+        width: 426.66666
+        height: 480
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -411,6 +411,11 @@ TextureImporter:
       Club_10: -1858003281
       Club_11: -467143236
       Club_12: 1028256354
+      Club_13: 1348744921
+      Club_14: 1526095884
+      Club_15: -915029248
+      Club_16: -96105072
+      Club_17: 1116057509
       Club_2: 209420051
       Club_3: -1683404462
       Club_4: 1955317399

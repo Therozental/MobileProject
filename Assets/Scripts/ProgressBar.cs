@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using System.Threading.Tasks;
 using UnityEngine.UI;
 
 public class ProgressBar : MonoBehaviour
@@ -18,10 +19,21 @@ public class ProgressBar : MonoBehaviour
         ValueText.text = progressBar.value.ToString() + "/" + progressBar.maxValue.ToString();
     }
     
-    public void GetExp(int expPoints)
+    public async void GetExp(int expPoints)
     {
         // int expPoints = Random.Range(5, 20);
-        progressBar.value += expPoints;
+        int time = 300;
+
+        await Task.Delay(300);
+        for (float i = 0; i < expPoints + 1; i++)
+        {
+            {
+                progressBar.value++;
+                time -= time / 2;
+                await Task.Delay(time);
+            }
+        }
+        //progressBar.value += expPoints;
         //Exp += expPoints;
 
         if (progressBar.value >= 100) //(Exp >= 100)

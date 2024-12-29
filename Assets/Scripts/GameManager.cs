@@ -86,8 +86,7 @@ public class GameManager : MonoBehaviour
                 else // if not in tie round
                 {
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
-                    Player.Points += differenceValue;
-                    
+                    Player.Points += differenceValue;                    
                     coinCounter.UpdatePoints(Player.Points);
                     audioManager.PlaySfx(audioManager.winPoints);
                 }
