@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class AudioManager : MonoBehaviour
 {
@@ -21,6 +22,11 @@ public class AudioManager : MonoBehaviour
     public AudioClip levelUp;
     public AudioClip makeAPurchase;
 
+
+    [Header("------- Sliders -------")]
+    [SerializeField] private Slider sfxSlider;
+    [SerializeField] private Slider musicSlider;
+
     private void Start()
     {
         musicSource.clip = background;
@@ -29,6 +35,17 @@ public class AudioManager : MonoBehaviour
     public void PlaySfx(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
+    }
+
+
+    public void ChangeMusicVolume()
+    {
+        musicSource.volume = musicSlider.value;
+    }
+
+    public void ChangeSoundVolume()
+    {
+        sfxSource.volume = sfxSlider.value;
     }
 
     //AudioManager audioManager;

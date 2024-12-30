@@ -3,8 +3,9 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using System.Threading.Tasks;
 using UnityEngine.UI;
+using DG.Tweening;
+using UnityEditor;
 
 public class ProgressBar : MonoBehaviour
 {
@@ -12,49 +13,39 @@ public class ProgressBar : MonoBehaviour
     public Slider progressBar;
     public TextMeshProUGUI ValueText;
     public Player Player;
-    
+
+    [SerializeField] private float speed;
     
     public void Update()
     {
         ValueText.text = progressBar.value.ToString() + "/" + progressBar.maxValue.ToString();
     }
     
-    public async void GetExp(int expPoints)
+    public void GetExp(int expPoints)
     {
-        // int expPoints = Random.Range(5, 20);
-        int time = 300;
-
-        await Task.Delay(300);
-        for (float i = 0; i < expPoints + 1; i++)
-        {
-            {
-                progressBar.value++;
-                time -= time / 2;
-                await Task.Delay(time);
-            }
-        }
-        //progressBar.value += expPoints;
-        //Exp += expPoints;
-
-        if (progressBar.value >= 100) //(Exp >= 100)
+        if (progressBar.value >= progressBar.maxValue) //(Exp >= Max points)
         {
             LevelUp();
-            
         }
+
+        //adding exp
+        float currentValue = progressBar.value;
+        currentValue += expPoints;
+        progressBar.DOValue(currentValue, speed).Play();
     }
 
     private void LevelUp()
     {
         Player.Level++;
-       // GameManager.instance.audioManager.PlaySfx(audioManager.warWin);
-        IncreaseMaxBarValue();
+        // GameManager.instance.audioManager.PlaySfx(audioManager.warWin);
         ResetExp();
+        progressBar.DOValue(0, speed).Play();
+        IncreaseMaxBarValue();
     }
     
     private int ResetExp()
     {
         return (int)(progressBar.value = 0);
-        //  return Exp = 0;
     }
 
     private int IncreaseMaxBarValue()

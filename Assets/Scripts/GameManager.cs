@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [Header("UI Elements")]
     public CoinCounter coinCounter;
     public ProgressBar progressBar;
+    public GameObject shopPopup;
 
     [Header("Game Elements")]
     [SerializeField] private int CardRestoreTime;
@@ -129,8 +130,8 @@ public class GameManager : MonoBehaviour
         {
             // ***add an pop up event that say your deck is empty***
             audioManager.PlaySfx(audioManager.noMoreCards);
-            Debug.Log("player deck is empty");
-            
+            shopPopup.SetActive(true); //openes the shop
+            Debug.Log("player deck is empty");            
         }
     }
 
