@@ -4,6 +4,8 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
+using DG.Tweening;
+using UnityEditor;
 
 public class ProgressBar : MonoBehaviour
 {
@@ -11,7 +13,8 @@ public class ProgressBar : MonoBehaviour
     public Slider progressBar;
     public TextMeshProUGUI ValueText;
     public Player Player;
-    
+
+    [SerializeField] private float speed;
     
     public void Update()
     {
@@ -20,29 +23,29 @@ public class ProgressBar : MonoBehaviour
     
     public void GetExp(int expPoints)
     {
-        // int expPoints = Random.Range(5, 20);
-        progressBar.value += expPoints;
-        //Exp += expPoints;
-
-        if (progressBar.value >= 100) //(Exp >= 100)
+        if (progressBar.value >= progressBar.maxValue) //(Exp >= Max points)
         {
             LevelUp();
-            
         }
+
+        //adding exp
+        float currentValue = progressBar.value;
+        currentValue += expPoints;
+        progressBar.DOValue(currentValue, speed).Play();
     }
 
     private void LevelUp()
     {
         Player.Level++;
-       // GameManager.instance.audioManager.PlaySfx(audioManager.warWin);
-        IncreaseMaxBarValue();
+        // GameManager.instance.audioManager.PlaySfx(audioManager.warWin);
         ResetExp();
+        progressBar.DOValue(0, speed).Play();
+        IncreaseMaxBarValue();
     }
     
     private int ResetExp()
     {
         return (int)(progressBar.value = 0);
-        //  return Exp = 0;
     }
 
     private int IncreaseMaxBarValue()

@@ -25,6 +25,7 @@ public class GameManager : MonoBehaviour
     [Header("UI Elements")]
     public CoinCounter coinCounter;
     public ProgressBar progressBar;
+    public GameObject shopPopup;
 
     [Header("Game Elements")]
     [SerializeField] private int CardRestoreTime;
@@ -86,8 +87,7 @@ public class GameManager : MonoBehaviour
                 else // if not in tie round
                 {
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
-                    Player.Points += differenceValue;
-                    
+                    Player.Points += differenceValue;                    
                     coinCounter.UpdatePoints(Player.Points);
                     audioManager.PlaySfx(audioManager.winPoints);
                 }
@@ -130,8 +130,8 @@ public class GameManager : MonoBehaviour
         {
             // ***add an pop up event that say your deck is empty***
             audioManager.PlaySfx(audioManager.noMoreCards);
-            Debug.Log("player deck is empty");
-            
+            shopPopup.SetActive(true); //openes the shop
+            Debug.Log("player deck is empty");            
         }
     }
 
