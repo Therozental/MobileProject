@@ -11,9 +11,4 @@ public class PileCounter : MonoBehaviour
     {
         NumberText.text = Number.ToString();
     }
-    void Update()
-    {
-    
-       // NumberText.text =  + "Cards Left";
-    }
 }

@@ -21,8 +21,6 @@ public class Deck : MonoBehaviour
             //Swap between the random index and the i
             (cards[i], cards[randomIndex]) = (cards[randomIndex], cards[i]);
         }
-
-        Debug.Log("Cards Shuffled");
     }
 
     public Card DrawTopCard()
@@ -32,7 +30,7 @@ public class Deck : MonoBehaviour
 
         // remove the top card from the cards pile
         cards.RemoveAt(0);
-        Debug.Log($"card drawn {topCard}");
+        Debug.Log($"drawn {topCard}");
         return topCard;
     }
 
@@ -40,14 +38,16 @@ public class Deck : MonoBehaviour
     {
         for (int i = 0; i < 3; i++)
         {
+            GameManager.instance.CheckPileCount(); // deck cards validation
             //remove the first card from the player pile
             Card removedPlayerCard = DrawTopCard();
 
             // add the card to the player discard pile
             DiscardPile.Add(removedPlayerCard);
-
-            Debug.Log("Player removed 3 cards");
+            
+            
         }
+        Debug.Log("Player removed 3 cards");
         //***have some cool animation each card removal***
     }
 
@@ -60,9 +60,8 @@ public class Deck : MonoBehaviour
 
             // put the card last in the cpu deck
             cards.Insert(cards.Count, removedCpuCard);
-
-            Debug.Log("CPU removed 3 cards");
         }
+        Debug.Log("CPU removed 3 cards");
         //***have some cool animation each card removal***
     }
 }
