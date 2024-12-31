@@ -21,6 +21,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip noMoreCards;
     public AudioClip levelUp;
     public AudioClip makeAPurchase;
+    public AudioClip tie;
+    public AudioClip computerPlayCard;
 
 
     [Header("------- Sliders -------")]
