@@ -314,3 +314,7 @@ MonoBehaviour:
   noMoreCards: {fileID: 8300000, guid: d5e91cb98f2ab6a4e8389c0212fd4942, type: 3}
   levelUp: {fileID: 8300000, guid: f3bda6541fdc8754c9d3d43c8d7e1522, type: 3}
   makeAPurchase: {fileID: 8300000, guid: 77eb7852378b6b94997b57157b94035d, type: 3}
+  tie: {fileID: 8300000, guid: caec7dc4e2e815946bc685a4104810ac, type: 3}
+  computerPlayCard: {fileID: 8300000, guid: 10f0bdab94ec09c4c9a278911194319a, type: 3}
+  sfxSlider: {fileID: 0}
+  musicSlider: {fileID: 0}

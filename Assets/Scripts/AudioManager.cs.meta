@@ -3,7 +3,23 @@ guid: ce3f6cd6ab1ad5b44b2e28196bdefa1c
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - musicSource: {instanceID: 0}
+  - sfxSource: {instanceID: 0}
+  - background: {instanceID: 0}
+  - openShop: {instanceID: 0}
+  - expandPlusSign: {instanceID: 0}
+  - playCard: {instanceID: 0}
+  - warWin: {instanceID: 0}
+  - warLose: {instanceID: 0}
+  - winPoints: {instanceID: 0}
+  - noMoreCards: {instanceID: 0}
+  - levelUp: {instanceID: 0}
+  - makeAPurchase: {instanceID: 0}
+  - tie: {fileID: 8300000, guid: caec7dc4e2e815946bc685a4104810ac, type: 3}
+  - computerPlayCard: {instanceID: 0}
+  - sfxSlider: {instanceID: 0}
+  - musicSlider: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
