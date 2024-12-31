@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class AudioManager : MonoBehaviour
 {
     [Header("------- Audio Source -------")]
-    [SerializeField] AudioSource musicSource;
+      [SerializeField] AudioSource musicSource;
     [SerializeField] AudioSource sfxSource;
 
 
@@ -30,14 +30,13 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         musicSource.clip = background;
-        musicSource.Play();
+            //  musicSource.Play();
     }
     public void PlaySfx(AudioClip clip)
     {
         sfxSource.PlayOneShot(clip);
     }
-
-
+    
     public void ChangeMusicVolume()
     {
         musicSource.volume = musicSlider.value;
