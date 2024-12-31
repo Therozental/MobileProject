@@ -18,7 +18,7 @@ public class CoinCounter : MonoBehaviour
         AdjustPoints(targetPoints);
     }
 
-    private async void AdjustPoints(int targetPoints)
+    public async void AdjustPoints(int targetPoints)
     {
         int time = 100;
 
@@ -87,7 +87,7 @@ public class CoinCounter : MonoBehaviour
     }
     */
 
-    private void PlayAnimation()
+    public void PlayAnimation()
     {
         anim.SetTrigger("Gain");
     }

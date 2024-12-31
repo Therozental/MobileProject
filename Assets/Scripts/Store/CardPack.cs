@@ -28,7 +28,6 @@ public class CardPack : MonoBehaviour
         {
             Debug.Log("not enough point!");
         }
-        
     }
     /*
     public void PurchasePointsByCash()
