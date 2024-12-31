@@ -802,7 +802,6 @@ MonoBehaviour:
   coinCounter: {fileID: 1790451758}
   progressBar: {fileID: 1444367146}
   shopPopup: {fileID: 8193477910008066005}
-  disabledCard: {fileID: 1792620395}
   CardRestoreTime: 8000
   audioManager: {fileID: 1276236897}
   _isInTie: 0
@@ -837,6 +836,8 @@ MonoBehaviour:
   _cpuCard: {fileID: 0}
   player: {fileID: 737914504}
   cpu: {fileID: 1456734601}
+  playerAnimator: {fileID: 1429902938}
+  cpuAnimator: {fileID: 1543738239}
   PlayerCardPlacement: {fileID: 882363449}
   CpuCardPlacement: {fileID: 1635610667}
 --- !u!1 &443661932
@@ -963,6 +964,10 @@ PrefabInstance:
     - target: {fileID: 7858585487522826083, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
       propertyPath: m_Name
       value: Audio Manager
+      objectReference: {fileID: 0}
+    - target: {fileID: 7858585487522826083, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7858585487522826083, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
       propertyPath: m_TagString
@@ -7514,11 +7519,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   AmountText: {fileID: 801671761}
   anim: {fileID: 1385152110}
---- !u!1 &1792620395 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1864187956927713793, guid: 437bf349aa3724a629a480317187300e, type: 3}
-  m_PrefabInstance: {fileID: 1334892571630361801}
-  m_PrefabAsset: {fileID: 0}
 --- !u!114 &1804215221 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3186478531320495926, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
