@@ -16,25 +16,24 @@ public enum Result
 public class GameManager : MonoBehaviour
 {
     public static GameManager instance;
-
-    [Header("References")] public Player Player;
+    
+    [Header("References")]
+    public Player Player;
     public CPU Cpu;
     public Round Round;
-
-    [Header("UI Elements")] public CoinCounter coinCounter;
-    public ProgressBar progressBar;
-    public GameObject shopPopup;
-    public GameObject tiePopup;
     
-    [Header("Game Elements")]
-    [SerializeField, Tooltip("time for card to restore to deck")]
-    private int CardRestoreTime;
+    [Header("UI Elements")]
+    public CoinCounter coinCounter;
+    public ProgressBar progressBar;
+    public GameObject shopPopup, disabledCard;
 
+    [Header("Game Elements")]
+    [SerializeField] private int CardRestoreTime;
     public AudioManager audioManager;
     public CardRestoration CardRestoration;
     public bool _isInTie = false;
 
-
+    
     void Start()
     {
         Round.InitRound(); //initialize the round
@@ -53,7 +52,6 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
-
         audioManager = GameObject.FindGameObjectWithTag("Audio").GetComponent<AudioManager>();
     }
 
@@ -64,20 +62,14 @@ public class GameManager : MonoBehaviour
 
     public void RoundPlay()
     {
-        if (_isInTie)
-        {
-            Round.StartTieRound();
-        }
-        else
-        {
-            Round.StartRound();
-        }
+        Round.StartRound();
+        //event of endround
         Round.CompareCards();
         CleanCards(); // remove the round cards to discard pile/return the last on deck list
-        tiePopup.SetActive(false);
+        ResetTieParameter();
         CheckPileCount();
     }
-
+    
     public void RoundResult(Result result, int differenceValue)
     {
         switch (result)
@@ -88,15 +80,14 @@ public class GameManager : MonoBehaviour
                 {
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points += (differenceValue * 3); // if it's a tie round decrease the points
-                    Debug.Log($"PLAYER WON TIE! player points increased by {differenceValue * 3}, its value is {Player.Points}");
+                    
                     coinCounter.UpdatePoints(Player.Points);
                     audioManager.PlaySfx(audioManager.warWin);
-                    ResetTieParameter();
                 }
                 else // if not in tie round
                 {
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
-                    Player.Points += differenceValue;
+                    Player.Points += differenceValue;                    
                     coinCounter.UpdatePoints(Player.Points);
                     audioManager.PlaySfx(audioManager.winPoints);
                 }
@@ -112,9 +103,6 @@ public class GameManager : MonoBehaviour
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points -= (differenceValue * 3);
                     audioManager.PlaySfx(audioManager.warLose);
-                    coinCounter.UpdatePoints(Player.Points);
-                    Debug.Log($"CPU WON TIE! player points decreased by {differenceValue * 3}, its value is {Player.Points}");
-                    ResetTieParameter();
                 }
                 else // if not in tie round
                 {
@@ -127,23 +115,15 @@ public class GameManager : MonoBehaviour
             }
             case (Result.Tie):
             {
-                Debug.Log("card tie");
-                CardTieSequence();
+                Debug.Log("card tie (will be fixed later)");
+               // CardTie();
                 audioManager.PlaySfx(audioManager.playCard);
                 break;
             }
         }
     }
 
-    public void CardTieSequence()
-    {
-        tiePopup.SetActive(true);
-        _isInTie = true;
-        Debug.Log($"{_isInTie} true");
-        //Round.StartRound();
-    }
-    
-    public void CheckPileCount()
+    private void CheckPileCount()
     {
         // check the number of cards the player has, send a signal if player's out of cards
         if (Player.Deck.cards.Count <= 0)
@@ -151,19 +131,22 @@ public class GameManager : MonoBehaviour
             // ***add an pop up event that say your deck is empty***
             audioManager.PlaySfx(audioManager.noMoreCards);
             shopPopup.SetActive(true); //openes the shop
-            Debug.Log("player deck is empty");
+            disabledCard.SetActive(true);
+            Debug.Log("player deck is empty");            
         }
+
+        else disabledCard.SetActive(false);
     }
 
     private void CleanCards()
     {
         // add the card to the discard pile
-        Player.Deck.DiscardPile.Add(Round._playerCard);
-        Debug.Log($"{Round._playerCard} discarded");
-
+        Player.Deck.DiscardPile.Add(Round._playerCard); 
+        Debug.Log($"{Round._playerCard} has card discarded");
+        
         // add it to the end of the cpu deck so it can be repeated
-        Cpu.Deck.cards.Insert(Cpu.Deck.cards.Count, Round._cpuCard);
-        Debug.Log($"{Round._cpuCard} discarded");
+        Cpu.Deck.cards.Insert(Cpu.Deck.cards.Count,Round._cpuCard); 
+        Debug.Log($"{Round._cpuCard} has card discarded");
 
         // Start the card return sequence if it's not already running
         if (!CardRestoration._isReturningCards)
@@ -171,10 +154,18 @@ public class GameManager : MonoBehaviour
             CardRestoration.StartReturningCards(CardRestoreTime);
         }
     }
-    
+
+    private void CardTie()
+    {
+        Debug.Log("Card tied");
+        _isInTie = true;
+        Player.Deck.PlayerRemove3Cards();
+        Cpu.Deck.CPURemove3Cards();
+        Round.StartRound();
+    }
+
     private bool ResetTieParameter()
     {
-        Debug.Log($"{_isInTie} false");
         return _isInTie = false;
     }
 }
