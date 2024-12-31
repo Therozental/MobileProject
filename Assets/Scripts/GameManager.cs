@@ -91,7 +91,7 @@ public class GameManager : MonoBehaviour
                     audioManager.PlaySfx(audioManager.warWin);
                     ResetTieParameter();
                 }
-                else // if not in tie round
+                else if (_isInTie == false) // if not in tie round
                 {
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points += differenceValue;
@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
                     Debug.Log($"CPU WON TIE! player points decreased by {differenceValue * 3}, its value is {Player.Points}");
                     ResetTieParameter();
                 }
-                else // if not in tie round
+                else if (_isInTie == false) // if not in tie round
                 {
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points -= differenceValue;
