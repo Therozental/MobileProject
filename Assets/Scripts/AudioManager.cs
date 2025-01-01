@@ -1,7 +1,10 @@
 using System.Collections;
 using System.Collections.Generic;
+using UnityEditor.VersionControl;
 using UnityEngine;
 using UnityEngine.UI;
+using System.Threading.Tasks;
+using Task = System.Threading.Tasks.Task;
 
 public class AudioManager : MonoBehaviour
 {
@@ -32,10 +35,11 @@ public class AudioManager : MonoBehaviour
     private void Start()
     {
         musicSource.clip = background;
-            //  musicSource.Play();
+        musicSource.Play();
     }
-    public void PlaySfx(AudioClip clip)
+    public async Task PlaySfx(AudioClip clip)
     {
+        Task.Delay(300);
         sfxSource.PlayOneShot(clip);
     }
     

@@ -127,7 +127,6 @@ public class GameManager : MonoBehaviour
             {
                 Debug.Log("card tie");
                 CardTieSequence();
-                audioManager.PlaySfx(audioManager.playCard);
                 break;
             }
         }
@@ -135,10 +134,8 @@ public class GameManager : MonoBehaviour
 
     public void CardTieSequence()
     {
-      
         _isInTie = true;
         Debug.Log($"{_isInTie} true");
-        //Round.StartRound();
     }
     
     public void CheckPileCount()
@@ -146,7 +143,6 @@ public class GameManager : MonoBehaviour
         // check the number of cards the player has, send a signal if player's out of cards
         if (Player.Deck.cards.Count <= 0)
         {
-            // ***add an pop up event that say your deck is empty***
             audioManager.PlaySfx(audioManager.noMoreCards);
             shopPopup.SetActive(true); //openes the shop
             Debug.Log("deck is empty");
