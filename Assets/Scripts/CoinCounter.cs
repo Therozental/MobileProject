@@ -13,7 +13,7 @@ public class CoinCounter : MonoBehaviour
 
     public async void UpdatePoints(int targetPoints)
     {
-        await Task.Delay(500);
+        await Task.Delay(300);
         PlayAnimation();
         AdjustPoints(targetPoints);
     }
