@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using System.Threading.Tasks;
 using Task = System.Threading.Tasks.Task;
 
+
 public class AudioManager : MonoBehaviour
 {
     [Header("------- Audio Source -------")]
@@ -37,9 +38,8 @@ public class AudioManager : MonoBehaviour
         musicSource.clip = background;
         musicSource.Play();
     }
-    public async Task PlaySfx(AudioClip clip)
+    public void PlaySfx(AudioClip clip)
     {
-        Task.Delay(300);
         sfxSource.PlayOneShot(clip);
     }
     

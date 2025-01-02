@@ -804,6 +804,7 @@ MonoBehaviour:
   progressBar: {fileID: 1444367146}
   shopPopup: {fileID: 8193477910008066005}
   CardRestoreTime: 8000
+  delaySoundTime: 450
   audioManager: {fileID: 1276236897}
   _isInTie: 0
 --- !u!4 &440656977
@@ -853,8 +854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9a876fd56e14d73a294b149a6769cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCounter: {fileID: 1385152111}
-  player: {fileID: 737914504}
 --- !u!1 &443661932
 GameObject:
   m_ObjectHideFlags: 0
@@ -7236,8 +7235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9a876fd56e14d73a294b149a6769cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCounter: {fileID: 1385152111}
-  player: {fileID: 737914504}
 --- !u!1 &1417193353
 GameObject:
   m_ObjectHideFlags: 0
