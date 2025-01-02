@@ -804,6 +804,7 @@ MonoBehaviour:
   progressBar: {fileID: 1444367146}
   shopPopup: {fileID: 8193477910008066005}
   CardRestoreTime: 8000
+  delaySoundTime: 450
   audioManager: {fileID: 1276236897}
   _isInTie: 0
 --- !u!4 &440656977
@@ -853,8 +854,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9a876fd56e14d73a294b149a6769cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCounter: {fileID: 1385152111}
-  player: {fileID: 737914504}
 --- !u!1 &443661932
 GameObject:
   m_ObjectHideFlags: 0
@@ -936,6 +935,14 @@ PrefabInstance:
       propertyPath: musicSlider
       value: 
       objectReference: {fileID: 852850929}
+    - target: {fileID: 1946857753039620235, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
+      propertyPath: Priority
+      value: 256
+      objectReference: {fileID: 0}
+    - target: {fileID: 1946857753039620235, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
+      propertyPath: m_Volume
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 2782432204577735613, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
       propertyPath: m_LocalPosition.x
       value: -1.1171054
@@ -7228,8 +7235,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ce9a876fd56e14d73a294b149a6769cf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coinCounter: {fileID: 1385152111}
-  player: {fileID: 737914504}
 --- !u!1 &1417193353
 GameObject:
   m_ObjectHideFlags: 0
@@ -12325,6 +12330,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 775911915442919295, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
+      propertyPath: coinCounter
+      value: 
+      objectReference: {fileID: 1385152111}
+    - target: {fileID: 775911915442919295, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: buttonParticles
       value: 
       objectReference: {fileID: 193677152}
@@ -12817,6 +12826,10 @@ PrefabInstance:
       value: -47.34961
       objectReference: {fileID: 0}
     - target: {fileID: 4090878023344643892, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
+      propertyPath: coinCounter
+      value: 
+      objectReference: {fileID: 1385152111}
+    - target: {fileID: 4090878023344643892, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: buttonParticles
       value: 
       objectReference: {fileID: 56927312}
@@ -12868,6 +12881,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5421461690523766133, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
+      propertyPath: coinCounter
+      value: 
+      objectReference: {fileID: 1385152111}
     - target: {fileID: 5421461690523766133, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: buttonParticles
       value: 
@@ -13124,6 +13141,10 @@ PrefabInstance:
       propertyPath: m_fontSize
       value: 180.7
       objectReference: {fileID: 0}
+    - target: {fileID: 6383815856680925703, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
+      propertyPath: coinCounter
+      value: 
+      objectReference: {fileID: 1385152111}
     - target: {fileID: 6383815856680925703, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: buttonParticles
       value: 

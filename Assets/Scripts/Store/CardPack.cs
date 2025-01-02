@@ -7,6 +7,7 @@ public class CardPack : MonoBehaviour
     [SerializeField] private CardPackScriptableobject ScriptableObject;
     public Store store;
     public ParticleSystem buttonParticles;
+    public CoinCounter coinCounter;
 
     public void PurchaseCardPoints()
     {
@@ -22,6 +23,7 @@ public class CardPack : MonoBehaviour
             {
                 store.playerDeck.cards.Add(ScriptableObject.packCards[i]);
                 Debug.Log($"{ScriptableObject.packCards[i]} added to you deck");
+                coinCounter.UpdatePoints(store.player.Points);
             }
         }
         else if (store.player.Points < ScriptableObject.costInPoints)
