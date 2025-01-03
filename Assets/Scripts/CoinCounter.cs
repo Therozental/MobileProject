@@ -41,6 +41,17 @@ public class CoinCounter : MonoBehaviour
             await Task.Delay(time);
         }
     }
+    
+    public void PlayAnimation()
+    {
+        anim.SetTrigger("Gain");
+    }
+
+    public void DisplayText()
+    {
+        AmountText.text = currentPoints.ToString();
+    }
+}
     /*
     public async void UpdatePoints(int Points)
     {
@@ -86,14 +97,3 @@ public class CoinCounter : MonoBehaviour
         }
     }
     */
-
-    public void PlayAnimation()
-    {
-        anim.SetTrigger("Gain");
-    }
-
-    public void DisplayText()
-    {
-        AmountText.text = currentPoints.ToString();
-    }
-}
