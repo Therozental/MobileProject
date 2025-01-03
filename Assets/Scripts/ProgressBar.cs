@@ -13,6 +13,7 @@ public class ProgressBar : MonoBehaviour
     public Slider progressBar;
     public TextMeshProUGUI ValueText;
     public Player Player;
+    public PopupManager popupManager;
 
     [SerializeField] private float speed;
     
@@ -38,6 +39,7 @@ public class ProgressBar : MonoBehaviour
     {
         Player.Level++;
         // GameManager.instance.audioManager.PlaySfx(audioManager.warWin);
+        popupManager.leveUpPopup.SetActive(true);
         ResetExp();
         progressBar.DOValue(0, speed).Play();
         IncreaseMaxBarValue();
