@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 1992855172910783}
   - component: {fileID: 1135977194711882125}
   - component: {fileID: 112184894841074536}
-  - component: {fileID: 377448457481904389}
   - component: {fileID: 836749229420204933}
   m_Layer: 5
   m_Name: CashButton
@@ -123,7 +122,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 377448457481904389}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: ParticleOnClick, Assembly-CSharp
         m_MethodName: OnClick
         m_Mode: 1
@@ -147,19 +146,6 @@ MonoBehaviour:
           m_StringArgument: Buy
           m_BoolArgument: 1
         m_CallState: 2
---- !u!114 &377448457481904389
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1233848901202194188}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 40528a2b90149724fb006616f4f02ece, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  particles: {fileID: 0}
 --- !u!114 &836749229420204933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -267,7 +253,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 136.63
+  m_fontSize: 18
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1

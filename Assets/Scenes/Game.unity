@@ -10053,15 +10053,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8295627176098172860, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_AnchorMax.x
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8295627176098172860, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8295627176098172860, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_SizeDelta.x
-      value: 0
+      value: 1.2994385
       objectReference: {fileID: 0}
     - target: {fileID: 8783792790662326421, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_Name
@@ -10069,7 +10069,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8783792790662326421, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5204474890823477273, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
@@ -13277,6 +13277,10 @@ PrefabInstance:
       propertyPath: m_hasFontAssetChanged
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5335117231642614958, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 193677152}
     - target: {fileID: 5421461690523766133, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: coinCounter
       value: 
@@ -13433,6 +13437,10 @@ PrefabInstance:
       propertyPath: playOnAwake
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5961549291211973039, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 193677152}
     - target: {fileID: 6069772899625290815, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -46.219727
@@ -13969,8 +13977,13 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -529.7151
       objectReference: {fileID: 0}
+    - target: {fileID: 9169646372111062405, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
+      propertyPath: particles
+      value: 
+      objectReference: {fileID: 193677152}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 2392671768737586626, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents:
     - targetCorrespondingSourceObject: {fileID: 2238100264862634093, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
