@@ -974,8 +974,10 @@ MonoBehaviour:
   coinCounter: {fileID: 1385152111}
   progressBar: {fileID: 1444367146}
   popupManager: {fileID: 1242251472}
+  cardBackColor: {fileID: 0}
+  pilebackColor: {fileID: 0}
   CardRestoreTime: 8000
-  delaySoundTime: 450
+  delaySoundTime: 500
   audioManager: {fileID: 1276236897}
   _isInTie: 0
 --- !u!4 &440656977
@@ -1011,6 +1013,7 @@ MonoBehaviour:
   cpu: {fileID: 1456734601}
   playerAnimator: {fileID: 1429902938}
   cpuAnimator: {fileID: 1543738239}
+  audioManager: {fileID: 1276236897}
   PlayerCardPlacement: {fileID: 882363449}
   CpuCardPlacement: {fileID: 1635610667}
 --- !u!1 &443661932
@@ -1086,6 +1089,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 720651170927687639, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
+      propertyPath: warWin
+      value: 
+      objectReference: {fileID: 8300000, guid: 64e0d5a8eeffe467ebafc0910aba8580, type: 3}
+    - target: {fileID: 720651170927687639, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
+      propertyPath: warFlip
+      value: 
+      objectReference: {fileID: 8300000, guid: e7c440728c3a945498df85fd8c4a1973, type: 3}
+    - target: {fileID: 720651170927687639, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
+      propertyPath: warLose
+      value: 
+      objectReference: {fileID: 8300000, guid: 461383717520a463a97d0cb62a5c0604, type: 3}
     - target: {fileID: 720651170927687639, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
       propertyPath: sfxSlider
       value: 
@@ -6941,7 +6956,7 @@ MonoBehaviour:
   leveUpPopup: {fileID: 493108349}
   internetPopup: {fileID: 1745180037}
   levelUpCards: {fileID: 93329597}
-  PlayerPilePlacement: {fileID: 1902751658}
+  PlayerDeckGameObject: {fileID: 1902751658}
 --- !u!4 &1242251473
 Transform:
   m_ObjectHideFlags: 0
@@ -9911,18 +9926,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1242251472}
     - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_CallState
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
@@ -9930,8 +9957,16 @@ PrefabInstance:
       value: GetNewCards
       objectReference: {fileID: 0}
     - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: ChangeBackground
+      objectReference: {fileID: 0}
+    - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
       value: PopupManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_TargetAssemblyTypeName
+      value: BackgroundChange, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgument
@@ -9940,6 +9975,10 @@ PrefabInstance:
     - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
       value: Deck, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 759612959636313346, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[2].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
       objectReference: {fileID: 0}
     - target: {fileID: 1341548645669589769, guid: 50046564f26c12d4d9b80af505ac927a, type: 3}
       propertyPath: m_Pivot.x
@@ -11303,6 +11342,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5610707585128346413, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5717046966267742825, guid: 437bf349aa3724a629a480317187300e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -12299,6 +12342,10 @@ PrefabInstance:
       propertyPath: Player
       value: 
       objectReference: {fileID: 737914504}
+    - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
+      propertyPath: audioManager
+      value: 
+      objectReference: {fileID: 1276236897}
     - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
       propertyPath: popupManager
       value: 

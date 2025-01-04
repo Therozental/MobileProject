@@ -14,6 +14,7 @@ public class ProgressBar : MonoBehaviour
     public TextMeshProUGUI ValueText;
     public Player Player;
     public PopupManager popupManager;
+    public AudioManager audioManager;
 
     [SerializeField] private float speed;
     
@@ -38,7 +39,7 @@ public class ProgressBar : MonoBehaviour
     private void LevelUp()
     {
         Player.Level++;
-        // GameManager.instance.audioManager.PlaySfx(audioManager.warWin);
+        audioManager.PlaySfx(audioManager.levelUp);
         popupManager.leveUpPopup.SetActive(true);
         ResetExp();
         progressBar.DOValue(0, speed).Play();

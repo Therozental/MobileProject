@@ -8,7 +8,7 @@ public class PopupManager : MonoBehaviour
     public GameObject leveUpPopup;
     public GameObject internetPopup;
     public Deck levelUpCards;
-    public GameObject PlayerPilePlacement;
+    public GameObject PlayerDeckGameObject;
 
     public void GetNewCards(Deck playerDeck)
     {
@@ -18,18 +18,22 @@ public class PopupManager : MonoBehaviour
             int randomIndex = Random.Range(0, levelUpCards.cards.Count);
             Card randomCard = levelUpCards.cards[randomIndex];
             
-            //put them in the player deck
-            PlaceCardToPlayerDeck(randomCard, PlayerPilePlacement);
+            //create card in scene view - put them in the player deck
+            levelUpCards.CreateCard(randomCard, PlayerDeckGameObject.transform);
+            
             playerDeck.cards.Add(randomCard);
-            // instantiate card and set parent it to the playerdeck
+            
             Debug.Log("new card added to you Deck!");
         }
         
     }
-    
-    public void PlaceCardToPlayerDeck(Card currentCard, GameObject cardPilePlacement)
+
+    /*
+    public void PlaceCardToPlayerDeck(Card card)
     {
         currentCard.transform.SetParent(cardPilePlacement.transform);
         currentCard.transform.position = cardPilePlacement.transform.position;
     }
+    */
+    
 }

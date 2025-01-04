@@ -64,4 +64,12 @@ public class Deck : MonoBehaviour
         Debug.Log("CPU removed 3 cards");
         //***have some cool animation each card removal***
     }
+    
+    
+    public void CreateCard(Card card, Transform deckGameObject)
+    {
+        Instantiate(card, deckGameObject.transform);
+        card.transform.SetParent(deckGameObject.transform);
+    }
+
 }
