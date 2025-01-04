@@ -35,8 +35,6 @@ public class Round : MonoBehaviour
         Debug.Log("Start Round");
         PlayerTurn();
         CpuTurn();
-        
-        //set event endround
     }
     
     public void StartTieRound()
