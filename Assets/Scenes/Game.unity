@@ -223,6 +223,30 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2392433397599066488, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2392433397599066488, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1745180037}
+    - target: {fileID: 2392433397599066488, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: SetActive
+      objectReference: {fileID: 0}
+    - target: {fileID: 2392433397599066488, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: UnityEngine.GameObject, UnityEngine
+      objectReference: {fileID: 0}
+    - target: {fileID: 2392433397599066488, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_BoolArgument
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2392433397599066488, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 2527500048209215020, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -0.00006866455
@@ -581,7 +605,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7295909409224960070, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -588.99774
+      value: -589.04504
       objectReference: {fileID: 0}
     - target: {fileID: 7579942681996832883, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
       propertyPath: m_AnchorMax.y
@@ -12947,7 +12971,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2452024747148367732, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -135
+      value: -134.99998
       objectReference: {fileID: 0}
     - target: {fileID: 2511351448372913381, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchorMax.y
