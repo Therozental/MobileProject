@@ -18,6 +18,7 @@ public class Round : MonoBehaviour
     [SerializeField] private CPU cpu;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Animator cpuAnimator;
+    [SerializeField] private AudioManager audioManager;
 
     [Header("Placements")]
     [SerializeField] private GameObject PlayerCardPlacement;
@@ -35,6 +36,7 @@ public class Round : MonoBehaviour
         Debug.Log("Start Round");
         PlayerTurn();
         CpuTurn();
+        audioManager.PlaySfx(audioManager.computerPlayCard);
     }
     
     public void StartTieRound()
@@ -46,7 +48,7 @@ public class Round : MonoBehaviour
         cpuAnimator.SetTrigger("Tie");
         PlayerTurn();
         CpuTurn();
-        //set event endround
+        audioManager.PlaySfx(audioManager.warFlip);
     }
     
 

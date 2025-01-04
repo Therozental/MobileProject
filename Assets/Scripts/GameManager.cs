@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.Serialization;
 using Random = UnityEngine.Random;
 
 public enum Result
@@ -24,7 +25,9 @@ public class GameManager : MonoBehaviour
     [Header("UI Elements")]
     public CoinCounter coinCounter;
     public ProgressBar progressBar;
-    public PopupManager popupManager;
+    public PopupManager popupManager; 
+    public CardBackColor cardBackColor;
+    public CardBackColor pilebackColor;
     
     [Header("Game Elements")]
     [SerializeField, Tooltip("time for card to restore to deck")] private int CardRestoreTime;
@@ -88,8 +91,12 @@ public class GameManager : MonoBehaviour
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points += (differenceValue * 3); // if it's a tie round decrease the points
                     Debug.Log($"PLAYER WON TIE! player points increased by {differenceValue * 3}, its value is {Player.Points}");
-                    audioManager.PlaySfx(audioManager.warWin);
                     
+                    // flip the cards 
+                 //   audioManager.PlaySfx(audioManager.warFlip); 
+                    
+                     await Task.Delay(600);
+                    audioManager.PlaySfx(audioManager.warWin);
                     await Task.Delay(delaySoundTime);
                     coinCounter.UpdatePoints(Player.Points);
                     ResetTieParameter();
@@ -98,8 +105,8 @@ public class GameManager : MonoBehaviour
                 {
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points += differenceValue;
-                    await Task.Delay(delaySoundTime);
                     
+                    await Task.Delay(delaySoundTime);
                     coinCounter.UpdatePoints(Player.Points);
                     audioManager.PlaySfx(audioManager.winPoints);
                 }
@@ -114,6 +121,11 @@ public class GameManager : MonoBehaviour
                 {
                     // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points -= (differenceValue * 3);
+                    
+                    // flip the cards 
+                    
+                    
+                    await Task.Delay(600);
                     audioManager.PlaySfx(audioManager.warLose);
                     
                     await Task.Delay(delaySoundTime);
@@ -132,6 +144,8 @@ public class GameManager : MonoBehaviour
             }
             case (Result.Tie):
             {
+                await Task.Delay(delaySoundTime);
+                audioManager.PlaySfx(audioManager.tie);
                 Debug.Log("card tie");
                 CardTieSequence();
                 break;

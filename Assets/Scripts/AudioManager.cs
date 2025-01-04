@@ -19,14 +19,16 @@ public class AudioManager : MonoBehaviour
     public AudioClip openShop;
     public AudioClip expandPlusSign;
     public AudioClip playCard;
+    public AudioClip computerPlayCard;
     public AudioClip warWin;
     public AudioClip warLose;
     public AudioClip winPoints;
+    public AudioClip warFlip;
     public AudioClip noMoreCards;
     public AudioClip levelUp;
     public AudioClip makeAPurchase;
     public AudioClip tie;
-    public AudioClip computerPlayCard;
+    
 
 
     [Header("------- Sliders -------")]
