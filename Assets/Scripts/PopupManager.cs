@@ -14,21 +14,34 @@ public class PopupManager : MonoBehaviour
     {
         for (int i = 0; i < 5; i++)
         {
-            //get a random card from the general deck
-            int randomIndex = Random.Range(0, levelUpCards.cards.Count);
-            Card randomCard = levelUpCards.cards[randomIndex];
-            
-            //create card in scene view - put them in the player deck
-           // GameManager.instance.CreateCard(randomCard, PlayerDeckGameObject.transform);
-            
-            playerDeck.cards.Add(randomCard);
-            
-            Debug.Log("new card added to you Deck!");
+            GameObject cardPrefab = GeneralDeck.instance.GetRandomCard();
+            GameObject card = Instantiate(cardPrefab, Vector2.zero, Quaternion.identity);
+
+            card.transform.SetParent(playerDeck.transform);
+            card.GetComponent<RectTransform>().localScale = Vector3.one;
+            card.SetActive(false);
+            playerDeck.cards.Add(card.GetComponent<Card>());
         }
         
     }
 
     /*
+     for (int i = 0; i < 5; i++)
+       {
+           
+           //get a random card from the general deck
+           int randomIndex = Random.Range(0, levelUpCards.cards.Count);
+           Card randomCard = levelUpCards.cards[randomIndex];
+           
+           //create card in scene view - put them in the player deck
+          
+           
+           playerDeck.cards.Add(randomCard);
+           
+           Debug.Log("new card added to you Deck!");
+       }
+       
+       
     public void PlaceCardToPlayerDeck(Card card)
     {
         currentCard.transform.SetParent(cardPilePlacement.transform);

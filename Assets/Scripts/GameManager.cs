@@ -27,12 +27,13 @@ public class GameManager : MonoBehaviour
     public ProgressBar progressBar;
     public PopupManager popupManager;
     public GameObject tiePopup;
+    public ParticleSystem winParticles;
     
     [Header("Game Elements")]
     [SerializeField, Tooltip("time for card to restore to deck")] private int CardRestoreTime;
     
 
-    [SerializeField, Tooltip("time delay for the sfx")] private int delaySoundTime = 300;
+    [FormerlySerializedAs("delaySoundTime")] [SerializeField, Tooltip("time delay for the sfx")] private int delayTime = 300;
     public AudioManager audioManager;
     public CardRestoration CardRestoration;
     public bool _isInTie = false;
@@ -96,7 +97,7 @@ public class GameManager : MonoBehaviour
                     
                     await Task.Delay(600);
                     audioManager.PlaySfx(audioManager.warWin);
-                    await Task.Delay(delaySoundTime);
+                    await Task.Delay(delayTime);
                     coinCounter.UpdatePoints(Player.Points);
                     ResetTieParameter();
                 }
@@ -104,13 +105,15 @@ public class GameManager : MonoBehaviour
                 {
                     Player.Points += differenceValue;
                     
-                    await Task.Delay(delaySoundTime);
+                    await Task.Delay(delayTime);
                     coinCounter.UpdatePoints(Player.Points);
                     audioManager.PlaySfx(audioManager.winPoints);
                 }
-
+                
                 Debug.Log($"PLAYER WON! player points increased by {differenceValue}, its value is {Player.Points}");
                 progressBar.GetExp(differenceValue);
+                await Task.Delay(300);
+                winParticles.Play();
                 break;
             }
             case (Result.Lose):
@@ -125,7 +128,7 @@ public class GameManager : MonoBehaviour
                     await Task.Delay(600);
                     audioManager.PlaySfx(audioManager.warLose);
                     
-                    await Task.Delay(delaySoundTime);
+                    await Task.Delay(delayTime);
                     coinCounter.UpdatePoints(Player.Points);
                     Debug.Log($"CPU WON TIE! player points decreased by {differenceValue * 3}, its value is {Player.Points}");
                     ResetTieParameter();
@@ -141,7 +144,7 @@ public class GameManager : MonoBehaviour
             }
             case (Result.Tie):
             {
-                await Task.Delay(delaySoundTime);
+                await Task.Delay(delayTime);
                 audioManager.PlaySfx(audioManager.tie);
                 Debug.Log("card tie");
                 CardTieSequence();
