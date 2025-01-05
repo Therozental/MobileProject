@@ -26,11 +26,10 @@ public class GameManager : MonoBehaviour
     public CoinCounter coinCounter;
     public ProgressBar progressBar;
     public PopupManager popupManager; 
-    public CardBackColor cardBackColor;
-    public CardBackColor pilebackColor;
     
     [Header("Game Elements")]
     [SerializeField, Tooltip("time for card to restore to deck")] private int CardRestoreTime;
+    
 
     [SerializeField, Tooltip("time delay for the sfx")] private int delaySoundTime = 300;
     public AudioManager audioManager;
@@ -93,9 +92,8 @@ public class GameManager : MonoBehaviour
                     Debug.Log($"PLAYER WON TIE! player points increased by {differenceValue * 3}, its value is {Player.Points}");
                     
                     // flip the cards 
-                 //   audioManager.PlaySfx(audioManager.warFlip); 
                     
-                     await Task.Delay(600);
+                    await Task.Delay(600);
                     audioManager.PlaySfx(audioManager.warWin);
                     await Task.Delay(delaySoundTime);
                     coinCounter.UpdatePoints(Player.Points);
@@ -103,7 +101,6 @@ public class GameManager : MonoBehaviour
                 }
                 else if (_isInTie == false) // if not in tie round
                 {
-                    // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points += differenceValue;
                     
                     await Task.Delay(delaySoundTime);
@@ -119,7 +116,6 @@ public class GameManager : MonoBehaviour
             {
                 if (_isInTie) // if it's a tie round increase the points
                 {
-                    // ***add a ValueEvent and a gameObject that appears with the winner/loser and the differanceValue***
                     Player.Points -= (differenceValue * 3);
                     
                     // flip the cards 
@@ -173,12 +169,12 @@ public class GameManager : MonoBehaviour
     private void CleanCards()
     {
         // add the card to the discard pile
-        Player.Deck.DiscardPile.Add(Round._playerCard);
-        Debug.Log($"{Round._playerCard} discarded");
+        Player.Deck.DiscardPile.Add(Round.playerCard);
+        Debug.Log($"{Round.playerCard} discarded");
 
         // add it to the end of the cpu deck so it can be repeated
-        Cpu.Deck.cards.Insert(Cpu.Deck.cards.Count, Round._cpuCard);
-        Debug.Log($"{Round._cpuCard} discarded");
+        Cpu.Deck.cards.Insert(Cpu.Deck.cards.Count, Round.cpuCard);
+        Debug.Log($"{Round.cpuCard} discarded");
 
         // Start the card return sequence if it's not already running
         if (!CardRestoration._isReturningCards)
@@ -191,5 +187,11 @@ public class GameManager : MonoBehaviour
     {
         Debug.Log($"{_isInTie} false");
         return _isInTie = false;
+    }
+    
+    public void CreateCard(GameObject card, Transform deckGameObject)
+    {
+        Instantiate(deckGameObject.transform);
+        card.transform.SetParent(deckGameObject.transform);
     }
 }

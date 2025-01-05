@@ -19,7 +19,7 @@ public class PopupManager : MonoBehaviour
             Card randomCard = levelUpCards.cards[randomIndex];
             
             //create card in scene view - put them in the player deck
-            levelUpCards.CreateCard(randomCard, PlayerDeckGameObject.transform);
+           // GameManager.instance.CreateCard(randomCard, PlayerDeckGameObject.transform);
             
             playerDeck.cards.Add(randomCard);
             

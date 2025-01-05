@@ -13,9 +13,4 @@ MonoBehaviour:
   m_Name: CardPack 1
   m_EditorClassIdentifier: 
   costInPoints: 25
-  packCards:
-  - {fileID: 5389388366592351567, guid: 72ef078a274a4b94f98a3852bd8c6237, type: 3}
-  - {fileID: 5389388366592351567, guid: 3f7c23407728f9042876086ee7c615a3, type: 3}
-  - {fileID: 5389388366592351567, guid: 3efcb50c15884694cb65f6489792e18f, type: 3}
-  - {fileID: 5389388366592351567, guid: 92f9ca3cad4ffbe4f83c1cd433ea9e9c, type: 3}
-  - {fileID: 5389388366592351567, guid: e35fea369ba169c4cb8cd3ceca5361a3, type: 3}
+  cardsInPack: 5

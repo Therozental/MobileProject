@@ -13,24 +13,4 @@ MonoBehaviour:
   m_Name: CardPack 3
   m_EditorClassIdentifier: 
   costInPoints: 80
-  packCards:
-  - {fileID: 5389388366592351567, guid: e35fea369ba169c4cb8cd3ceca5361a3, type: 3}
-  - {fileID: 5389388366592351567, guid: ad72383b8e97ac243a2044eae06c5360, type: 3}
-  - {fileID: 5389388366592351567, guid: 3f7c23407728f9042876086ee7c615a3, type: 3}
-  - {fileID: 5389388366592351567, guid: aceef11839f953e4da370fce397ae8ef, type: 3}
-  - {fileID: 5389388366592351567, guid: be90288c58c4e472692a671b9b389117, type: 3}
-  - {fileID: 5389388366592351567, guid: e35fea369ba169c4cb8cd3ceca5361a3, type: 3}
-  - {fileID: 5389388366592351567, guid: 2619396100f353e4184aba2383a574ad, type: 3}
-  - {fileID: 5389388366592351567, guid: 502bfaaad15ca9343a1f9959c3ef7bad, type: 3}
-  - {fileID: 5389388366592351567, guid: 8d801d0e2fea2b442bc906bcd95d4ab2, type: 3}
-  - {fileID: 5389388366592351567, guid: 6dc347dd94790a9448b78b0e52b91fd8, type: 3}
-  - {fileID: 5389388366592351567, guid: 83e9b0bd2694fcc4c80a92702acda3e0, type: 3}
-  - {fileID: 5389388366592351567, guid: 767ee318ecd304441bcab776103c73f6, type: 3}
-  - {fileID: 5389388366592351567, guid: 8d801d0e2fea2b442bc906bcd95d4ab2, type: 3}
-  - {fileID: 5389388366592351567, guid: 7b979fbbb45e0a947af383367c9aba82, type: 3}
-  - {fileID: 5389388366592351567, guid: 445e5102aa90f0a4e91ed6d393d873d0, type: 3}
-  - {fileID: 5389388366592351567, guid: e5a6b89e84f32ae418919e2604643ef9, type: 3}
-  - {fileID: 5389388366592351567, guid: 27a30b96e724cf044b20b79ebf516151, type: 3}
-  - {fileID: 5389388366592351567, guid: d577d1186d66bd14da1a168f3a5e7217, type: 3}
-  - {fileID: 5389388366592351567, guid: d2bbc2ce36a5f8c42b133c888c139976, type: 3}
-  - {fileID: 5389388366592351567, guid: 92f9ca3cad4ffbe4f83c1cd433ea9e9c, type: 3}
+  cardsInPack: 20
