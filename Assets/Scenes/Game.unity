@@ -863,8 +863,9 @@ MonoBehaviour:
   progressBar: {fileID: 1444367146}
   popupManager: {fileID: 1242251472}
   tiePopup: {fileID: 1924329689}
+  winParticles: {fileID: 686499876}
   CardRestoreTime: 8000
-  delaySoundTime: 500
+  delayTime: 500
   audioManager: {fileID: 1276236897}
   _isInTie: 0
 --- !u!4 &440656977
@@ -1158,6 +1159,11 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!198 &686499876 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 1631127653030876060, guid: 437bf349aa3724a629a480317187300e, type: 3}
+  m_PrefabInstance: {fileID: 1334892571630361801}
+  m_PrefabAsset: {fileID: 0}
 --- !u!224 &723065011 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 6025827312523487179, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
@@ -15218,7 +15224,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2452024747148367732, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -134.99998
+      value: -135
       objectReference: {fileID: 0}
     - target: {fileID: 2511351448372913381, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchorMax.y
@@ -16094,7 +16100,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8730909862005976118, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -352.63568
+      value: -352.6357
       objectReference: {fileID: 0}
     - target: {fileID: 8776722955860356533, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_hasFontAssetChanged

@@ -23,20 +23,19 @@ public class CardPack : MonoBehaviour
             // add the pack cards to the deck
             for (int i = 0; i < ScriptableObject.cardsInPack; i++)
             {
-                // Card card = ScriptableObject.packCards[i];
                 GameObject cardPrefab = GeneralDeck.instance.GetRandomCard();
                 GameObject card = Instantiate(cardPrefab, Vector2.zero, Quaternion.identity);
-                
+
+                // Card card = ScriptableObject.packCards[i];
                 // instantiate card and set parent it to the playerdeck
                 // GameManager.instance.CreateCard(card, store.playerDeck.transform);
-               
+
                 card.transform.SetParent(store.playerDeck.transform);
                 card.GetComponent<RectTransform>().localScale = Vector3.one;
                 card.SetActive(false);
                 store.playerDeck.cards.Add(card.GetComponent<Card>());
 
                 Debug.Log($"{cardPrefab.name} added to you deck");
-
                 coinCounter.UpdatePoints(store.player.Points);
             }
         }
