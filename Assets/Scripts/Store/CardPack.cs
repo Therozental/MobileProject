@@ -9,21 +9,34 @@ public class CardPack : MonoBehaviour
     public ParticleSystem buttonParticles;
     public CoinCounter coinCounter;
 
+
     public void PurchaseCardPoints()
     {
         if (store.player.Points >= ScriptableObject.costInPoints) // if player has enough points
         {
             buttonParticles.Play();
+
             // remove the points from the player
             store.player.Points -= ScriptableObject.costInPoints;
             Debug.Log($"your sum points:{store.player.Points}");
 
             // add the pack cards to the deck
-            for (int i = 0; i < ScriptableObject.packCards.Count; i++)
+            for (int i = 0; i < ScriptableObject.cardsInPack; i++)
             {
+                // Card card = ScriptableObject.packCards[i];
+                GameObject cardPrefab = GeneralDeck.instance.GetRandomCard();
+                GameObject card = Instantiate(cardPrefab, Vector2.zero, Quaternion.identity);
+                
                 // instantiate card and set parent it to the playerdeck
-                store.playerDeck.cards.Add(ScriptableObject.packCards[i]);
-                Debug.Log($"{ScriptableObject.packCards[i]} added to you deck");
+                // GameManager.instance.CreateCard(card, store.playerDeck.transform);
+               
+                card.transform.SetParent(store.playerDeck.transform);
+                card.GetComponent<RectTransform>().localScale = Vector3.one;
+                card.SetActive(false);
+                store.playerDeck.cards.Add(card.GetComponent<Card>());
+
+                Debug.Log($"{cardPrefab.name} added to you deck");
+
                 coinCounter.UpdatePoints(store.player.Points);
             }
         }
@@ -32,7 +45,6 @@ public class CardPack : MonoBehaviour
             Debug.Log("not enough point!");
         }
     }
-    
 }
 /*
 public void PurchasePointsByCash()

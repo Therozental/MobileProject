@@ -1,27 +1,23 @@
 using System.Collections;
-using System.Collections.Generic;
-using Unity.VisualScripting;
-using UnityEditor.VersionControl;
 using UnityEngine;
-using UnityEngine.UI;
-using System.Threading;
-using Task = System.Threading.Tasks.Task;
 
 
 public class Round : MonoBehaviour
 {
-    public Card _playerCard;
-    public Card _cpuCard;
+    public Card playerCard;
+    public Card cpuCard;
 
-    [Header("References")]
-    [SerializeField] private Player player;
+    [Header("References")] [SerializeField]
+    private Player player;
+
     [SerializeField] private CPU cpu;
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private Animator cpuAnimator;
     [SerializeField] private AudioManager audioManager;
 
-    [Header("Placements")]
-    [SerializeField] private GameObject PlayerCardPlacement;
+    [Header("Placements")] [SerializeField]
+    private GameObject PlayerCardPlacement;
+
     [SerializeField] private GameObject CpuCardPlacement;
 
     public void InitRound()
@@ -38,7 +34,7 @@ public class Round : MonoBehaviour
         CpuTurn();
         audioManager.PlaySfx(audioManager.computerPlayCard);
     }
-    
+
     public void StartTieRound()
     {
         Debug.Log("Start Tie Round");
@@ -50,7 +46,7 @@ public class Round : MonoBehaviour
         CpuTurn();
         audioManager.PlaySfx(audioManager.warFlip);
     }
-    
+
 
     public void PlaceCard(Card currentCard, GameObject cardPilePlacement)
     {
@@ -61,31 +57,31 @@ public class Round : MonoBehaviour
     public void PlayerTurn()
     {
         //player draws top card and place it in the middle of the screen
-        _playerCard = player.Deck.DrawTopCard();
-        PlaceCard(_playerCard, PlayerCardPlacement);
+        playerCard = player.Deck.DrawTopCard();
+        PlaceCard(playerCard, PlayerCardPlacement);
     }
 
     public void CpuTurn()
     {
         //cpu draws top card and place it in the middle of the screen
-        _cpuCard = cpu.Deck.DrawTopCard();
-        PlaceCard(_cpuCard, CpuCardPlacement);
+        cpuCard = cpu.Deck.DrawTopCard();
+        PlaceCard(cpuCard, CpuCardPlacement);
     }
 
     public void CompareCards()
     {
         int differenceValue = 0;
-        differenceValue = _playerCard.Value - _cpuCard.Value;
+        differenceValue = playerCard.Value - cpuCard.Value;
 
-        if (_playerCard.Value > _cpuCard.Value) // if player wins
+        if (playerCard.Value > cpuCard.Value) // if player wins
         {
             GameManager.instance.RoundResult(Result.Win, differenceValue);
         }
-        else if (_playerCard.Value < _cpuCard.Value) // if cpu wins
+        else if (playerCard.Value < cpuCard.Value) // if cpu wins
         {
             GameManager.instance.RoundResult(Result.Lose, differenceValue);
         }
-        else if (_playerCard.Value == _cpuCard.Value)
+        else if (playerCard.Value == cpuCard.Value)
         {
             GameManager.instance.RoundResult(Result.Tie, differenceValue);
         }
