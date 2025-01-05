@@ -25,7 +25,8 @@ public class GameManager : MonoBehaviour
     [Header("UI Elements")]
     public CoinCounter coinCounter;
     public ProgressBar progressBar;
-    public PopupManager popupManager; 
+    public PopupManager popupManager;
+    public GameObject tiePopup;
     
     [Header("Game Elements")]
     [SerializeField, Tooltip("time for card to restore to deck")] private int CardRestoreTime;
@@ -152,6 +153,7 @@ public class GameManager : MonoBehaviour
     public void CardTieSequence()
     {
         _isInTie = true;
+        tiePopup.SetActive(true);
         Debug.Log($"{_isInTie} true");
     }
     
