@@ -65,7 +65,7 @@ public class GameManager : MonoBehaviour
 
     public void RoundPlay()
     {
-        CleanCards(); // remove the round cards to discard pile/return the last on deck list
+       
         CheckPileCount();
 
         if (_isInTie)
@@ -78,7 +78,7 @@ public class GameManager : MonoBehaviour
         }
 
         Round.CompareCards();
-       
+        CleanCards(); // remove the round cards to discard pile/return the last on deck list
     }
 
     public async void RoundResult(Result result, int differenceValue)
@@ -97,7 +97,7 @@ public class GameManager : MonoBehaviour
 
                     await Task.Delay(1000);
                     audioManager.PlaySfx(audioManager.warWin);
-                    await Task.Delay(delayTime);
+                    // await Task.Delay(delayTime);
                     coinCounter.UpdatePoints(Player.Points);
                     ResetTieParameter();
                     break;
@@ -125,9 +125,9 @@ public class GameManager : MonoBehaviour
                     
                     await Task.Delay(1000);
                     audioManager.PlaySfx(audioManager.warLose);
-
-                    await Task.Delay(delayTime);
-                    coinCounter.UpdatePoints(Player.Points);
+                    
+                    //await Task.Delay(delayTime);
+                 //   coinCounter.UpdatePoints(Player.Points);
                     Debug.Log(
                         $"CPU WON TIE! player points decreased by {differenceValue * 3}, its value is {Player.Points}");
                     ResetTieParameter();
@@ -177,6 +177,7 @@ public class GameManager : MonoBehaviour
 
         // add it to the end of the cpu deck so it can be repeated
         Cpu.Deck.cards.Insert(Cpu.Deck.cards.Count, Round.cpuCard);
+        // Round.cpuCard.transform.SetParent(Cpu.cpuPile.transform);
         Debug.Log($"{Round.cpuCard} discarded");
 
         // Start the card return sequence if it's not already running
