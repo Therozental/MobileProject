@@ -37,6 +37,7 @@ public class Round : MonoBehaviour
 
     public void StartTieRound()
     {
+        GameManager.instance.CheckPileCount();
         Debug.Log("Start Tie Round");
         player.Deck.PlayerRemove3Cards();
         playerAnimator.SetTrigger("Tie");

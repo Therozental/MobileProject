@@ -45,20 +45,3 @@ public class CardPack : MonoBehaviour
         }
     }
 }
-/*
-public void PurchasePointsByCash()
-{
-    if (store.player.Cash >= ScriptableObject.costInCash) // if player has enough points
-    {
-        // remove the cash from the player
-        store.player.Cash -= ScriptableObject.costInCash;
-
-        // add the pack cards to the deck
-        for (int i = 0; i < ScriptableObject.packCards.Count; i++)
-        {
-            store.playerDeck.deck.Add(ScriptableObject.packCards[i]);
-        }
-    }
-
-}
-*/

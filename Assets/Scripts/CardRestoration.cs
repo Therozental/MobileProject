@@ -13,8 +13,6 @@ public class CardRestoration
         _player = player;
     }
 
-
-    //new script only for ressurect cards?
     public async void StartReturningCards(int restoreTime)
     {
         _isReturningCards = true;
@@ -36,10 +34,13 @@ public class CardRestoration
     {
         int randomIndex = Random.Range(0, _player.Deck.DiscardPile.Count); // Get a random card index
         Card card = _player.Deck.DiscardPile[randomIndex]; // Get the card at the random index
+        
+        if (card != null)
+        {
+            _player.Deck.DiscardPile.RemoveAt(randomIndex); // Remove it from the discard pile
+            _player.Deck.cards.Add(card); // Add it back to the player's deck
 
-        _player.Deck.DiscardPile.RemoveAt(randomIndex); // Remove it from the discard pile
-        _player.Deck.cards.Add(card); // Add it back to the player's deck
-
-        Debug.Log($"Card {card.name} returned to the player's deck.");
+            Debug.Log($"Card {card.name} returned to the player's deck.");
+        }
     }
 }

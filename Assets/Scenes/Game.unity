@@ -940,6 +940,7 @@ MonoBehaviour:
   popupManager: {fileID: 1242251472}
   tiePopup: {fileID: 1924329689}
   winParticles: {fileID: 686499876}
+  notEnoughCards: {fileID: 668281399}
   CardRestoreTime: 8000
   delayTime: 500
   audioManager: {fileID: 1276236897}
@@ -1246,6 +1247,7 @@ GameObject:
   - component: {fileID: 668281400}
   - component: {fileID: 668281401}
   - component: {fileID: 668281402}
+  - component: {fileID: 668281403}
   m_Layer: 5
   m_Name: NoCardsPopup
   m_TagString: Untagged
@@ -1306,6 +1308,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 328936ee22707984e8ab618acc954b24, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &668281403
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 668281399}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a36b33bc18b2c4f5cbb40527399f5b22, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  audioManager: {fileID: 1276236897}
+  popupManager: {fileID: 1242251472}
 --- !u!198 &686499876 stripped
 ParticleSystem:
   m_CorrespondingSourceObject: {fileID: 1631127653030876060, guid: 437bf349aa3724a629a480317187300e, type: 3}
@@ -15478,7 +15494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1634623444774555085, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -470.40002
+      value: -470.4
       objectReference: {fileID: 0}
     - target: {fileID: 1639338628215365737, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchorMax.y
@@ -16478,7 +16494,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674508006094281540, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -522.2262
+      value: -522.22614
       objectReference: {fileID: 0}
     - target: {fileID: 8218745309019753298, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_Spacing
@@ -16522,7 +16538,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8730909862005976118, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -352.6357
+      value: -352.63568
       objectReference: {fileID: 0}
     - target: {fileID: 8776722955860356533, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_hasFontAssetChanged
