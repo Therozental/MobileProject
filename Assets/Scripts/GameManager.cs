@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour
                     // await Task.Delay(delayTime);
                     coinCounter.UpdatePoints(Player.Points);
                     ResetTieParameter();
+                    progressBar.GetExp(differenceValue * 3);
                     break;
                 }
                 if (_isInTie == false) // if not in tie round
@@ -109,10 +110,11 @@ public class GameManager : MonoBehaviour
                     await Task.Delay(delayTime);
                     coinCounter.UpdatePoints(Player.Points);
                     audioManager.PlaySfx(audioManager.winPoints);
+                    progressBar.GetExp(differenceValue);
                 }
 
                 Debug.Log($"PLAYER WON! player points increased by {differenceValue}, its value is {Player.Points}");
-                progressBar.GetExp(differenceValue);
+               // progressBar.GetExp(differenceValue);
                 await Task.Delay(300);
                 winParticles.Play();
                 break;
