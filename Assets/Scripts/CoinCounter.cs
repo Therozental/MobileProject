@@ -15,10 +15,10 @@ public class CoinCounter : MonoBehaviour
     {
         await Task.Delay(300);
         PlayAnimation();
-        AdjustPoints(targetPoints);
+      await AdjustPoints(targetPoints);
     }
 
-    public async void AdjustPoints(int targetPoints)
+    public async Task AdjustPoints(int targetPoints)
     {
         int time = 100;
 
@@ -29,7 +29,7 @@ public class CoinCounter : MonoBehaviour
             {
                 currentPoints++; // Gain points
             }
-            else
+            else if (currentPoints > targetPoints)
             {
                 currentPoints--; // Lose points
             }
@@ -53,6 +53,8 @@ public class CoinCounter : MonoBehaviour
     }
 }
     /*
+     hili previous code:
+     
     public async void UpdatePoints(int Points)
     {
         await Task.Delay(300);

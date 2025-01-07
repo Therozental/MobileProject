@@ -17,12 +17,12 @@ public class ProgressBar : MonoBehaviour
     public AudioManager audioManager;
 
     [SerializeField] private float speed;
-    
+
     public void Update()
     {
         ValueText.text = progressBar.value.ToString() + "/" + progressBar.maxValue.ToString();
     }
-    
+
     public void GetExp(int expPoints)
     {
         if (progressBar.value >= progressBar.maxValue) //(Exp >= Max points)
@@ -45,7 +45,7 @@ public class ProgressBar : MonoBehaviour
         progressBar.DOValue(0, speed).Play();
         IncreaseMaxBarValue();
     }
-    
+
     private int ResetExp()
     {
         return (int)(progressBar.value = 0);

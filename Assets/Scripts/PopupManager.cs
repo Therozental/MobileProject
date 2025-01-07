@@ -22,31 +22,22 @@ public class PopupManager : MonoBehaviour
             card.SetActive(false);
             playerDeck.cards.Add(card.GetComponent<Card>());
         }
-        
     }
-
-    /*
-     for (int i = 0; i < 5; i++)
-       {
-           
-           //get a random card from the general deck
-           int randomIndex = Random.Range(0, levelUpCards.cards.Count);
-           Card randomCard = levelUpCards.cards[randomIndex];
-           
-           //create card in scene view - put them in the player deck
-          
-           
-           playerDeck.cards.Add(randomCard);
-           
-           Debug.Log("new card added to you Deck!");
-       }
-       
-       
-    public void PlaceCardToPlayerDeck(Card card)
-    {
-        currentCard.transform.SetParent(cardPilePlacement.transform);
-        currentCard.transform.position = cardPilePlacement.transform.position;
-    }
-    */
-    
 }
+/*
+ for (int i = 0; i < 5; i++)
+   {
+
+       //get a random card from the general deck
+       int randomIndex = Random.Range(0, levelUpCards.cards.Count);
+       Card randomCard = levelUpCards.cards[randomIndex];
+
+       //create card in scene view - put them in the player deck
+
+
+       playerDeck.cards.Add(randomCard);
+
+       Debug.Log("new card added to you Deck!");
+   }
+
+*/

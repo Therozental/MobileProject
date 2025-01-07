@@ -25,6 +25,7 @@ public class Deck : MonoBehaviour
 
     public Card DrawTopCard()
     {
+        GameManager.instance.CheckPileCount();
         // the top card of the deck
         Card topCard = cards[0];
 
@@ -44,9 +45,8 @@ public class Deck : MonoBehaviour
 
             // add the card to the player discard pile
             DiscardPile.Add(removedPlayerCard);
-            
-            
         }
+
         Debug.Log("Player removed 3 cards");
     }
 
@@ -60,7 +60,7 @@ public class Deck : MonoBehaviour
             // put the card last in the cpu deck
             cards.Insert(cards.Count, removedCpuCard);
         }
+
         Debug.Log("CPU removed 3 cards");
     }
-    
 }
