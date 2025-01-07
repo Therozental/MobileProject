@@ -177,7 +177,7 @@ public class GameManager : MonoBehaviour
 
         // add it to the end of the cpu deck so it can be repeated
         Cpu.Deck.cards.Insert(Cpu.Deck.cards.Count, Round.cpuCard);
-      //  Round.cpuCard.transform.SetParent(Cpu.cpuPile.transform);
+        // Round.cpuCard.transform.SetParent(Cpu.cpuPile.transform);
         Debug.Log($"{Round.cpuCard} discarded");
 
         // Start the card return sequence if it's not already running

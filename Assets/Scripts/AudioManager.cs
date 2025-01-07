@@ -26,8 +26,6 @@ public class AudioManager : MonoBehaviour
     public AudioClip makeAPurchase;
     public AudioClip tie;
     
-
-
     [Header("------- Sliders -------")]
     [SerializeField] private Slider sfxSlider;
     [SerializeField] private Slider musicSlider;

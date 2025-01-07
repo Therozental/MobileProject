@@ -1074,6 +1074,10 @@ PrefabInstance:
       propertyPath: musicSlider
       value: 
       objectReference: {fileID: 852850929}
+    - target: {fileID: 720651170927687639, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
+      propertyPath: expandPlusSign
+      value: 
+      objectReference: {fileID: 8300000, guid: 56a85a9bc967c4629b27cd9040e4aefc, type: 3}
     - target: {fileID: 1946857753039620235, guid: 79888d4103c1b4b8780ea209c09ef3e2, type: 3}
       propertyPath: Priority
       value: 256
@@ -1731,7 +1735,7 @@ MonoBehaviour:
         m_MethodName: PlaySfx
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 8300000, guid: 76722b6e136b2734b99bf76f1eff8bbf, type: 3}
+          m_ObjectArgument: {fileID: 8300000, guid: 56a85a9bc967c4629b27cd9040e4aefc, type: 3}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.AudioClip, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
@@ -8191,6 +8195,56 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 1884199426107179389, guid: 63a1d045c518e88499bad4d9ddca562c, type: 3}
   m_PrefabInstance: {fileID: 1123274034072316253}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1944019808 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1864187956927713793, guid: 437bf349aa3724a629a480317187300e, type: 3}
+  m_PrefabInstance: {fileID: 1334892571630361801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1944019812
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1944019808}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0, y: 0}
+    oldSize: {x: 0, y: 0}
+    newSize: {x: 0, y: 0}
+    adaptiveTilingThreshold: 0
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1 &2009951135
 GameObject:
   m_ObjectHideFlags: 0
@@ -14902,6 +14956,9 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6591465381354718647, guid: 437bf349aa3724a629a480317187300e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1334892571630361804}
+    - targetCorrespondingSourceObject: {fileID: 1864187956927713793, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1944019812}
   m_SourcePrefab: {fileID: 100100000, guid: 437bf349aa3724a629a480317187300e, type: 3}
 --- !u!114 &1334892571630361802 stripped
 MonoBehaviour:
@@ -15494,7 +15551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1634623444774555085, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -470.4
+      value: -470.40002
       objectReference: {fileID: 0}
     - target: {fileID: 1639338628215365737, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchorMax.y
@@ -16494,7 +16551,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7674508006094281540, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -522.22614
+      value: -522.2262
       objectReference: {fileID: 0}
     - target: {fileID: 8218745309019753298, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_Spacing
@@ -16538,7 +16595,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8730909862005976118, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -352.63568
+      value: -352.6357
       objectReference: {fileID: 0}
     - target: {fileID: 8776722955860356533, guid: 561da991c2365a149a7f997fc9b20f56, type: 3}
       propertyPath: m_hasFontAssetChanged

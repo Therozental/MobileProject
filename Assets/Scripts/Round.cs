@@ -62,7 +62,6 @@ public class Round : MonoBehaviour
         //player draws top card and place it in the middle of the screen
         playerCard = player.Deck.DrawTopCard();
         PlaceCard(playerCard, PlayerCardPlacement);
-        
     }
 
     public void CpuTurn()
