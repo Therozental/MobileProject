@@ -1,4 +1,5 @@
 using System.Collections;
+using System.Threading.Tasks;
 using UnityEngine;
 
 
@@ -27,11 +28,12 @@ public class Round : MonoBehaviour
         Debug.Log("Cards Shuffled");
     }
 
-    public void StartRound()
+    public async void StartRound()
     {
         Debug.Log("Start Round");
         PlayerTurn();
         CpuTurn();
+        await Task.Delay(300);
         audioManager.PlaySfx(audioManager.computerPlayCard);
     }
 
@@ -60,6 +62,7 @@ public class Round : MonoBehaviour
         //player draws top card and place it in the middle of the screen
         playerCard = player.Deck.DrawTopCard();
         PlaceCard(playerCard, PlayerCardPlacement);
+        
     }
 
     public void CpuTurn()
