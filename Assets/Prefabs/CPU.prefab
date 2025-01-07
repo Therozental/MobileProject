@@ -346,6 +346,7 @@ GameObject:
   - component: {fileID: 6844483951691675422}
   - component: {fileID: 2941089251873047904}
   - component: {fileID: 3689189394587396618}
+  - component: {fileID: 9181983423714310914}
   m_Layer: 3
   m_Name: CPUCardBack
   m_TagString: Untagged
@@ -467,6 +468,28 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5390b46868fc84ecd88c407dd28810dd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &9181983423714310914
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7350188635260307988}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d5bd760ef4e425e8fd291601f4fcac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardBackUI: {fileID: 0}
+  cardSprite: {fileID: 21300000, guid: daeb7c91a45fbd24594c11ada42b33c7, type: 3}
+  cardImage: {fileID: 0}
+  backImages:
+  - {fileID: 21300000, guid: 32ab8c45f1a2846b3b361a951db0a4d8, type: 3}
+  - {fileID: 21300000, guid: 72a05e81b7f57454eb5d301dd1eb856e, type: 3}
+  - {fileID: 21300000, guid: 946bed1dda0184493919b8fc091ffa7f, type: 3}
+  - {fileID: 21300000, guid: e2198754639754242af211230c7ae333, type: 3}
+  - {fileID: 21300000, guid: daeb7c91a45fbd24594c11ada42b33c7, type: 3}
+  imageNumber: 0
 --- !u!1001 &1162586468335088384
 PrefabInstance:
   m_ObjectHideFlags: 0

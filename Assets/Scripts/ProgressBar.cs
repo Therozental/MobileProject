@@ -9,14 +9,21 @@ using UnityEditor;
 
 public class ProgressBar : MonoBehaviour
 {
-    [Header("Progress Bar Stats")]
-    public Slider progressBar;
+    [Header("Progress Bar Stats")] public Slider progressBar;
     public TextMeshProUGUI ValueText;
-    public Player Player;
+    [SerializeField] private float speed;
+
+    [Header("referances")] public Player Player;
     public PopupManager popupManager;
     public AudioManager audioManager;
 
-    [SerializeField] private float speed;
+    [Header("cardsBacks")] public CardBack playerCardBack;
+    public CardBack playerCardPileBack;
+    public CardBack cpuCardBack;
+    public CardBack cpuCardPileBack;
+    public CardBack levelUpCardBack;
+    
+
 
     public void Update()
     {
@@ -39,6 +46,11 @@ public class ProgressBar : MonoBehaviour
     private void LevelUp()
     {
         Player.Level++;
+        playerCardBack.ChangeImage();
+        playerCardPileBack.ChangeImage();
+        cpuCardBack.ChangeImage();
+        cpuCardPileBack.ChangeImage();
+        //levelUpCardBack.ChangeImage();
         audioManager.PlaySfx(audioManager.levelUp);
         popupManager.leveUpPopup.SetActive(true);
         ResetExp();

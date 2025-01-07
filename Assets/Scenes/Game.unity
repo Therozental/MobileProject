@@ -1898,6 +1898,28 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.62352943}
   m_EffectDistance: {x: 0, y: -3.35}
   m_UseGraphicAlpha: 1
+--- !u!114 &910387644
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910387630}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d5bd760ef4e425e8fd291601f4fcac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardBackUI: {fileID: 910387630}
+  cardSprite: {fileID: 21300000, guid: daeb7c91a45fbd24594c11ada42b33c7, type: 3}
+  cardImage: {fileID: 0}
+  backImages:
+  - {fileID: 21300000, guid: 32ab8c45f1a2846b3b361a951db0a4d8, type: 3}
+  - {fileID: 21300000, guid: 72a05e81b7f57454eb5d301dd1eb856e, type: 3}
+  - {fileID: 21300000, guid: 946bed1dda0184493919b8fc091ffa7f, type: 3}
+  - {fileID: 21300000, guid: e2198754639754242af211230c7ae333, type: 3}
+  - {fileID: 21300000, guid: daeb7c91a45fbd24594c11ada42b33c7, type: 3}
+  imageNumber: 0
 --- !u!1 &967346943
 GameObject:
   m_ObjectHideFlags: 0
@@ -6892,6 +6914,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1010965501}
   m_CullTransparentMesh: 1
+--- !u!1 &1110221255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7350188635260307988, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
+  m_PrefabInstance: {fileID: 515678914842479503}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1138363765
 GameObject:
   m_ObjectHideFlags: 0
@@ -8061,6 +8088,88 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 5824555358476749573, guid: f186a72b2a0f3d54c8ab8a4843e77f2c, type: 3}
   m_PrefabInstance: {fileID: 73279071}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1866555318 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7860991346018493143, guid: 437bf349aa3724a629a480317187300e, type: 3}
+  m_PrefabInstance: {fileID: 1334892571630361801}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1866555323 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4259637091061692388, guid: 437bf349aa3724a629a480317187300e, type: 3}
+  m_PrefabInstance: {fileID: 1334892571630361801}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866555318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1866555325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866555318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Navigation:
+    m_Mode: 3
+    m_WrapAround: 0
+    m_SelectOnUp: {fileID: 0}
+    m_SelectOnDown: {fileID: 0}
+    m_SelectOnLeft: {fileID: 0}
+    m_SelectOnRight: {fileID: 0}
+  m_Transition: 1
+  m_Colors:
+    m_NormalColor: {r: 1, g: 1, b: 1, a: 1}
+    m_HighlightedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_PressedColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 1}
+    m_SelectedColor: {r: 0.9607843, g: 0.9607843, b: 0.9607843, a: 1}
+    m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
+    m_ColorMultiplier: 1
+    m_FadeDuration: 0.1
+  m_SpriteState:
+    m_HighlightedSprite: {fileID: 0}
+    m_PressedSprite: {fileID: 0}
+    m_SelectedSprite: {fileID: 0}
+    m_DisabledSprite: {fileID: 0}
+  m_AnimationTriggers:
+    m_NormalTrigger: Normal
+    m_HighlightedTrigger: Highlighted
+    m_PressedTrigger: Pressed
+    m_SelectedTrigger: Selected
+    m_DisabledTrigger: Disabled
+  m_Interactable: 1
+  m_TargetGraphic: {fileID: 1866555323}
+  m_OnClick:
+    m_PersistentCalls:
+      m_Calls: []
+--- !u!114 &1866555326
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1866555318}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d5bd760ef4e425e8fd291601f4fcac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardBackUI: {fileID: 1866555318}
+  cardSprite: {fileID: 21300000, guid: daeb7c91a45fbd24594c11ada42b33c7, type: 3}
+  cardImage: {fileID: 0}
+  backImages:
+  - {fileID: 21300000, guid: 32ab8c45f1a2846b3b361a951db0a4d8, type: 3}
+  - {fileID: 21300000, guid: 72a05e81b7f57454eb5d301dd1eb856e, type: 3}
+  - {fileID: 21300000, guid: 946bed1dda0184493919b8fc091ffa7f, type: 3}
+  - {fileID: 21300000, guid: e2198754639754242af211230c7ae333, type: 3}
+  - {fileID: 21300000, guid: daeb7c91a45fbd24594c11ada42b33c7, type: 3}
+  imageNumber: 0
 --- !u!1 &1887714805
 GameObject:
   m_ObjectHideFlags: 0
@@ -8340,6 +8449,28 @@ MonoBehaviour:
   m_EffectColor: {r: 0, g: 0, b: 0, a: 0.62352943}
   m_EffectDistance: {x: 0, y: -3.35}
   m_UseGraphicAlpha: 1
+--- !u!114 &2023544582
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2023544572}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d5bd760ef4e425e8fd291601f4fcac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cardBackUI: {fileID: 2023544572}
+  cardSprite: {fileID: 21300000, guid: daeb7c91a45fbd24594c11ada42b33c7, type: 3}
+  cardImage: {fileID: 0}
+  backImages:
+  - {fileID: 21300000, guid: 32ab8c45f1a2846b3b361a951db0a4d8, type: 3}
+  - {fileID: 21300000, guid: 72a05e81b7f57454eb5d301dd1eb856e, type: 3}
+  - {fileID: 21300000, guid: 946bed1dda0184493919b8fc091ffa7f, type: 3}
+  - {fileID: 21300000, guid: e2198754639754242af211230c7ae333, type: 3}
+  - {fileID: 21300000, guid: daeb7c91a45fbd24594c11ada42b33c7, type: 3}
+  imageNumber: 0
 --- !u!1001 &2036085574
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -12335,6 +12466,10 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 380
       objectReference: {fileID: 0}
+    - target: {fileID: 9181983423714310914, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
+      propertyPath: cardBackUI
+      value: 
+      objectReference: {fileID: 1110221255}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -12342,7 +12477,21 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 6788322407633514012, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
       insertIndex: -1
       addedObject: {fileID: 2023544577}
+    - targetCorrespondingSourceObject: {fileID: 6788322407633514012, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 2023544582}
   m_SourcePrefab: {fileID: 100100000, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
+--- !u!114 &515678914842479504 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9181983423714310914, guid: 423b491e29ecd48d887abd8d302bf714, type: 3}
+  m_PrefabInstance: {fileID: 515678914842479503}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1110221255}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 91d5bd760ef4e425e8fd291601f4fcac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &650460959099321974
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14914,6 +15063,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 9203212370221102044, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      propertyPath: cardBackUI
+      value: 
+      objectReference: {fileID: 1866555318}
     - target: {fileID: 9212110666173616733, guid: 437bf349aa3724a629a480317187300e, type: 3}
       propertyPath: m_AnchorMax.x
       value: 1
@@ -14944,15 +15097,25 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 244883605576343757, guid: 437bf349aa3724a629a480317187300e, type: 3}
+    - {fileID: 9203212370221102044, guid: 437bf349aa3724a629a480317187300e, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7860991346018493143, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866555325}
+    - targetCorrespondingSourceObject: {fileID: 7860991346018493143, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1866555326}
     - targetCorrespondingSourceObject: {fileID: 6413084990607210419, guid: 437bf349aa3724a629a480317187300e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 910387636}
     - targetCorrespondingSourceObject: {fileID: 6413084990607210419, guid: 437bf349aa3724a629a480317187300e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 910387640}
+    - targetCorrespondingSourceObject: {fileID: 6413084990607210419, guid: 437bf349aa3724a629a480317187300e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 910387644}
     - targetCorrespondingSourceObject: {fileID: 6591465381354718647, guid: 437bf349aa3724a629a480317187300e, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1334892571630361804}
@@ -15034,13 +15197,41 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 737914504}
     - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
+      propertyPath: cardBack
+      value: 
+      objectReference: {fileID: 910387644}
+    - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
+      propertyPath: cpuCardBack
+      value: 
+      objectReference: {fileID: 515678914842479504}
+    - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
       propertyPath: audioManager
       value: 
       objectReference: {fileID: 1276236897}
     - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
+      propertyPath: cardPileBack
+      value: 
+      objectReference: {fileID: 1866555326}
+    - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
       propertyPath: popupManager
       value: 
       objectReference: {fileID: 1242251472}
+    - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
+      propertyPath: playerCardBack
+      value: 
+      objectReference: {fileID: 1866555326}
+    - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
+      propertyPath: cpuCardPileBack
+      value: 
+      objectReference: {fileID: 2023544582}
+    - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
+      propertyPath: levelUpCardBack
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4640543211804916248, guid: 603f337215f8640b6b9126212d039169, type: 3}
+      propertyPath: playerCardPileBack
+      value: 
+      objectReference: {fileID: 910387644}
     - target: {fileID: 5489001854359348561, guid: 603f337215f8640b6b9126212d039169, type: 3}
       propertyPath: m_Color.b
       value: 1
